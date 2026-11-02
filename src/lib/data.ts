@@ -14,7 +14,7 @@ export const COMPANY = {
   tagline: 'Your Partner For Progress',
   legacy: 'Jaikvik Technology India Pvt. Ltd.',
   founded: 2016,
-  years: 18,
+  years: 10,
   email: 'info@arkatechnovation.com',
   careers: 'careers@arkatechnovation.com',
   phone: '+91 97114 87316',
