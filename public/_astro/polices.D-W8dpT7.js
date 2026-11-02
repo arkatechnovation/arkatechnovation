@@ -1,0 +1,1 @@
+var e=(e=1500)=>Promise.race([document.fonts.ready.then(()=>{}).catch(()=>{}),new Promise(t=>setTimeout(t,e))]);export{e as t};

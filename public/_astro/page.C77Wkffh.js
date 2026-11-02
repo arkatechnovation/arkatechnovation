@@ -1,0 +1,1 @@
+import{t as e}from"./prefetch.CBArSmeQ.js";e();

@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Production build
+.next/
+out/
+build/
+dist/
+dist-ssr/
+*.local
+*.tsbuildinfo
+
+# Scratch, debug logs and temporary files
+scratch/
+*.zip
+*.tar.gz
+*.png
+!public/**
+!src/**
+
+# Python cache & temp
+__pycache__/
+*.py[cod]
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
