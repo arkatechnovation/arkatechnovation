@@ -157,7 +157,7 @@ export default function WhoWeArePage() {
               About ARKA Technovation
             </h1>
             <p className="text-xs sm:text-sm text-zinc-500 font-mono mt-2 mb-4">
-              ARKA Technovation Private Limited · Ibem Solutions LLP · Jaikvik Technology India Pvt Ltd
+              ARKA Technovation Private Limited
             </p>
 
             <p className="mt-4 text-base sm:text-lg text-zinc-600 max-w-3xl leading-relaxed font-light text-left">
@@ -217,7 +217,7 @@ export default function WhoWeArePage() {
               18 Years of Dedicated Engineering &amp; Market Growth
             </h2>
             <p className="mt-5 text-zinc-600 text-sm sm:text-base leading-relaxed font-light">
-              For over 18 years, ARKA Technovation Private Limited (along with Ibem Solutions LLP and Jaikvik Technology India Pvt Ltd) has been dedicated to helping businesses across diverse industries augment their digital infrastructure, build scalable software, and gain an undeniable competitive edge. We follow strict institutional values that have established us as an undisputed leader in business growth and corporate promotions.
+              For over 18 years, ARKA Technovation Private Limited has been dedicated to helping businesses across diverse industries augment their digital infrastructure, build scalable software, and gain an undeniable competitive edge. We follow strict institutional values that have established us as an undisputed leader in business growth and corporate promotions.
             </p>
             <p className="mt-4 text-zinc-600 text-sm sm:text-base leading-relaxed font-light">
               Led by Founder &amp; Director Mr. Kranti Parashar, an eminent figure in Indian industry circles with over 18 years of craft across technology, enterprise software, and growth marketing, an MBA background and hands-on focus on execution, our in-house specialist pods based in Sector 63, Noida provide actionable services across software engineering, digital marketing, corporate film making, creative UI/UX design, and technical SEO.
@@ -235,6 +235,8 @@ export default function WhoWeArePage() {
                   'Aegon Religare',
                   'Indiamart Intermesh Ltd.',
                   'Care Ratings Ltd.',
+                  'Ibem Solutions LLP',
+                  'Jaikvik Technology India Pvt Ltd',
                 ].map((c) => (
                   <span
                     key={c}
@@ -252,7 +254,7 @@ export default function WhoWeArePage() {
             <div className="relative rounded-3xl overflow-hidden border border-black/12 bg-zinc-100 aspect-[4/5] shadow-xl group">
               <img
                 src="/portfolite/kranti-parashar.webp"
-                alt="Mr. Kranti Parashar — Founder & Director, ARKA Technovation Private Limited, Ibem Solutions LLP, Jaikvik Technology India Pvt Ltd"
+                alt="Mr. Kranti Parashar — Founder & Director, ARKA Technovation Private Limited"
                 loading="lazy"
                 decoding="async"
                 width="768"
@@ -264,7 +266,7 @@ export default function WhoWeArePage() {
               <div className="absolute bottom-6 inset-x-6 flex items-end justify-between z-10">
                 <div>
                   <p className="text-white font-bold text-lg">Mr. Kranti Parashar</p>
-                  <p className="text-zinc-300 text-xs">Founder &amp; Director · ARKA Technovation Private Limited · Ibem Solutions LLP · Jaikvik Technology India Pvt Ltd</p>
+                  <p className="text-zinc-300 text-xs">Founder &amp; Director · ARKA Technovation Private Limited</p>
                   <p className="text-zinc-400 text-[11px] mt-0.5">Sector 63, Noida (Delhi NCR)</p>
                 </div>
                 <div className="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-[11px] font-semibold shrink-0">

@@ -7,6 +7,8 @@ export default function PortfoliteAbout() {
     'Aegon Religare',
     'Indiamart Intermesh Ltd.',
     'Care Ratings Ltd.',
+    'Ibem Solutions LLP',
+    'Jaikvik Technology India Pvt Ltd',
   ];
 
   return (
@@ -31,11 +33,11 @@ export default function PortfoliteAbout() {
               Meet Founder
             </h2>
             <p className="text-xs text-zinc-500 font-mono mt-1 mb-2">
-              ARKA Technovation Private Limited · Ibem Solutions LLP · Jaikvik Technology India Pvt Ltd
+              ARKA Technovation Private Limited
             </p>
 
             <p className="mt-4 sm:mt-6 text-zinc-600 text-sm sm:text-base font-light leading-relaxed max-w-xl">
-              Led by Founder &amp; Director <strong className="font-semibold text-black">Mr. Kranti Parashar</strong>, an eminent figure in Indian industry circles with over 18 years of craft across technology, enterprise software, and growth marketing. Operating across ARKA Technovation Private Limited, Ibem Solutions LLP, and Jaikvik Technology India Pvt Ltd, with an MBA background, focus on execution, and dedicated in-house specialist pods based in Sector 63, Noida, he drives integrated digital transformation and revenue acceleration across 500+ enterprise and manufacturing deployments.
+              Led by Founder &amp; Director <strong className="font-semibold text-black">Mr. Kranti Parashar</strong>, an eminent figure in Indian industry circles with over 18 years of craft across technology, enterprise software, and growth marketing. Operating as ARKA Technovation Private Limited, with an MBA background, focus on execution, and dedicated in-house specialist pods based in Sector 63, Noida, he drives integrated digital transformation and revenue acceleration across 500+ enterprise and manufacturing deployments.
             </p>
 
             {/* Mobile Founder Photo (shown between narrative and credentials on mobile) */}
@@ -43,7 +45,7 @@ export default function PortfoliteAbout() {
               <div className="relative rounded-2xl overflow-hidden border border-black/12 bg-zinc-100 aspect-[4/4.5] shadow-lg group">
                 <img
                   src="/portfolite/kranti-parashar.webp"
-                  alt="Mr. Kranti Parashar — Founder & Director, ARKA Technovation Private Limited, Ibem Solutions LLP, Jaikvik Technology India Pvt Ltd"
+                  alt="Mr. Kranti Parashar — Founder & Director, ARKA Technovation Private Limited"
                   loading="lazy"
                   decoding="async"
                   width="768"
@@ -55,7 +57,7 @@ export default function PortfoliteAbout() {
                 <div className="absolute bottom-4 inset-x-4 flex items-end justify-between z-10">
                   <div>
                     <p className="text-white font-bold text-base">Mr. Kranti Parashar</p>
-                    <p className="text-zinc-300 text-xs">Founder &amp; Director · ARKA Technovation Private Limited · Ibem Solutions LLP · Jaikvik Technology India Pvt Ltd</p>
+                    <p className="text-zinc-300 text-xs">Founder &amp; Director · ARKA Technovation Private Limited</p>
                     <p className="text-zinc-400 text-[11px] mt-0.5">Sector 63, Noida (Delhi NCR)</p>
                   </div>
                   <div className="px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-[11px] font-semibold flex-shrink-0">
@@ -88,7 +90,7 @@ export default function PortfoliteAbout() {
             <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-black/12 bg-zinc-100 aspect-[4/4.8] sm:aspect-[4/5] shadow-xl group">
               <img
                 src="/portfolite/kranti-parashar.webp"
-                alt="Mr. Kranti Parashar — Founder & Director, ARKA Technovation Private Limited, Ibem Solutions LLP, Jaikvik Technology India Pvt Ltd"
+                alt="Mr. Kranti Parashar — Founder & Director, ARKA Technovation Private Limited"
                 loading="lazy"
                 decoding="async"
                 width="768"
@@ -100,7 +102,7 @@ export default function PortfoliteAbout() {
               <div className="absolute bottom-6 inset-x-6 flex items-end justify-between z-10">
                 <div>
                   <p className="text-white font-bold text-base sm:text-lg">Mr. Kranti Parashar</p>
-                  <p className="text-zinc-300 text-xs">Founder &amp; Director · ARKA Technovation Private Limited · Ibem Solutions LLP · Jaikvik Technology India Pvt Ltd</p>
+                  <p className="text-zinc-300 text-xs">Founder &amp; Director · ARKA Technovation Private Limited</p>
                   <p className="text-zinc-400 text-[11px] mt-0.5">Sector 63, Noida (Delhi NCR)</p>
                 </div>
                 <div className="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-[11px] font-semibold">
