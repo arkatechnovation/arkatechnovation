@@ -11,10 +11,10 @@ export const COMPANY = {
   short: 'ARKA.',
   logo: '/images/logo/arka-logo-black.png',
   logoWhite: '/images/logo/arka-logo-white.png',
-  tagline: 'Digital Product Company.',
+  tagline: 'Your Partner For Progress',
   legacy: 'Jaikvik Technology India Pvt. Ltd.',
   founded: 2016,
-  years: 10,
+  years: 18,
   email: 'info@arkatechnovation.com',
   careers: 'careers@arkatechnovation.com',
   phone: '+91 97114 87316',
@@ -399,7 +399,7 @@ export const ROLES = [
 
 export const FAQS = [
   { q: 'What does ARKA Technovation Private Limited do?', a: 'Ten services across three disciplines: marketing (SEO, digital marketing, digital advertising, content, analytics), technology (web development, CRM software, e-commerce) and creative (film making, UX and interactive design). One in-house team delivers all of it.' },
-  { q: 'Who leads ARKA Technovation Private Limited?', a: 'ARKA Technovation Private Limited (formerly known as Jaikvik Technology India Pvt. Ltd.) is founded and led by Mr. Kranti Parashar, an eminent leader with over 10 years of experience in enterprise technology, strategic finance, and corporate communication.' },
+  { q: 'Who leads ARKA Technovation Private Limited?', a: 'ARKA Technovation Private Limited (along with Ibem Solutions LLP and Jaikvik Technology India Pvt Ltd) is founded and led by Mr. Kranti Parashar, an eminent leader with over 18 years of experience in enterprise technology, strategic finance, and corporate communication.' },
   { q: 'Where are your offices?', a: 'Our corporate office is located at Rayos Business Park, Office No- 202, C-4, Sector 63, Noida, Uttar Pradesh 201301, India.' },
   { q: 'How long does a project take?', a: 'A corporate website ships in three to six weeks. E-commerce and mobile apps run eight to sixteen. Custom CRM depends on scope and is planned in milestones. Marketing engines show measurable movement in sixty to ninety days.' },
   { q: 'Do you provide reports after launch?', a: 'Yes. Monthly performance reports, a live dashboard, quarterly strategy reviews and a named account contact. Maintenance, hosting and iteration are available as retainers or per project.' },

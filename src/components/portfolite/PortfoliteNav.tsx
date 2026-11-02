@@ -308,7 +308,7 @@ export default function PortfoliteNav() {
                   decoding="sync"
                   width={215}
                   height={46}
-                  className={`absolute inset-0 h-full w-auto max-w-full object-contain transition-opacity duration-300 group-hover:scale-105 ${
+                  className={`absolute inset-0 h-full w-auto max-w-full object-contain object-left transition-opacity duration-300 group-hover:scale-105 ${
                     isOverHero ? 'opacity-100 drop-shadow-[0_0_14px_rgba(255,255,255,0.4)]' : 'opacity-0 pointer-events-none'
                   }`}
                 />
@@ -319,7 +319,7 @@ export default function PortfoliteNav() {
                   decoding="async"
                   width={215}
                   height={46}
-                  className={`absolute inset-0 h-full w-auto max-w-full object-contain transition-opacity duration-300 group-hover:scale-105 ${
+                  className={`absolute inset-0 h-full w-auto max-w-full object-contain object-left transition-opacity duration-300 group-hover:scale-105 ${
                     isOverHero ? 'opacity-0 pointer-events-none' : 'opacity-100 drop-shadow-[0_1px_3px_rgba(0,0,0,0.12)]'
                   }`}
                 />
@@ -589,7 +589,7 @@ export default function PortfoliteNav() {
                     decoding="async"
                     width={240}
                     height={48}
-                    className="h-11 sm:h-13 w-auto max-w-[240px] object-contain"
+                    className="h-11 sm:h-13 w-auto max-w-[240px] object-contain object-left"
                   />
                 </Link>
                 <button

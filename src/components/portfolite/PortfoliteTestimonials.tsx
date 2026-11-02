@@ -35,9 +35,9 @@ export default function PortfoliteTestimonials() {
   ];
 
   const stats = [
-    { value: '12+', label: 'Years Experience' },
-    { value: '1,500+', label: 'Clients Scaled' },
-    { value: '850+', label: 'Projects Shipped' },
+    { value: '18+', label: 'Years Experience' },
+    { value: '600+', label: 'Clients Scaled' },
+    { value: '500+', label: 'Projects Shipped' },
   ];
 
   return (

@@ -68,8 +68,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/images/logo/arka-logo-black.png',
-        width: 800,
-        height: 600,
+        width: 820,
+        height: 498,
         alt: 'ARKA Technovation Private Limited Corporate Logo',
       },
     ],
@@ -165,6 +165,13 @@ export default function RootLayout({
         <link
           rel="preload"
           href="/images/logo/arka-logo-white.webp"
+          as="image"
+          type="image/webp"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          href="/images/logo/arka-logo-black.webp"
           as="image"
           type="image/webp"
           fetchPriority="high"

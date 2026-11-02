@@ -68,7 +68,7 @@ export default function PortfoliteHome() {
         <DigitalGrowthShowcaseSection />
       </div>
 
-      {/* Who We Are: Founded by Kranti Parashar, 17+ Years Heritage */}
+      {/* Who We Are: Founded by Kranti Parashar, 18 Years Heritage */}
       <div className="cv-auto">
         <PortfoliteAbout />
       </div>
