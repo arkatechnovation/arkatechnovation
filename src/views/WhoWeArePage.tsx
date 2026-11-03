@@ -167,7 +167,7 @@ export default function WhoWeArePage() {
             {/* Verified Statistics Grid */}
             <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 py-6 border-y border-black/10">
               <div>
-                <p className="text-2xl sm:text-3xl font-bold text-black font-mono">18 Years</p>
+                <p className="text-2xl sm:text-3xl font-bold text-black font-mono">10 Years</p>
                 <p className="text-xs text-zinc-500 font-mono uppercase tracking-wider mt-1">Industry Craft</p>
               </div>
               <div>
