@@ -572,7 +572,7 @@ export const SERVICES: Service[] = [
           'Automated micro-clip generation for Instagram Reels, YouTube Shorts & TikTok',
           'Full audio mastering and RSS feed distribution to Spotify & Apple Podcasts',
         ],
-        img: '/images/blogs/blog-04-corporate-film-production.webp',
+        img: '/images/services/film/podcasts.webp',
       },
       {
         name: 'Personal Interviews',
@@ -902,7 +902,7 @@ export const PROCESS = [
 
 export const SEO_SERVICES_DATA = {
   eyebrow: 'Organic Search & High-Velocity Lead Engines',
-  title: 'SEO & Lead Generation Services That Power Scalable Pipeline',
+  title: 'SEO, GEO & Lead Generation Services That Power Scalable Pipeline',
   intro:
     'Search engine optimization is the foundation of digital revenue. At ARKA Technovation Private Limited, we handle custom end-to-end SEO campaigns from technical health, Core Web Vitals, and structured schemas to competitive enterprise search and hyper-targeted paid media.',
   stats: [

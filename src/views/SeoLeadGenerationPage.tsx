@@ -496,7 +496,7 @@ export default function SeoLeadGenerationPage() {
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
           <div className="max-w-4xl text-left">
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-black leading-[1.08] text-left">
-              SEO &amp; Lead Generation Services That Generate High Quality Leads.
+              SEO, GEO &amp; Lead Generation Services That Generate High Quality Leads.
             </h1>
 
             <p className="mt-6 text-lg sm:text-xl text-zinc-600 max-w-3xl leading-relaxed font-light text-left">
