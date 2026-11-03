@@ -741,20 +741,18 @@ export default function PortfoliteServicesPage() {
                   ))}
 
                   {/* ── Visual Panel: Responsive image height on mobile, full editorial height on desktop ── */}
-                  <div className="w-full h-48 sm:h-64 lg:h-auto lg:min-h-[440px] lg:w-[42%] xl:w-[40%] shrink-0 relative overflow-hidden bg-zinc-100">
+                  <div className="w-full h-56 sm:h-72 lg:h-auto lg:min-h-[440px] lg:w-[42%] xl:w-[40%] shrink-0 relative overflow-hidden bg-zinc-100 self-stretch">
                     <img
                       src={item.img || `/images/services/catalog/${item.id}.webp?v=2`}
                       alt={`${item.title} — ARKA Technovation`}
                       loading="lazy"
                       decoding="async"
-                      width={800}
-                      height={600}
-                      className="w-full h-full object-cover object-top sm:object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                      className="absolute inset-0 w-full h-full object-cover object-top sm:object-center transition-transform duration-700 ease-out group-hover:scale-105"
                     />
                   </div>
 
                   {/* ── Context & Deliverables Panel: Compact mobile spacing, expansive desktop typography ── */}
-                  <div className="w-full lg:w-[58%] xl:w-[60%] p-5 sm:p-8 lg:p-11 flex flex-col justify-between bg-zinc-50/50 group-hover:bg-zinc-50 transition-colors duration-300">
+                  <div className="w-full lg:w-[58%] xl:w-[60%] p-5 sm:p-8 lg:p-11 flex flex-col justify-between bg-zinc-50/50 group-hover:bg-zinc-50 transition-colors duration-300 flex-1">
                     <div>
                       {/* Title */}
                       <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-black tracking-tight leading-snug font-display text-balance">

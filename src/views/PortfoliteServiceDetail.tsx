@@ -306,31 +306,19 @@ export default function PortfoliteServiceDetail({ initialSlug }: { initialSlug?:
                 } relative`}
               >
                 {/* ── Visual Panel: Responsive image height on mobile, full editorial height on desktop ── */}
-                <div className="w-full h-48 sm:h-64 lg:h-auto lg:min-h-[440px] lg:w-[42%] xl:w-[40%] shrink-0 relative overflow-hidden bg-zinc-100">
+                <div className="w-full h-56 sm:h-72 lg:h-auto lg:min-h-[440px] lg:w-[42%] xl:w-[40%] shrink-0 relative overflow-hidden bg-zinc-100 self-stretch">
                   <img
                     src={moduleImg}
                     alt={`${sub.name} — ARKA Technovation`}
                     loading="lazy"
                     decoding="async"
-                    width={800}
-                    height={600}
-                    className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                    className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                   />
-                  <div className="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-black/80 backdrop-blur-md text-solar font-mono text-xs font-bold border border-white/10 tracking-wider">
-                    MODULE {String(i + 1).padStart(2, '0')}
-                  </div>
                 </div>
 
                 {/* ── Context & Deliverables Panel: Compact mobile spacing, expansive desktop typography ── */}
-                <div className="w-full lg:w-[58%] xl:w-[60%] p-5 sm:p-8 lg:p-11 flex flex-col justify-between bg-zinc-50/50 group-hover:bg-zinc-50 transition-colors duration-300">
+                <div className="w-full lg:w-[58%] xl:w-[60%] p-5 sm:p-8 lg:p-11 flex flex-col justify-between bg-zinc-50/50 group-hover:bg-zinc-50 transition-colors duration-300 flex-1">
                   <div>
-                    {/* Module pill badge */}
-                    <div className="flex items-center gap-2 mb-2 font-mono text-xs text-solar font-semibold uppercase tracking-wider">
-                      <span>MODULE {String(i + 1).padStart(2, '0')}</span>
-                      <span>•</span>
-                      <span>In-House Craft Pod</span>
-                    </div>
-
                     {/* Title */}
                     <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-black tracking-tight leading-snug font-display text-balance">
                       {sub.name}
@@ -366,11 +354,7 @@ export default function PortfoliteServiceDetail({ initialSlug }: { initialSlug?:
                   </div>
 
                   {/* Card Footer Action Bar */}
-                  <div className="mt-5 pt-4 sm:mt-8 sm:pt-5 border-t border-black/8 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                    <div className="text-xs font-mono text-zinc-500 flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                      <span>100% In-House · Noida Craft Pod</span>
-                    </div>
+                  <div className="mt-5 pt-4 sm:mt-8 sm:pt-5 border-t border-black/8 flex items-center justify-end">
                     <Link
                       to="/contact"
                       className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-black text-white hover:bg-solar text-xs sm:text-sm font-semibold transition-[background-color,transform] duration-200 active:scale-[0.98] shadow-sm group/btn w-full sm:w-auto"

@@ -155,7 +155,7 @@ export default function PortfoliteLogosMarquee() {
   return (
     <section
       aria-label="Enterprise & Industrial Clients"
-      className="py-7 sm:py-9 bg-white relative overflow-hidden font-framer select-none border-y border-black/[0.04]"
+      className="py-3.5 sm:py-5 bg-white relative overflow-hidden font-framer select-none border-b border-black/[0.04]"
     >
       {/* Edge gradient fade masks */}
       <div className="absolute left-0 inset-y-0 w-20 sm:w-40 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
