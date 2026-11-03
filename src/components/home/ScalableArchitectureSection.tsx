@@ -590,7 +590,11 @@ export default function ScalableArchitectureSection() {
 
         {/* 13 Technology Squircles (Exact Horizontal Row matching reference) */}
         <div className="mb-8 sm:mb-10 overflow-x-auto scrollbar-none pb-3 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:mx-0 lg:px-0">
-          <div className="flex items-center justify-start lg:justify-center gap-3 sm:gap-4 shrink-0 min-w-max mx-auto py-1">
+          <div
+            role="tablist"
+            aria-label="Technology Stack selection"
+            className="flex items-center justify-start lg:justify-center gap-3 sm:gap-4 shrink-0 min-w-max mx-auto py-1"
+          >
             {TECH_STACKS.map((stack) => {
               const isActive = stack.id === activeStackId;
               return (
@@ -689,7 +693,7 @@ export default function ScalableArchitectureSection() {
               {/* Line Numbers */}
               <div
                 aria-hidden="true"
-                className="select-none text-right pr-4 sm:pr-6 text-zinc-400 border-r border-black/8 mr-4 sm:mr-6 shrink-0"
+                className="select-none text-right pr-4 sm:pr-6 text-zinc-500 border-r border-black/8 mr-4 sm:mr-6 shrink-0"
               >
                 {codeLines.map((_, i) => (
                   <div key={i} className="leading-relaxed">
@@ -778,7 +782,7 @@ function formatCodeLine(line: string): React.ReactNode {
         // Strings
         if ((token.startsWith('"') && token.endsWith('"')) || (token.startsWith("'") && token.endsWith("'"))) {
           return (
-            <span key={i} className="text-[#059669]">
+            <span key={i} className="text-[#047857]">
               {token}
             </span>
           );
@@ -787,7 +791,7 @@ function formatCodeLine(line: string): React.ReactNode {
         // Booleans
         if (/^(?:true|false|null|nil)$/.test(token)) {
           return (
-            <span key={i} className="text-blue-600 font-semibold">
+            <span key={i} className="text-blue-700 font-semibold">
               {token}
             </span>
           );
@@ -796,7 +800,7 @@ function formatCodeLine(line: string): React.ReactNode {
         // Numbers
         if (/^\d+$/.test(token)) {
           return (
-            <span key={i} className="text-[#d97706]">
+            <span key={i} className="text-[#b45309]">
               {token}
             </span>
           );

@@ -32,8 +32,8 @@ export default function PrivacyPolicyPage() {
       num: '02',
       title: 'How We Use Your Information',
       content: [
-        'Contract Fulfillment: Delivering requested software development builds, SEO audits, corporate film productions, and digital marketing campaigns.',
-        'Technical Support & SLA Delivery: Responding to support inquiries, triaging server incidents, and maintaining 99.95% system uptime.',
+        'Contract Fulfillment: Delivering requested software development builds, SEO architectures, corporate film productions, and digital marketing campaigns.',
+        'Technical Support & SLA Delivery: Responding to support inquiries, triaging server incidents, and maintaining high platform reliability.',
         'Commercial Communication: Providing requested milestone roadmaps, billing invoices, technical documentation, and strategic progress reports.',
         'Legal Compliance & Security: Protecting against unauthorized access, malicious attacks, security threats, and fulfilling statutory requirements under Indian law.',
       ],
@@ -44,14 +44,14 @@ export default function PrivacyPolicyPage() {
       content: [
         'Zero Third-Party Sale: We do not sell, rent, monetize, or trade any client data, personal contact information, or proprietary business assets to third-party data brokers or marketing networks.',
         'Confidentiality: All customer information and project specifications are treated with strict confidentiality under non-disclosure obligations.',
-        'In-House Processing: 100% of development, marketing analysis, and data engineering is handled by our full-time in-house pods based in Sector 63, Noida—never outsourced to unvetted freelancers.',
+        'In-House Processing: Direct in-house execution across development, search analytics, and media production by our full-time team in Sector 63, Noida—never outsourced to unvetted freelancers.',
       ],
     },
     {
       num: '04',
       title: 'Data Security & Storage Standards',
       content: [
-        'Enterprise Encryption: All data in transit is encrypted using TLS 1.3 standards. Sensitive credentials and client databases at rest are secured using AES-256 bit encryption.',
+        'Enterprise Encryption: All data in transit is encrypted using modern TLS cryptographic standards. Sensitive credentials and client databases at rest are secured using AES-256 bit encryption.',
         'Access Controls: Strict role-based access control (RBAC), multi-factor authentication (MFA), and audit logging are enforced across our internal systems.',
         'Geographic Hosting: Managed production servers are deployed on enterprise cloud providers (AWS, Google Cloud) compliant with ISO 27001, SOC 2, and Indian data localization guidelines.',
       ],
@@ -62,8 +62,17 @@ export default function PrivacyPolicyPage() {
       content: [
         'Right to Access & Review: You have the right to request a complete summary of the personal and business contact information we maintain about you.',
         'Right to Rectification: You may request immediate correction of inaccurate or incomplete corporate records.',
-        'Right to Erasure (&quot;Right to Be Forgotten&quot;): Subject to statutory retention requirements for accounting and taxation under Indian law, you may request complete deletion of your data.',
+        'Right to Erasure ("Right to Be Forgotten"): Subject to statutory retention requirements for accounting and taxation under Indian law, you may request complete deletion of your data.',
         'Revocation of Consent: You may opt out of commercial communications at any time with a single click or written request.',
+      ],
+    },
+    {
+      num: '06',
+      title: 'Cookies & Telemetry Governance',
+      content: [
+        'Essential Session Data: We employ minimal, privacy-centric cookies strictly required for session integrity, authentication states, and security verification.',
+        'Zero Invasive Cross-Site Tracking: We do not deploy third-party cross-site behavioral tracking cookies or invasive audience-reselling pixels.',
+        'Cookie Preference Management: Users may configure their browser settings to decline or clear cookies at any time without restricting access to public information on our website.',
       ],
     },
   ];
@@ -149,15 +158,15 @@ export default function PrivacyPolicyPage() {
                 <p className="text-zinc-500 font-mono text-xs">Official Correspondence:</p>
                 <p className="text-zinc-700 flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-solar shrink-0" />
-                  <span>Rayos Business Park, Office No- 202, C-4, Sector 63, Noida, UP 201301</span>
+                  <span>{COMPANY.address}</span>
                 </p>
                 <p className="text-zinc-700 flex items-center gap-2">
                   <Mail className="w-4 h-4 text-solar shrink-0" />
-                  <span>legal@arkatechnovation.com / info@arkatechnovation.com</span>
+                  <span>legal@arkatechnovation.com / {COMPANY.email}</span>
                 </p>
                 <p className="text-zinc-700 flex items-center gap-2">
                   <Phone className="w-4 h-4 text-solar shrink-0" />
-                  <span>+91 97114 87316 (Mon–Sat, 9:30 AM – 6:30 PM IST)</span>
+                  <span>{COMPANY.phone} (Mon–Sat, 9:30 AM – 6:30 PM IST)</span>
                 </p>
               </div>
             </div>

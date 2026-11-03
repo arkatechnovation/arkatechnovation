@@ -33,7 +33,7 @@ const SERVICES_DATA: BentoServiceCard[] = [
     title: 'Software Development',
     link: '/services/development',
     description:
-      'We engineer bespoke enterprise software, modular backend architectures, scalable ERP systems, custom CRMs, and automated workflow matrices built for dependable scale.',
+      'Custom CRM and ERP platforms, high-performance web applications, and modular backend architectures engineered with complete source code ownership.',
     tags: [
       'CRM',
       'ERP',
@@ -53,7 +53,7 @@ const SERVICES_DATA: BentoServiceCard[] = [
     title: 'Digital Marketing',
     link: '/services/digital-marketing',
     description:
-      'Full-funnel acquisition campaigns, multi-touch attribution telemetry, and precision conversion optimization engineered to accelerate verified business revenue.',
+      'Full-funnel customer acquisition campaigns across Google and Meta, powered by multi-touch attribution and focused on pipeline growth.',
     tags: [
       'Digital Marketing',
       'Social Media Marketing',
@@ -75,7 +75,7 @@ const SERVICES_DATA: BentoServiceCard[] = [
     title: 'SEO, GEO & AEO Services',
     link: '/seo-lead-generation',
     description:
-      'Technical crawl architecture, high-intent keyword mapping, structured Schema.org entity graphs, generative & answer engine dominance, and local discovery.',
+      'Technical crawl architecture, Schema.org entity graphs, and localized discovery funnels built for Google, SearchGPT, and Perplexity.',
     tags: [
       'SEO',
       'GEO Services',
@@ -96,7 +96,7 @@ const SERVICES_DATA: BentoServiceCard[] = [
     title: 'Film Production & Media',
     link: '/services/film-making',
     description:
-      'Broadcast-quality corporate films, digital & TV commercials, executive interview pods, high-end studio photography, and next-gen AI video creation.',
+      'Commercial films, TV ads, executive interview broadcasts, and studio photography produced in-house on our Noida soundstage.',
     tags: [
       'Film Production',
       'Digital Ads',
@@ -119,7 +119,7 @@ const SERVICES_DATA: BentoServiceCard[] = [
     title: 'Corporate World News',
     link: '/corporate-world-news',
     description:
-      'Authoritative corporate journalism, executive interview broadcasts, strategic press releases, breaking business updates, and rigorous market research.',
+      'Verified corporate journalism, executive interview broadcasts, vertical industry analysis, and wire-syndicated corporate press releases.',
     tags: [
       'Corporate World News',
       'Interview & Press Releases',
@@ -144,7 +144,7 @@ export default function PortfoliteServicesBento() {
         {/* Left-Aligned Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-10 sm:mb-16 gap-4 sm:gap-6 text-left">
           <div className="max-w-2xl">
-            <p className="text-xs sm:text-sm font-mono font-semibold uppercase tracking-widest text-[#E8742C] mb-2 sm:mb-3">
+            <p className="text-xs sm:text-sm font-mono font-semibold uppercase tracking-widest text-[#B85014] mb-2 sm:mb-3">
               Capabilities
             </p>
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-black leading-[1.15]">

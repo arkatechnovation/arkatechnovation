@@ -21,11 +21,10 @@ import {
   Phone,
   Mail,
   MapPin,
-  Library,
-  BookOpen,
   ChevronDown,
   Globe,
   TrendingUp,
+  Newspaper,
 } from 'lucide-react';
 import PortfoliteNav from '@/components/portfolite/PortfoliteNav';
 import PortfoliteFooter from '@/components/portfolite/PortfoliteFooter';
@@ -38,105 +37,83 @@ export default function WhoWeArePage() {
     {
       role: 'Full-Stack Software & Cloud Architecture',
       icon: Code2,
-      members: 'Next.js 15, React, Node.js, Python, PostgreSQL, AWS & Docker Specialists',
-      desc: 'Architecting mission-critical web platforms, custom ERP/CRM engines, high-concurrency microservices, and secure API gateways with complete source code ownership.',
-      deliverables: ['Custom CRM/ERP builds', 'Scalable Next.js frontends', 'Database optimization', 'Cloud DevOps & CI/CD'],
+      members: 'Next.js, React, Node.js, Python, PostgreSQL, and cloud architecture specialists',
+      desc: 'We develop bespoke ERP systems, custom operational CRMs, relational database schemas, and authenticated API architectures, transferring full intellectual property and source code ownership to your organization.',
+      deliverables: ['Custom CRM & ERP Platforms', 'High-Performance Frontends', 'Relational Database Engineering', 'Cloud CI/CD & Infrastructure'],
     },
     {
-      role: 'Search Engine & Performance Media',
+      role: 'Search Optimization & Performance Media',
       icon: Search,
-      members: 'Technical SEO Engineers, PPC Managers & CRO Data Analysts',
-      desc: 'Managing commercial Google page-one rankings, Core Web Vitals speed optimization, Google Guaranteed ads, addressable geofencing, and multi-touch attribution.',
-      deliverables: ['Enterprise SEO audits', 'High-ROAS Google/Meta ads', 'Core Web Vitals tuning', 'Call tracking attribution'],
+      members: 'Technical crawl architects, Schema.org modelers, and media performance leads',
+      desc: 'We resolve crawl architecture bottlenecks, construct semantic knowledge graphs, and deploy targeted acquisition campaigns across Google and Meta, tying marketing spend directly to verified commercial pipeline.',
+      deliverables: ['Technical Crawl Governance', 'Core Web Vitals Engineering', 'Entity Schema & AI Citations', 'Closed-Loop Revenue Telemetry'],
     },
     {
-      role: 'Human-Centered UX & Design Systems',
+      role: 'Product Design & Design Systems',
       icon: Layers,
-      members: 'Product Designers, Design System Leads & Motion Animators',
-      desc: 'Creating atomic Figma design systems, WCAG 2.2 accessibility compliance, and silky Framer Motion frontends that elevate brand prestige and accelerate conversions.',
-      deliverables: ['Interactive Figma prototypes', 'Design tokens & UI kits', 'ADA / WCAG 2.2 audits', 'Friction & heatmap analysis'],
+      members: 'Design system leads, accessibility specialists, and interaction engineers',
+      desc: 'We craft tokenized Figma component libraries, accessible web interfaces compliant with WCAG accessibility standards, and high-converting user journeys validated through behavioral analysis.',
+      deliverables: ['Figma Tokenized UI Kits', 'Interactive Application Prototypes', 'WCAG Accessibility Audits', 'Conversion Heatmap Optimization'],
     },
     {
-      role: 'Cinematography & Visual Production',
+      role: 'Cinematography & Commercial Production',
       icon: Video,
-      members: 'Cinema Directors, Cinematographers, DaVinci Colorists & Editors',
-      desc: 'Shooting 4K/8K corporate films, brand documentaries, factory tours, and high-converting commercial video ads that build undeniable credibility and trust.',
-      deliverables: ['4K/8K cinema shoots', 'Product demo videos', 'Explainer animations', 'Broadcast TV commercials'],
+      members: 'Directors, cinematographers, DaVinci Resolve colorists, and sound designers',
+      desc: 'Operating our own soundstage in Sector 63, Noida, our crew writes, films, and post-produces corporate documentaries, television commercials, industrial plant walkthroughs, and executive interview series.',
+      deliverables: ['Corporate Cinema & Documentaries', 'Broadcast Commercial Production', 'Executive Leadership Series', 'Multi-Platform Video Formats'],
+    },
+    {
+      role: 'Corporate Journalism & Market Intelligence',
+      icon: Newspaper,
+      members: 'Financial journalists, sector research analysts, and editorial leads',
+      desc: 'We research industry verticals, conduct executive broadcast interviews, draft AP-compliant corporate press releases, and syndicate verified announcements across national media networks.',
+      deliverables: ['Executive Broadcast Interviews', 'Media Wire Syndication', 'Empirical Sector Whitepapers', 'Curated Market Intelligence'],
     },
   ];
 
   const methodology = [
     {
       num: '01',
-      title: 'Zero Outsourcing Philosophy',
-      desc: 'Every single line of code, design layout, marketing campaign, and film shoot is executed directly by our full-time in-house team in Sector 63, Noida. By eliminating middle-tier subcontractors, we maintain absolute quality control, data security, and uninterrupted accountability.',
+      title: 'Unified In-House Execution',
+      desc: 'Our software engineers, search marketers, interface designers, and commercial cinematographers work collaboratively under direct supervision. By eliminating third-party contractors and unvetted handoffs, we protect client source code, uphold strict architectural benchmarks, and maintain complete accountability for every production release.',
     },
     {
       num: '02',
-      title: 'Agile Two-Week Sprints',
-      desc: 'We operate in disciplined two-week development sprints with demonstrable milestone reviews. You test working code on staging servers every fortnight—eliminating guesswork and ensuring complete alignment with commercial objectives.',
+      title: 'Milestone-Driven Staged Sprints',
+      desc: 'Engagements are structured into focused iterative delivery cycles. At each sprint milestone, stakeholders review functional deployments on isolated staging environments, maintaining clear velocity, transparent progress, and close alignment with commercial outcomes.',
     },
     {
       num: '03',
-      title: 'Direct Specialist Access',
-      desc: 'Our clients communicate directly with senior software architects, performance marketing directors, and filmmakers—never junior account coordinators passing messages back and forth. You receive immediate answers and rapid execution.',
+      title: 'Direct Access to Craft Leads',
+      desc: 'Clients communicate directly with the software engineers architecting their databases, the technical leads managing their search frameworks, and the directors producing their commercial media. Removing non-technical intermediary layers prevents misinterpretation and accelerates strategic decisions.',
     },
     {
       num: '04',
-      title: 'Radical Reporting Transparency',
-      desc: 'You see the exact same real-time dashboards and analytics telemetry we see internally. Complete visibility into organic search rankings, Cost Per Acquisition (CPA), conversion bottlenecks, and every rupee of advertising spend.',
-    },
-  ];
-
-  const guides = [
-    {
-      title: 'Why the Unified In-House Pod Model Beats Fragmented Agency Outsourcing',
-      cat: 'Organizational Strategy',
-      readTime: '6 min read',
-      desc: 'When code, creative, search marketing, and video production sit under one roof, projects ship faster with zero architectural miscommunications and 100% intellectual property security.',
-    },
-    {
-      title: 'Radical Reporting Transparency: Why We Share the Exact Dashboards We Use',
-      cat: 'Governance & Ethics',
-      readTime: '5 min read',
-      desc: 'How traditional agency reporting hides underperforming campaigns. Why ARKA Technovation Private Limited shares live, unfiltered telemetry connecting digital spend directly to pipeline revenue.',
-    },
-    {
-      title: 'Corporate Social Responsibility (CSR) in Enterprise Technology',
-      cat: 'Community Impact',
-      readTime: '4 min read',
-      desc: 'How our STEM mentorship programs, university engineering workshops across Delhi NCR, and pro-bono small business assistance foster long-term technological empowerment.',
+      title: 'Shared Telemetry & Dashboards',
+      desc: 'We grant client stakeholders direct access to the same analytics telemetry, server performance metrics, and search visibility data that our internal leads monitor, providing complete transparency into infrastructure reliability and pipeline growth.',
     },
   ];
 
   const faqs = [
     {
-      q: 'Who founded and leads ARKA Technovation Private Limited?',
-      a: 'ARKA Technovation Private Limited is founded and led by Mr. Kranti Parashar, an eminent technology leader with over 18 years of craft across enterprise software, digital marketing strategy, and corporate film production. Associated ventures include Ibem Solutions LLP and Jaikvik Technology India Pvt Ltd.',
+      q: 'Who leads the company?',
+      a: 'The company is led by Founder & Director Mr. Kranti Parashar, who brings over 18+ years of industry experience across enterprise software development, digital marketing strategy, and corporate film production. The firm has a 10-year operating history, having been formerly known as Jaikvik Technology India Pvt. Ltd., with related corporate ventures including Ibem Solutions LLP.',
     },
     {
       q: 'Where is your corporate headquarters located?',
-      a: 'Our corporate headquarters is located at Rayos Business Park, Office No- 202, C-4, Sector 63, Noida, Uttar Pradesh 201301, India. Our facility houses our engineering development bays, design studios, 4K editing and color grading suites, and executive consultation suites.',
+      a: 'Our facility is located at Rayos Business Park, Office No- 202, C-4, Sector 63, Noida, Uttar Pradesh 201301, India. Our office houses our engineering bays, design workstations, broadcast video editing and color grading suites, and consultation rooms.',
     },
     {
       q: 'What is your track record in enterprise deployments?',
-      a: 'We have successfully delivered 500+ projects across custom ERP platforms, Next.js web applications, digital marketing funnels, and corporate film productions, supported by 100+ verified client testimonials.',
+      a: 'Our team delivers custom ERP platforms, web applications, commercial search engines, and corporate cinema productions for mid-market enterprises and regional manufacturers, backed by verified client reviews and ongoing technical partnerships.',
     },
     {
-      q: 'Why does ARKA Technovation Private Limited refuse to outsource work to freelancers or third-party agencies?',
-      a: 'Outsourcing creates fragmented communication, security risks, variable code quality, and intellectual property ambiguities. By keeping 100% of our software developers, SEO specialists, designers, and cinematographers in-house in Sector 63, Noida, we guarantee institutional quality, rigorous accountability, and direct client communication.',
+      q: 'Why do you keep all project work in-house instead of outsourcing?',
+      a: 'Outsourcing introduces communication bottlenecks, uneven code quality, and security vulnerabilities. By employing our developers, SEO analysts, designers, and film crew on staff in Sector 63, Noida, we maintain quality standards, protect client data, and provide direct accountability.',
     },
     {
-      q: 'What is the ARKA Centralized Content Library?',
-      a: 'Our Centralized Content Library is an institutional repository that stores, manages, and organizes all digital assets utilized in client operations—marketing collateral, product specifications, training videos, brand guidelines, cinema b-roll, and interactive presentations. It ensures version stability, rapid retrieval, and seamless collaboration across enterprise teams.',
-    },
-    {
-      q: 'How does ARKA Technovation Private Limited contribute to the local community in Uttar Pradesh and Delhi NCR?',
-      a: 'We believe technology companies have a responsibility to uplift their local ecosystems. We run quarterly STEM workshops for government school students in Noida, mentor university engineering undergraduates in modern web frameworks (Next.js, Python), and provide pro-bono digital strategy to emerging local manufacturers and small businesses in the industrial sectors of Delhi NCR.',
-    },
-    {
-      q: 'Can we schedule an in-person meeting at your Noida headquarters?',
-      a: 'Yes, absolutely. We welcome enterprise executives, founders, and marketing directors to visit our corporate office at Rayos Business Park, Office No- 202, C-4, Sector 63, Noida, Uttar Pradesh 201301, India. You can meet our team, inspect our development bays and film editing suites, and review your project roadmap in person.',
+      q: 'Can we schedule an in-person meeting at your Noida office?',
+      a: 'Yes. We welcome prospective clients and partners to visit our office at Rayos Business Park in Sector 63, Noida. You can meet our team, review work on staging servers, and discuss your roadmap in detail.',
     },
   ];
 
@@ -150,25 +127,22 @@ export default function WhoWeArePage() {
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
           <div className="max-w-4xl text-left">
-            <p className="text-xs sm:text-sm font-mono font-semibold uppercase tracking-widest text-[#E8742C] mb-3">
+            <p className="text-xs sm:text-sm font-mono font-semibold uppercase tracking-widest text-[#B85014] mb-3">
               Leadership &amp; Heritage
             </p>
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-black leading-[1.08] text-left">
-              About ARKA Technovation
+              About Us
             </h1>
-            <p className="text-xs sm:text-sm text-zinc-500 font-mono mt-2 mb-4">
-              ARKA Technovation Private Limited
-            </p>
 
-            <p className="mt-4 text-base sm:text-lg text-zinc-600 max-w-3xl leading-relaxed font-light text-left">
-              Welcome to ARKA Technovation Private Limited, a premier technology engineering firm, digital growth agency, and corporate cinema studio based in Sector 63, Noida. Guided by Founder &amp; Director <strong className="font-semibold text-black">Mr. Kranti Parashar</strong>, our dedicated in-house specialist pods engineer full-stack web applications, custom CRM &amp; enterprise ERP platforms, high-intent SEO architectures, and broadcast-grade films for 500+ enterprise clients across India and worldwide.
+            <p className="mt-6 text-base sm:text-lg text-zinc-600 max-w-3xl leading-relaxed font-light text-left">
+              Operating as ARKA Technovation Private Limited (formerly known as Jaikvik Technology India Pvt. Ltd.), our studio unifies full-stack software development, technical search optimization, and commercial film production under direct engineering leadership. Directed by Founder Mr. Kranti Parashar, we build mission-critical digital systems and growth engines for established mid-market enterprises, regional manufacturers, and institutional partners across India and overseas.
             </p>
 
             {/* Verified Statistics Grid */}
-            <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 py-6 border-y border-black/10">
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 py-6 border-y border-black/10">
               <div>
-                <p className="text-2xl sm:text-3xl font-bold text-black font-mono">10 Years</p>
-                <p className="text-xs text-zinc-500 font-mono uppercase tracking-wider mt-1">Industry Craft</p>
+                <p className="text-2xl sm:text-3xl font-bold text-black font-mono">10+ Years</p>
+                <p className="text-xs text-zinc-500 font-mono uppercase tracking-wider mt-1">Company Operations</p>
               </div>
               <div>
                 <p className="text-2xl sm:text-3xl font-bold text-black font-mono">500+</p>
@@ -177,10 +151,6 @@ export default function WhoWeArePage() {
               <div>
                 <p className="text-2xl sm:text-3xl font-bold text-black font-mono">100+</p>
                 <p className="text-xs text-zinc-500 font-mono uppercase tracking-wider mt-1">Client Testimonials</p>
-              </div>
-              <div>
-                <p className="text-2xl sm:text-3xl font-bold text-black font-mono">100%</p>
-                <p className="text-xs text-zinc-500 font-mono uppercase tracking-wider mt-1">In-House Pods</p>
               </div>
             </div>
 
@@ -191,7 +161,7 @@ export default function WhoWeArePage() {
                 className="site-button px-7 py-3.5 rounded-full !bg-black !text-white text-sm font-semibold flex items-center justify-center gap-2 hover:!bg-zinc-800 transition-colors shadow-lg active:scale-[0.98]"
                 style={{ color: '#FFFFFF', backgroundColor: '#000000' }}
               >
-                <span style={{ color: '#FFFFFF' }}>Get in Touch with Leadership</span>
+                <span style={{ color: '#FFFFFF' }}>Speak with Leadership</span>
                 <ArrowRight className="w-4 h-4 !text-white" style={{ color: '#FFFFFF', stroke: '#FFFFFF' }} />
               </Link>
               <a
@@ -199,34 +169,34 @@ export default function WhoWeArePage() {
                 className="px-7 py-3.5 rounded-full bg-zinc-100 border border-black/10 text-zinc-800 text-sm font-medium flex items-center justify-center gap-2 hover:bg-zinc-200 transition-colors"
               >
                 <Phone className="w-4 h-4 text-solar" />
-                <span>Call Noida Headquarters</span>
+                <span>Call Noida Office: {COMPANY.phones[0]}</span>
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── 10-Year Heritage & Executive Leadership ── */}
+      {/* ── Heritage & Executive Leadership ── */}
       <section id="story" className="scroll-mt-36 py-20 sm:py-28 max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid md:grid-cols-12 gap-12 items-center">
           <div className="md:col-span-7">
             <span className="text-xs font-mono uppercase tracking-widest text-solar font-semibold block mb-2">
-              Our Heritage &amp; Vision
+              Company Journey
             </span>
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-black leading-tight">
-              18 Years of Dedicated Engineering &amp; Market Growth
+              Engineering Discipline Backed by Executive Experience
             </h2>
             <p className="mt-5 text-zinc-600 text-sm sm:text-base leading-relaxed font-light">
-              For over 18 years, ARKA Technovation Private Limited has been dedicated to helping businesses across diverse industries augment their digital infrastructure, build scalable software, and gain an undeniable competitive edge. We follow strict institutional values that have established us as an undisputed leader in business growth and corporate promotions.
+              Our operating philosophy has remained straightforward: build systems directly, eliminate intermediary layers, and take undivided responsibility for software quality, search visibility, and visual assets. Rather than dividing client projects across disparate freelance contractors or third-party vendors, every system architecture and creative deliverable is developed by our full-time specialists.
             </p>
             <p className="mt-4 text-zinc-600 text-sm sm:text-base leading-relaxed font-light">
-              Led by Founder &amp; Director Mr. Kranti Parashar, an eminent figure in Indian industry circles with over 18 years of craft across technology, enterprise software, and growth marketing, an MBA background and hands-on focus on execution, our in-house specialist pods based in Sector 63, Noida provide actionable services across software engineering, digital marketing, corporate film making, creative UI/UX design, and technical SEO.
+              The firm is directed by Founder Mr. Kranti Parashar, whose professional career spans more than 18 years across enterprise technology consulting, systems engineering, and commercial growth. Today, he works directly with our craft leads to ensure every engagement meets rigorous technical standards and drives measurable commercial value.
             </p>
 
             {/* Corporate pedigree tags */}
             <div className="mt-6 pt-5 border-t border-black/10">
               <p className="text-xs font-mono uppercase tracking-wider text-zinc-500 mb-2.5">
-                Leadership Career Pedigree:
+                Executive Career Background:
               </p>
               <div className="flex flex-wrap gap-2">
                 {[
@@ -254,7 +224,7 @@ export default function WhoWeArePage() {
             <div className="relative rounded-3xl overflow-hidden border border-black/12 bg-zinc-100 aspect-[4/5] shadow-xl group">
               <img
                 src="/portfolite/kranti-parashar.webp"
-                alt="Mr. Kranti Parashar — Founder & Director, ARKA Technovation Private Limited"
+                alt="Mr. Kranti Parashar — Founder & Director"
                 loading="lazy"
                 decoding="async"
                 width="768"
@@ -266,10 +236,10 @@ export default function WhoWeArePage() {
               <div className="absolute bottom-6 inset-x-6 flex items-end justify-between z-10">
                 <div>
                   <p className="text-white font-bold text-lg">Mr. Kranti Parashar</p>
-                  <p className="text-zinc-300 text-xs">Founder &amp; Director · ARKA Technovation Private Limited</p>
+                  <p className="text-zinc-300 text-xs">Founder &amp; Director</p>
                 </div>
                 <div className="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-[11px] font-semibold shrink-0">
-                  18 Years
+                  18+ Years Experience
                 </div>
               </div>
             </div>
@@ -282,13 +252,13 @@ export default function WhoWeArePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-left max-w-3xl mb-14">
             <span className="text-xs font-mono uppercase tracking-widest text-solar font-semibold">
-              Our Working Culture
+              Delivery Standards
             </span>
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-black mt-3">
-              How Ambitious Companies Work With ARKA
+              How Projects Run Inside Our Studio
             </h2>
             <p className="mt-4 text-zinc-600 text-base sm:text-lg leading-relaxed font-light">
-              We operate with the discipline of an engineering firm and the creative standards of a boutique studio.
+              Disciplined milestone engineering cycles with verified staging reviews.
             </p>
           </div>
 
@@ -311,7 +281,7 @@ export default function WhoWeArePage() {
                 </div>
                 <div className="mt-6 pt-4 border-t border-black/8 flex items-center gap-2 text-xs font-mono text-zinc-500">
                   <CheckCircle2 className="w-4 h-4 text-solar" />
-                  <span>Standardized on every ARKA engagement</span>
+                  <span>Standardized across every client engagement</span>
                 </div>
               </div>
             ))}
@@ -327,10 +297,10 @@ export default function WhoWeArePage() {
               Specialized Pods
             </span>
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white mt-3">
-              One Cross-Functional Team Under One Roof
+              Cross-Functional Craft Under One Roof
             </h2>
             <p className="mt-4 text-zinc-400 text-sm sm:text-base leading-relaxed font-light">
-              No disconnected silos or third-party agencies. Our engineers, designers, marketers, and filmmakers sit together in Sector 63, Noida.
+              Engineers, designers, marketers, and filmmakers collaborating side by side in Sector 63, Noida.
             </p>
           </div>
 
@@ -361,106 +331,7 @@ export default function WhoWeArePage() {
         </div>
       </section>
 
-      {/* ── Centralized Content Library & Operational Efficiency ── */}
-      <section className="py-20 sm:py-28 max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="p-8 sm:p-12 rounded-3xl bg-zinc-50 border border-black/10">
-            <div className="w-12 h-12 rounded-2xl bg-white border border-black/10 flex items-center justify-center text-solar mb-6 shadow-sm">
-              <Library className="w-6 h-6" />
-            </div>
-            <span className="text-xs font-mono uppercase tracking-widest text-solar font-semibold block mb-2">
-              Institutional Asset Governance
-            </span>
-            <h3 className="text-2xl sm:text-3xl font-bold text-black tracking-tight">
-              The ARKA Centralized Content Library
-            </h3>
-            <p className="mt-4 text-sm sm:text-base text-zinc-600 leading-relaxed font-light">
-              A Content Library within a software company is an institutional repository that stores, manages, and organizes all digital assets utilized in company operations. This contains marketing collateral, product technical descriptions, training materials, executive presentations, cinema b-roll, high-resolution imagery, and production master files.
-            </p>
-            <p className="mt-3 text-sm sm:text-base text-zinc-600 leading-relaxed font-light">
-              Our Content Library enhances operational efficiency, preserves brand consistency, and streamlines the process of creating and handling client collateral. Team members across departments can instantly access the most up-to-date version of any asset, enabling rapid execution without version conflicts.
-            </p>
-          </div>
 
-          <div>
-            <span className="text-xs font-mono uppercase tracking-widest text-solar font-semibold block mb-2">
-              Community &amp; Corporate Social Responsibility (CSR)
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-black leading-tight">
-              Positive Community Impact in Noida &amp; Delhi NCR
-            </h2>
-            <p className="mt-4 text-zinc-600 text-sm sm:text-base leading-relaxed font-light">
-              Community impact in a technology company refers to the positive influence that the organization exercises on its local, regional, and national ecosystem. At {COMPANY.name}, we believe our responsibility extends far beyond commercial engagements.
-            </p>
-            <div className="mt-6 space-y-3">
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-solar shrink-0 mt-0.5" />
-                <p className="text-xs sm:text-sm text-zinc-700 font-light">
-                  <strong className="font-semibold text-black">STEM Mentorship:</strong> Quarterly coding and digital literacy workshops for students in government schools across Noida and Greater Noida.
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-solar shrink-0 mt-0.5" />
-                <p className="text-xs sm:text-sm text-zinc-700 font-light">
-                  <strong className="font-semibold text-black">University Engineering Support:</strong> Mentoring computer science undergraduates in Uttar Pradesh on production frameworks (Next.js, Python, Docker).
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-solar shrink-0 mt-0.5" />
-                <p className="text-xs sm:text-sm text-zinc-700 font-light">
-                  <strong className="font-semibold text-black">Pro-Bono Small Business Assistance:</strong> Free digital strategy audits and web support for emerging traditional manufacturers and local enterprises in Delhi NCR.
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-solar shrink-0 mt-0.5" />
-                <p className="text-xs sm:text-sm text-zinc-700 font-light">
-                  <strong className="font-semibold text-black">Open-Source Contributions:</strong> Sponsoring and releasing open-source software libraries and web development components for the global developer community.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Educational Guides & Playbooks ── */}
-      <section className="py-16 sm:py-24 max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="text-left max-w-3xl mb-12">
-          <span className="text-xs font-mono uppercase tracking-widest text-solar font-semibold block mb-2">
-            Company Culture &amp; Strategy
-          </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-black leading-tight">
-            Strategic Playbooks on Enterprise Execution
-          </h2>
-          <p className="mt-3 text-base sm:text-lg text-zinc-600 font-light leading-relaxed">
-            Institutional methodologies, reporting ethics, and engineering principles from our executive leadership.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {guides.map((g, idx) => (
-            <div
-              key={idx}
-              className="p-7 rounded-2xl bg-white border border-black/10 flex flex-col justify-between hover:border-black/25 transition-all shadow-sm group"
-            >
-              <div>
-                <span className="text-xs font-mono text-solar uppercase tracking-wider font-medium block mb-3">
-                  {g.cat} · {g.readTime}
-                </span>
-                <h3 className="text-xl font-bold text-black tracking-tight group-hover:text-zinc-800 transition-colors leading-snug">
-                  {g.title}
-                </h3>
-                <p className="mt-3 text-xs sm:text-sm text-zinc-600 font-light leading-relaxed">
-                  {g.desc}
-                </p>
-              </div>
-              <div className="mt-6 pt-4 border-t border-black/8 flex items-center gap-1.5 text-xs font-semibold text-black group-hover:text-solar transition-colors">
-                <span>Read Full Analysis</span>
-                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* ── Corporate Headquarters & Contact Information ── */}
       <section id="leadership" className="scroll-mt-36 py-16 bg-zinc-50 border-t border-black/10">
@@ -469,13 +340,13 @@ export default function WhoWeArePage() {
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-black/10 text-xs font-mono text-zinc-700 mb-4">
                 <Building2 className="w-3.5 h-3.5 text-solar" />
-                <span>Headquarters &amp; Engineering Center</span>
+                <span>Engineering Center</span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-bold text-black tracking-tight">
                 Visit Us in Sector 63, Noida
               </h3>
               <p className="mt-4 text-sm sm:text-base text-zinc-600 leading-relaxed font-light">
-                {COMPANY.legalName} is located at {COMPANY.hq}. Our facility houses dedicated full-stack development bays, design review suites, 4K video editing rooms, and testing stations covering all modern mobile and desktop browsers.
+                Our facility is located at {COMPANY.hq}. The space houses our full-stack development bays, design review workstations, broadcast video editing and color grading suites, and client consultation suites.
               </p>
               <div className="mt-6 space-y-2.5 text-sm text-zinc-700">
                 <p className="flex items-center gap-2.5">
@@ -501,7 +372,7 @@ export default function WhoWeArePage() {
                 Meet With Our Leadership Team
               </h4>
               <p className="mt-3 text-sm text-zinc-600 leading-relaxed font-light">
-                We believe executive leadership should be accessible. When evaluating an enterprise software development build, corporate film campaign, or enterprise SEO engagement, you will meet directly with Mr. Kranti Parashar and our discipline directors to align on goals and deliverables.
+                We believe executive leadership should be accessible. When evaluating an enterprise software development build, corporate film campaign, or search marketing engagement, you will meet directly with Mr. Kranti Parashar and our discipline directors to align on goals and deliverables.
               </p>
               <div className="mt-6 flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center text-solar">
@@ -524,10 +395,10 @@ export default function WhoWeArePage() {
             Frequently Asked Questions
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-black leading-tight">
-            Answers on Culture, Governance &amp; Location
+            Direct Answers on Operations, Leadership &amp; Facility
           </h2>
           <p className="mt-3 text-base sm:text-lg text-zinc-600 font-light leading-relaxed">
-            Direct answers regarding our ownership, headquarters, in-house team, and CSR initiatives.
+            Clear responses regarding our history, ownership, in-house team structure, and facility.
           </p>
         </div>
 
@@ -577,21 +448,32 @@ export default function WhoWeArePage() {
       <section className="py-20 sm:py-28 max-w-6xl mx-auto px-4 sm:px-6 text-center">
         <div className="p-10 sm:p-16 rounded-3xl bg-zinc-900 text-white border border-black shadow-xl relative overflow-hidden">
           <div className="max-w-2xl mx-auto relative z-10">
+            <div className="mb-6 flex justify-center">
+              <img
+                src="/images/logo/arka-logo-white.webp"
+                alt="ARKA Technovation"
+                width={200}
+                height={110}
+                className="h-10 sm:h-12 w-auto object-contain opacity-95"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
             <span className="text-xs font-mono uppercase tracking-widest text-solar font-semibold">
-              Work With Us
+              Project Planning
             </span>
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white mt-3">
-              Let&apos;s Build Something Unmistakable
+              Plan Your Next Build With Our Noida Team
             </h2>
             <p className="mt-4 text-zinc-400 text-sm sm:text-base leading-relaxed font-light">
-              Talk directly with Mr. Kranti Parashar and our senior pod directors in Sector 63, Noida. Receive an honest audit and fixed-milestone scope.
+              Speak directly with Mr. Kranti Parashar and our lead engineers in Sector 63, Noida. We provide an honest technical assessment, realistic delivery schedules, and clear milestone costs.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 to="/contact"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-solar text-white hover:bg-orange-600 font-semibold text-sm transition-all shadow-md"
               >
-                <span>Initiate a Conversation</span>
+                <span>Schedule a Project Consultation</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <a

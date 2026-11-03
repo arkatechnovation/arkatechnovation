@@ -703,7 +703,7 @@ export default function PortfoliteRecentWorksCarousel() {
         {/* Clean, subtle header aligned with operational standards & engineering protocols */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 sm:gap-8">
           <div className="max-w-2xl">
-            <p className="text-xs sm:text-sm font-mono font-semibold uppercase tracking-widest text-[#E8742C] mb-2 sm:mb-3">
+            <p className="text-xs sm:text-sm font-mono font-semibold uppercase tracking-widest text-[#B85014] mb-2 sm:mb-3">
               Delivery Standards
             </p>
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-black leading-[1.15]">

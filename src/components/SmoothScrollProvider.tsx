@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import dynamic from 'next/dynamic';
-import Lenis from 'lenis';
+import type Lenis from 'lenis';
 
 const FloatingSocialWidget = dynamic(() => import('./FloatingSocialWidget'), {
   ssr: false,
@@ -14,7 +14,7 @@ export default function SmoothScrollProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const lenis = useRef<Lenis | null>(null);
+  const lenis = useRef<any>(null);
   const pathname = usePathname();
   const [showWidget, setShowWidget] = useState(false);
 
@@ -35,23 +35,30 @@ export default function SmoothScrollProvider({
   }, []);
 
   useEffect(() => {
-    let l: Lenis | null = null;
+    let l: any = null;
     let timerId: number | ReturnType<typeof setTimeout> | null = null;
+    let isCancelled = false;
 
-    const initLenis = () => {
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      l = new Lenis({
-        duration: prefersReducedMotion ? 0 : 1.05,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        smoothWheel: !prefersReducedMotion,
-        wheelMultiplier: 0.95,
-        touchMultiplier: 1.1,
-        syncTouch: false,
-        autoRaf: true,
-      });
-      lenis.current = l;
-      if (typeof window !== 'undefined') {
-        (window as unknown as { __lenis?: Lenis | null }).__lenis = l;
+    const initLenis = async () => {
+      try {
+        const { default: Lenis } = await import('lenis');
+        if (isCancelled) return;
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        l = new Lenis({
+          duration: prefersReducedMotion ? 0 : 1.05,
+          easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          smoothWheel: !prefersReducedMotion,
+          wheelMultiplier: 0.95,
+          touchMultiplier: 1.1,
+          syncTouch: false,
+          autoRaf: true,
+        });
+        lenis.current = l;
+        if (typeof window !== 'undefined') {
+          (window as unknown as { __lenis?: any }).__lenis = l;
+        }
+      } catch (err) {
+        console.warn('Could not initialize Lenis smooth scroll:', err);
       }
     };
 
@@ -62,6 +69,7 @@ export default function SmoothScrollProvider({
     }
 
     return () => {
+      isCancelled = true;
       if (typeof window !== 'undefined' && 'cancelIdleCallback' in window && typeof timerId === 'number') {
         (window as unknown as { cancelIdleCallback: (id: number) => void }).cancelIdleCallback(timerId);
       } else if (timerId) {
@@ -93,7 +101,7 @@ export default function SmoothScrollProvider({
           }
           return true;
         }
-      } catch {}
+      } catch { }
       return false;
     };
 
@@ -128,7 +136,7 @@ export default function SmoothScrollProvider({
             window.scrollTo({ top, behavior: 'smooth' });
           }
         }
-      } catch {}
+      } catch { }
     };
     window.addEventListener('hashchange', handleHash);
     return () => window.removeEventListener('hashchange', handleHash);

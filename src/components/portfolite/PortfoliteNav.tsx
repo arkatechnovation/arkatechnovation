@@ -51,6 +51,16 @@ import { NAV, COMPANY } from '../../lib/data';
 
 const getNavIcon = (label: string) => {
   switch (label) {
+    case 'Software Development':
+    case '01 Software Development': return Code2;
+    case 'Digital Marketing':
+    case '02 Digital Marketing': return TrendingUp;
+    case 'SEO, GEO & AEO Services':
+    case '03 SEO, GEO & AEO Services': return Search;
+    case 'Film Production & Media':
+    case '04 Film Production & Media': return Film;
+    case 'Corporate World News':
+    case '05 Corporate World News': return Newspaper;
     case 'Organic Search & SEO': return Search;
     case 'Enterprise SEO Services': return Layers;
     case 'Local SEO & Google Guarantee': return MapPin;
@@ -148,7 +158,7 @@ export default function PortfoliteNav() {
 
     const targetWidth =
       label === 'Services'
-        ? 710
+        ? 620
         : label === 'About Us'
         ? 580
         : 560;
@@ -297,31 +307,17 @@ export default function PortfoliteNav() {
 
           {/* ── Main Edge-to-Edge Navigation Bar ── */}
           <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 h-[70px] sm:h-[78px] flex items-center justify-between gap-2 lg:gap-4 xl:gap-6">
-            {/* Official ARKA Technovation Logo: Zero-lag preloaded crossfade between white and black logos */}
+            {/* Official ARKA Technovation Logo */}
             <Link to="/" className="relative flex items-center group cursor-pointer shrink-0 py-1" aria-label="ARKA Technovation Private Limited Home">
               <div className="relative h-10 sm:h-12 lg:h-[46px] w-[150px] sm:w-[175px] lg:w-[190px] xl:w-[215px]">
                 <img
-                  src="/images/logo/arka-logo-white.webp"
-                  alt="ARKA Technovation Private Limited"
-                  loading="eager"
-                  fetchPriority="high"
-                  decoding="sync"
-                  width={215}
-                  height={46}
-                  className={`absolute inset-0 h-full w-auto max-w-full object-contain object-left transition-opacity duration-300 group-hover:scale-105 ${
-                    isOverHero ? 'opacity-100 drop-shadow-[0_0_14px_rgba(255,255,255,0.4)]' : 'opacity-0 pointer-events-none'
-                  }`}
-                />
-                <img
                   src="/images/logo/arka-logo-black.webp"
                   alt="ARKA Technovation Private Limited"
-                  loading="lazy"
+                  loading="eager"
                   decoding="async"
                   width={215}
-                  height={46}
-                  className={`absolute inset-0 h-full w-auto max-w-full object-contain object-left transition-opacity duration-300 group-hover:scale-105 ${
-                    isOverHero ? 'opacity-0 pointer-events-none' : 'opacity-100 drop-shadow-[0_1px_3px_rgba(0,0,0,0.12)]'
-                  }`}
+                  height={118}
+                  className="h-full w-auto max-w-full object-contain object-left transition-transform duration-300 group-hover:scale-105 drop-shadow-[0_1px_3px_rgba(0,0,0,0.12)]"
                 />
               </div>
             </Link>
@@ -588,7 +584,7 @@ export default function PortfoliteNav() {
                     loading="lazy"
                     decoding="async"
                     width={240}
-                    height={48}
+                    height={132}
                     className="h-11 sm:h-13 w-auto max-w-[240px] object-contain object-left"
                   />
                 </Link>

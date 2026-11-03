@@ -26,18 +26,18 @@ export default function PortfoliteAbout() {
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           {/* Left Column (Clean Framer Editorial Layout) */}
           <div className="lg:col-span-7 flex flex-col items-start">
-            <p className="text-xs font-mono uppercase tracking-widest text-[#E8742C] font-semibold mb-2">
+            <p className="text-xs font-mono uppercase tracking-widest text-[#B85014] font-semibold mb-2">
               Leadership &amp; Heritage
             </p>
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-black leading-[1.12]">
               Meet Founder
             </h2>
             <p className="text-xs text-zinc-500 font-mono mt-1 mb-2">
-              ARKA Technovation Private Limited
+              Mr. Kranti Parashar · Founder &amp; Managing Director
             </p>
 
             <p className="mt-4 sm:mt-6 text-zinc-600 text-sm sm:text-base font-light leading-relaxed max-w-xl">
-              Led by Founder &amp; Director <strong className="font-semibold text-black">Mr. Kranti Parashar</strong>, an eminent figure in Indian industry circles with over 18 years of craft across technology, enterprise software, and growth marketing. Operating as ARKA Technovation Private Limited, with an MBA background, focus on execution, and dedicated in-house specialist pods based in Sector 63, Noida, he drives integrated digital transformation and revenue acceleration across 500+ enterprise and manufacturing deployments.
+              Led by Founder and Director Mr. Kranti Parashar, ARKA Technovation Private Limited (formerly known as Jaikvik Technology India Pvt. Ltd.) brings together full-stack engineering, technical search systems, and commercial cinema under direct leadership. Backed by an MBA and more than 18 years of industry craft, he actively directs our technical architecture, guiding over 500 completed client projects across our 10-year operating history.
             </p>
 
             {/* Mobile Founder Photo (shown between narrative and credentials on mobile) */}
@@ -60,7 +60,7 @@ export default function PortfoliteAbout() {
                     <p className="text-zinc-300 text-xs">Founder &amp; Director · ARKA Technovation Private Limited</p>
                   </div>
                   <div className="px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-[11px] font-semibold flex-shrink-0">
-                    18 Years
+                    18+ Years
                   </div>
                 </div>
               </div>
@@ -104,7 +104,7 @@ export default function PortfoliteAbout() {
                   <p className="text-zinc-300 text-xs">Founder &amp; Director · ARKA Technovation Private Limited</p>
                 </div>
                 <div className="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-[11px] font-semibold">
-                  18 Years
+                  18+ Years
                 </div>
               </div>
             </div>

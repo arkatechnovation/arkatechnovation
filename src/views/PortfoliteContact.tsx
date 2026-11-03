@@ -19,12 +19,12 @@ export default function PortfoliteContact() {
   });
 
   const availableServices = [
-    'SEO & Lead Generation',
-    'Full-Stack Web & Next.js',
+    'SEO, GEO & AEO Services',
+    'Full-Stack Web & Next.js 15',
     'Custom CRM & Cloud ERP',
     'Corporate Film Production',
-    'E-Commerce & Headless',
-    'Paid Ads & Performance',
+    'Corporate World News & PR',
+    'Performance Paid Ads & Media',
     'Technical Support & Retainer',
   ];
 
@@ -67,7 +67,7 @@ export default function PortfoliteContact() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 text-zinc-600 text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto"
           >
-            Whether you need an enterprise software audit, search engine dominance, corporate factory film, or immediate project support — our direct leadership is one call away.
+            Whether you need an enterprise software audit, search engine optimization, a corporate film, or ongoing technical retainers, our leadership team is ready to talk.
           </motion.p>
         </div>
       </section>

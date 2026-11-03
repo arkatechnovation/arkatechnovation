@@ -21,53 +21,53 @@ interface ServiceItem {
 
 const SERVICES_LIST: ServiceItem[] = [
   {
-    id: 'web-design',
-    name: 'Creative Websites Design',
-    category: 'Digital Experience',
+    id: 'software-dev',
+    name: 'Software Development',
+    category: 'Software Engineering',
     slug: '/services/development',
-    highlight: 'Next.js 15, headless architecture & interactive 3D web',
+    highlight: 'Custom CRM, ERP platforms, mobile apps & modular microservices',
   },
   {
     id: 'digital-marketing',
     name: 'Digital Marketing',
     category: 'Full-Funnel Growth',
     slug: '/services/digital-marketing',
-    highlight: 'Revenue attribution, performance media & omnichannel scaling',
-  },
-  {
-    id: 'software-dev',
-    name: 'Software Development',
-    category: 'Custom Engineering',
-    slug: '/services/crm-software',
-    highlight: 'Custom enterprise CRM, ERP portals & high-throughput APIs',
-  },
-  {
-    id: 'film-making',
-    name: 'Corporate Film Making',
-    category: 'Creative Production',
-    slug: '/services/film-making',
-    highlight: 'Cinematic brand documentaries, 4K product films & aerial cinema',
+    highlight: 'Revenue attribution, Google Ads, Meta Ads & ROAS acceleration',
   },
   {
     id: 'seo-services',
-    name: 'SEO Optimization Services',
-    category: 'Organic Authority',
-    slug: '/services/seo-lead-generation',
-    highlight: 'Schema.org entity graphs, Core Web Vitals & Top-3 rank dominance',
+    name: 'SEO, GEO & AEO Services',
+    category: 'Search & AI Engines',
+    slug: '/seo-lead-generation',
+    highlight: 'Technical crawl architecture, Schema.org entity graphs & AI answers',
   },
   {
-    id: 'content-marketing',
-    name: 'Content Marketing',
-    category: 'Editorial Systems',
-    slug: '/services/content-marketing',
-    highlight: 'Executive thought leadership, technical whitepapers & media assets',
+    id: 'film-making',
+    name: 'Film Production & Media',
+    category: 'Production Studio',
+    slug: '/services/film-making',
+    highlight: 'Broadcast 4K corporate films, studio podcasts & AI video creation',
   },
   {
-    id: 'google-ads',
-    name: 'Google Ads Services',
-    category: 'Paid Search & Media',
-    slug: '/services/digital-advertising',
-    highlight: 'High-intent search capture, smart bidding & programmatic display',
+    id: 'corporate-news',
+    name: 'Corporate World News',
+    category: 'Editorial & Intelligence',
+    slug: '/corporate-world-news',
+    highlight: 'Executive broadcast interviews, wire press releases & market research',
+  },
+  {
+    id: 'crm-erp',
+    name: 'Enterprise CRM & ERP Systems',
+    category: 'Enterprise Infrastructure',
+    slug: '/services/development#erp-module',
+    highlight: 'Centralized supply chain logistics, inventory & zero per-seat fees',
+  },
+  {
+    id: 'geo-ai',
+    name: 'Generative Engine Optimization',
+    category: 'AI Answer Engines',
+    slug: '/seo-lead-generation#geo-services',
+    highlight: 'Entity graph modeling for ChatGPT, Perplexity & Gemini citations',
   },
 ];
 
@@ -128,7 +128,8 @@ export default function DigitalGrowthShowcaseSection() {
                 width={896}
                 height={1200}
                 className="w-auto h-full max-h-[420px] sm:max-h-[520px] lg:max-h-none object-contain select-none pointer-events-none drop-shadow-[0_20px_45px_rgba(0,0,0,0.06)]"
-                priority
+                loading="lazy"
+                decoding="async"
               />
             </motion.div>
           </div>
@@ -139,7 +140,7 @@ export default function DigitalGrowthShowcaseSection() {
           <div className="lg:col-span-7 flex flex-col items-start">
             
             {/* Section Heading */}
-            <p className="text-xs sm:text-sm font-mono font-semibold uppercase tracking-widest text-[#E8742C] mb-2 sm:mb-3">
+            <p className="text-xs sm:text-sm font-mono font-semibold uppercase tracking-widest text-[#B85014] mb-2 sm:mb-3">
               Overview
             </p>
             <h2
@@ -155,7 +156,7 @@ export default function DigitalGrowthShowcaseSection() {
               className="mt-4 sm:mt-6 text-zinc-600 text-sm sm:text-base font-light leading-relaxed max-w-2xl"
               style={{ textWrap: 'pretty' }}
             >
-              <strong className="font-semibold text-black">ARKA Technovation</strong> helps businesses modernize software infrastructure, expand search visibility, and grow qualified customer demand through dependable engineering and digital marketing.
+              Operating from our engineering hub in Sector 63, Noida, <strong className="font-semibold text-black">ARKA Technovation</strong> deploys 100% in-house specialist craft pods. We modernize enterprise cloud software, build search engine and AI authority, and scale revenue through verified performance media and corporate cinema.
             </p>
 
             {/* 7 Capabilities Interactive List (Clean, no pills, matching reference) */}

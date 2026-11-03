@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { SERVICES } from '@/lib/data';
+import { BLOG_POSTS } from '@/lib/blogs';
 
 const BASE_URL = 'https://arkatechnovation.com';
 
@@ -15,19 +16,61 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
+      url: `${BASE_URL}/services`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${BASE_URL}/services/development`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${BASE_URL}/services/digital-marketing`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
       url: `${BASE_URL}/seo-lead-generation`,
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.95,
     },
     {
-      url: `${BASE_URL}/services`,
+      url: `${BASE_URL}/services/film-making`,
       lastModified: now,
       changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${BASE_URL}/corporate-world-news`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${BASE_URL}/about-us`,
+      lastModified: now,
+      changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/ux-interactives`,
+      url: `${BASE_URL}/who-we-are`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/gallery`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/blogs`,
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.9,
@@ -36,12 +79,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${BASE_URL}/our-technology`,
       lastModified: now,
       changeFrequency: 'weekly',
-      priority: 0.9,
+      priority: 0.85,
     },
     {
-      url: `${BASE_URL}/who-we-are`,
+      url: `${BASE_URL}/ux-interactives`,
       lastModified: now,
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly',
       priority: 0.85,
     },
     {
@@ -60,7 +103,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${BASE_URL}/contact`,
       lastModified: now,
       changeFrequency: 'monthly',
-      priority: 0.85,
+      priority: 0.9,
     },
   ];
 
@@ -72,6 +115,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  return [...staticPages, ...servicePages];
+  // Dynamic Blog Article Pages
+  const blogPages: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
+    url: `${BASE_URL}/blogs/${post.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...servicePages, ...blogPages];
 }
 

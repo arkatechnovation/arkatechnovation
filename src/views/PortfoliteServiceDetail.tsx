@@ -29,19 +29,60 @@ import PortfoliteNav from '../components/portfolite/PortfoliteNav';
 import PortfoliteFooter from '../components/portfolite/PortfoliteFooter';
 import { SERVICES, COMPANY } from '../lib/data';
 
-// Specialized tech stack tags per service discipline
+// Specialized core capabilities and tags per service discipline
 const SERVICE_TECH_STACK: Record<string, string[]> = {
-  'seo-lead-generation': ['Google Search Console', 'Ahrefs', 'SEMrush', 'Core Web Vitals', 'Schema.org', 'Screaming Frog', 'Dynamic Number Insertion'],
-  'digital-marketing': ['Meta Ads Manager', 'Google Ads', 'WhatsApp Business API', 'Klaviyo', 'Looker Studio', 'GA4 Analytics', 'TikTok Ads'],
+  'development': [
+    'CRM',
+    'ERP',
+    'Mobile App',
+    'E-Commerce Website',
+    'Corporate Website',
+    'Custom Software',
+  ],
+  'digital-marketing': [
+    'Digital Marketing',
+    'Social Media Marketing',
+    'Content Marketing',
+    'Performance Marketing',
+    'Branding',
+    'Google Ads',
+    'Meta Ads',
+    'PR Management',
+  ],
+  'seo-lead-generation': [
+    'SEO',
+    'GEO Services',
+    'AEO Services',
+    'On-Page Services',
+    'Off-Page Services',
+    'Local SEO (GMB)',
+    'Google Marketplace Listing',
+  ],
+  'film-making': [
+    'Film Production',
+    'Digital Ads',
+    'TV Ads',
+    'Corporate Film Production',
+    'Podcasts',
+    'Personal Interviews',
+    'AI Video Creation',
+    'Product Photoshoot',
+    'Model Shoot',
+  ],
+  'corporate-world-news': [
+    'Corporate World News',
+    'Interview & Press Releases',
+    'Corporate News',
+    'Market Update',
+    'Industries Analysis',
+    'Market Research',
+  ],
   'digital-advertising': ['Google Ads PMax', 'LinkedIn Campaign Manager', 'Addressable Geofencing', 'The Trade Desk', 'DV360', 'ClickCease'],
-  'development': ['Next.js 15', 'React 19', 'TypeScript', 'Node.js', 'Tailwind CSS', 'PostgreSQL', 'Docker', 'AWS'],
   'crm-software': ['Custom SaaS Architecture', 'PostgreSQL & Redis', 'REST & GraphQL APIs', 'Twilio & RingCentral', 'Tally Integration', 'Role-Based Access'],
   'content-marketing': ['Original Editorial', 'SEO Copywriting', 'Motion Design', '2D/3D Kinetic Graphics', 'Content Calendering', 'Whitepaper Research'],
-  'film-making': ['8K & 4K Cinema Rigs', 'DaVinci Resolve Studio', 'DJI Aerial Cinema', 'Studio Lighting', 'Sennheiser Audio', 'Broadcast Color Grading'],
   'e-commerce': ['Shopify Plus', 'Custom Liquid & Headless', 'Magento 2', 'WooCommerce', 'Stripe & Razorpay', 'Inventory Sync Middleware'],
   'analytics-attribution': ['GA4 BigQuery Export', 'Looker Studio Enterprise', 'Multi-Touch Attribution', 'Dynamic Call Tracking', 'Data Lakehouse', 'SQL BI'],
   'ux-interactive': ['Figma Design Systems', 'Framer Motion', 'WCAG 2.2 AA Audit', 'FullStory Heatmaps', 'Multivariate CRO', 'Design Tokens'],
-  'corporate-world-news': ['4K Executive Broadcast Suite', 'Global Wire Syndication', 'Bloomberg & Refinitiv Feeds', 'Primary Source Verification', 'DaVinci Audio & Color', 'Real-Time Media Monitoring'],
 };
 
 // Strategic value propositions per service
@@ -196,7 +237,7 @@ export default function PortfoliteServiceDetail({ initialSlug }: { initialSlug?:
           {/* Tech Ecosystem Strip */}
           <div className="mt-8 pt-6 border-t border-black/10 text-left">
             <span className="text-xs font-mono uppercase tracking-wider text-zinc-500 block mb-3 font-medium">
-              Technologies &amp; Frameworks Deployed:
+              Core Capabilities &amp; Key Focus Areas:
             </span>
             <div className="flex flex-wrap gap-2">
               {techStack.map((tech) => (
@@ -212,10 +253,11 @@ export default function PortfoliteServiceDetail({ initialSlug }: { initialSlug?:
         </div>
       </section>
 
-      {/* ── Scope of Work: Sub-services Bento Grid ── */}
+      {/* ── Scope of Engagement: Rich Split Card Structure (matching SEO Lead Generation) ── */}
       <section className="py-16 sm:py-24 max-w-6xl mx-auto px-4 sm:px-6">
-        <div id="scope" className="scroll-mt-36 text-left max-w-3xl mb-12">
+        <div id="scope" className="scroll-mt-36 text-left max-w-3xl mb-12 sm:mb-16">
           <span id="erp" className="block scroll-mt-36" />
+          <span id="crm" className="block scroll-mt-36" />
           <span id="lms" className="block scroll-mt-36" />
           <span id="mobile" className="block scroll-mt-36" />
           <span className="text-xs font-mono uppercase tracking-widest text-solar font-semibold block mb-2">
@@ -229,41 +271,116 @@ export default function PortfoliteServiceDetail({ initialSlug }: { initialSlug?:
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="flex flex-col gap-6 sm:gap-10 lg:gap-14">
           {service.subs.map((sub, i) => {
+            const isEven = i % 2 === 0;
             const subLower = sub.name.toLowerCase();
             const cardId = subLower.includes('erp')
               ? 'erp-module'
+              : subLower.includes('crm')
+              ? 'crm-module'
               : subLower.includes('lead management') || subLower.includes('lms') || subLower.includes('sales pipeline')
               ? 'lms-module'
               : subLower.includes('mobile') || subLower.includes('responsive web design')
               ? 'mobile-module'
+              : subLower.includes('ecommerce') || subLower.includes('e-commerce')
+              ? 'ecommerce-module'
               : subLower.replace(/[^a-z0-9]+/g, '-');
 
+            const moduleImg = sub.img || service.img;
+            const highlights = sub.highlights && sub.highlights.length > 0
+              ? sub.highlights
+              : [
+                  'Dedicated in-house craft pod in Sector 63, Noida',
+                  'Enterprise QA benchmarking and automated unit testing',
+                  'Role-based permissions and high-throughput architecture',
+                  'Guaranteed SLAs, complete IP rights & full source code handover',
+                ];
+
             return (
-              <div
+              <article
                 key={sub.name}
                 id={cardId}
-                className="p-7 sm:p-8 rounded-2xl bg-white border border-black/10 flex flex-col justify-between hover:border-black/25 transition-all group shadow-sm hover:shadow-md"
+                className={`scroll-mt-36 group rounded-2xl sm:rounded-[28px] lg:rounded-[32px] bg-white border border-black/[0.08] hover:border-black/25 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] overflow-hidden transition-[transform,box-shadow,border-color] duration-300 flex flex-col ${
+                  isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                } relative`}
               >
-                <div>
-                  <div className="flex items-center justify-between text-xs font-mono text-zinc-500 mb-4">
-                    <span className="text-solar font-semibold">MODULE {String(i + 1).padStart(2, '0')}</span>
-                    <span className="w-2 h-2 rounded-full bg-zinc-300 group-hover:bg-solar transition-colors" />
+                {/* ── Visual Panel: Responsive image height on mobile, full editorial height on desktop ── */}
+                <div className="w-full h-48 sm:h-64 lg:h-auto lg:min-h-[440px] lg:w-[42%] xl:w-[40%] shrink-0 relative overflow-hidden bg-zinc-100">
+                  <img
+                    src={moduleImg}
+                    alt={`${sub.name} — ARKA Technovation`}
+                    loading="lazy"
+                    decoding="async"
+                    width={800}
+                    height={600}
+                    className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                  <div className="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-black/80 backdrop-blur-md text-solar font-mono text-xs font-bold border border-white/10 tracking-wider">
+                    MODULE {String(i + 1).padStart(2, '0')}
                   </div>
-                  <h3 className="text-xl font-bold text-black tracking-tight group-hover:text-zinc-900 transition-colors">
-                    {sub.name}
-                  </h3>
-                  <p className="mt-3 text-xs sm:text-sm text-zinc-600 font-light leading-relaxed">
-                    {sub.desc}
-                  </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-black/8 flex items-center justify-between text-xs font-mono text-zinc-500">
-                  <span>In-House Craft Pod</span>
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                {/* ── Context & Deliverables Panel: Compact mobile spacing, expansive desktop typography ── */}
+                <div className="w-full lg:w-[58%] xl:w-[60%] p-5 sm:p-8 lg:p-11 flex flex-col justify-between bg-zinc-50/50 group-hover:bg-zinc-50 transition-colors duration-300">
+                  <div>
+                    {/* Module pill badge */}
+                    <div className="flex items-center gap-2 mb-2 font-mono text-xs text-solar font-semibold uppercase tracking-wider">
+                      <span>MODULE {String(i + 1).padStart(2, '0')}</span>
+                      <span>•</span>
+                      <span>In-House Craft Pod</span>
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-black tracking-tight leading-snug font-display text-balance">
+                      {sub.name}
+                    </h3>
+
+                    {/* Punchy Subtitle */}
+                    {sub.subtitle && (
+                      <p className="text-[11px] sm:text-xs lg:text-sm font-mono text-solar font-semibold mt-1.5 leading-relaxed">
+                        {sub.subtitle}
+                      </p>
+                    )}
+
+                    {/* Editorial Context Description */}
+                    <p className="mt-3 sm:mt-4 text-xs sm:text-sm lg:text-[15px] text-zinc-600 leading-relaxed font-normal text-pretty">
+                      {sub.desc}
+                    </p>
+
+                    {/* Deliverables & Technical Capabilities Grid */}
+                    <div className="mt-4 pt-4 sm:mt-6 sm:pt-6 border-t border-black/8">
+                      <p className="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-zinc-800 font-semibold mb-2.5 sm:mb-3 flex items-center gap-1.5 sm:gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-solar" />
+                        Deliverables &amp; Technical Capabilities:
+                      </p>
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
+                        {highlights.map((pt, hIdx) => (
+                          <li key={hIdx} className="flex items-start gap-2 sm:gap-2.5 text-xs sm:text-sm text-zinc-700 font-medium leading-snug">
+                            <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-solar shrink-0 mt-0.5" />
+                            <span>{pt}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* Card Footer Action Bar */}
+                  <div className="mt-5 pt-4 sm:mt-8 sm:pt-5 border-t border-black/8 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div className="text-xs font-mono text-zinc-500 flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                      <span>100% In-House · Noida Craft Pod</span>
+                    </div>
+                    <Link
+                      to="/contact"
+                      className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-black text-white hover:bg-solar text-xs sm:text-sm font-semibold transition-[background-color,transform] duration-200 active:scale-[0.98] shadow-sm group/btn w-full sm:w-auto"
+                    >
+                      <span>Request Custom Strategy</span>
+                      <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform duration-200" />
+                    </Link>
+                  </div>
                 </div>
-              </div>
+              </article>
             );
           })}
         </div>
@@ -277,7 +394,7 @@ export default function PortfoliteServiceDetail({ initialSlug }: { initialSlug?:
               Strategic Commercial Advantage
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">
-              Why Enterprise Leaders Choose ARKA
+              Why Enterprise Leaders Partner With Us
             </h2>
             <p className="mt-4 text-zinc-400 text-base sm:text-lg leading-relaxed font-light">
               We eliminate traditional agency layers, guaranteeing complete technical rigor, radical reporting transparency, and direct specialist collaboration.

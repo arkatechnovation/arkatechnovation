@@ -29,17 +29,18 @@ import {
   TrendingUp,
   Phone,
   Code2,
+  Newspaper,
 } from 'lucide-react';
 import PortfoliteNav from '../components/portfolite/PortfoliteNav';
 import PortfoliteFooter from '../components/portfolite/PortfoliteFooter';
 import { COMPANY, PROCESS } from '../lib/data';
 
-type CategoryFilter = 'All' | 'Digital Marketing' | 'Software Development' | 'Search Engine Optimization' | 'Film Making';
+type CategoryFilter = 'All' | 'Digital Marketing' | 'Software Development' | 'Search Engine Optimization' | 'Film Making' | 'Corporate World News';
 
 interface DisciplineItem {
   id: string;
   aliasIds?: string[];
-  category: 'Digital Marketing' | 'Software Development' | 'Search Engine Optimization' | 'Film Making';
+  category: 'Digital Marketing' | 'Software Development' | 'Search Engine Optimization' | 'Film Making' | 'Corporate World News';
   tag: string;
   title: string;
   subtitle: string;
@@ -47,6 +48,8 @@ interface DisciplineItem {
   highlights: string[];
   metric: string;
   metricLabel: string;
+  img?: string;
+  link?: string;
 }
 
 export default function PortfoliteServicesPage() {
@@ -59,6 +62,7 @@ export default function PortfoliteServicesPage() {
     'Software Development',
     'Search Engine Optimization',
     'Film Making',
+    'Corporate World News',
   ];
 
   const disciplines: DisciplineItem[] = [
@@ -195,7 +199,7 @@ export default function PortfoliteServicesPage() {
       tag: 'Full-Stack Web',
       title: 'Website Development',
       subtitle: 'Systematic technical engineering using Next.js, React, Node.js, PHP, and Microsoft .NET',
-      desc: 'Advancement can be characterized as the efficient utilization of logical and specialized information to meet explicit tasks. We build high-throughput corporate websites, customer portals, and web applications engineered for speed, security, and scalability. Our engineering team possesses deep mastery of open-source stacks (PHP 8, MySQL, Node.js, Next.js 15) and enterprise Microsoft technologies (ASP.NET, C#, SQL Server).',
+      desc: 'We build high-throughput corporate websites, customer portals, and enterprise web applications engineered for speed, security, and scalability. Our engineering pods develop on modern open-source frameworks (Next.js 15, TypeScript, Node.js, Python, PostgreSQL) and enterprise platforms with clean code standards and full IP handover.',
       highlights: [
         'Modern frontend engineering with Next.js 15, React, TypeScript, and Tailwind CSS',
         'Robust backend architectures across Node.js, Python, PHP, and Microsoft ASP.NET',
@@ -229,7 +233,7 @@ export default function PortfoliteServicesPage() {
       tag: 'iOS & Android',
       title: 'Mobile Application',
       subtitle: 'Native and hybrid mobile apps leveraging cloud backends and device hardware',
-      desc: 'Mobile application development is the process of creating specific software applications that run on a mobile device (smartphones and tablets). A well-structured mobile application allows your enterprise to leverage native device features—push notifications, offline storage, biometrics, camera scanning, and geolocation. We engineer secure, intuitive mobile bundles for iOS and Android balanced for speed and cost.',
+      desc: 'Mobile applications allow your enterprise to leverage native device capabilities: push notifications, offline data synchronization, biometric authentication, and camera scanning. We engineer performant, intuitive mobile applications for iOS and Android built on React Native, Swift, and Kotlin.',
       highlights: [
         'Cross-platform React Native and native Swift / Kotlin mobile app engineering',
         'Real-time cloud database synchronization and offline-first operational capability',
@@ -250,7 +254,7 @@ export default function PortfoliteServicesPage() {
       tag: 'Google Search Dominance',
       title: 'Google SEO Services',
       subtitle: 'Algorithmic alignment with Google search standards to capture high-intent commercial traffic',
-      desc: 'Google SEO services from ARKA Technovation Private Limited are absolutely imperative for any business looking to sharpen its online presence and drive organic traffic. Google handles more than 90 percent of all global searches. Optimizing for Google requires deep understanding of how its crawling spiders interpret page content, structure, image assets, and semantic relationships. Instead of languishing on page three or four, our proven Google SEO frameworks place your enterprise firmly on page one.',
+      desc: 'Over 90% of global searches occur on Google. Our Google SEO frameworks align your website with search engine crawling algorithms through technical architecture revamps, semantic entity schema, high-intent keyword clustering, and white-hat editorial authority—placing your enterprise firmly on Page One.',
       highlights: [
         'Comprehensive keyword intent mapping focusing on high-converting transactional queries',
         'Entity-based semantic optimization and structured schema markup for Google rich snippets',
@@ -267,7 +271,7 @@ export default function PortfoliteServicesPage() {
       tag: 'Paid Search (SEM)',
       title: 'Search Engine Marketing',
       subtitle: 'Keyword bidding, visual Product Listing Ads (PLAs), and high-intent paid conversion',
-      desc: 'Search Engine Marketing is considered an efficient means of elevating the visibility of a brand considerably, placing your commercial offerings at the top of search result pages precisely when active buyers are searching for solutions. We bid strategically on high-intent search queries across Google and Bing. Our campaigns encompass text ads, call-only formats, and visual Product Listing Ads (PLAs) that showcase product imagery, live prices, and customer reviews.',
+      desc: 'Search engine marketing places your commercial offerings at the top of search result pages at the exact moment buyers search for solutions. We bid strategically on high-converting queries across Google and Bing, pairing text ads, call-only formats, and Google Shopping Product Listing Ads (PLAs) with fast-loading landing pages.',
       highlights: [
         'Strategic keyword bidding and query management with real-time automated bid adjustments',
         'Google Shopping / PLA management with rich product reviews, shipping annotations, and badges',
@@ -339,7 +343,7 @@ export default function PortfoliteServicesPage() {
       tag: 'Brand Cinema',
       title: 'Corporate Presentation Videos',
       subtitle: 'Cinematic corporate storytelling, leadership vision, and company presentation films',
-      desc: 'A corporate video is a video that corporations use to build awareness for their brand, company, or products. They are one of the most effective ways for businesses to communicate and convey their brand message to teams, partners, colleagues, and customers. A corporate film tells your company\'s story, communicates your values, mission, and vision in an engaging format, and acts as your company\'s most persuasive visual brand ambassador.',
+      desc: 'A corporate presentation film communicates your enterprise scale, mission, and operational capabilities to investors, partners, and high-value buyers. Operating our own cinema packages and soundstage in Sector 63, Noida, our full-time crew writes, shoots, and edits broadcast-grade corporate documentaries and brand films.',
       highlights: [
         'Full in-house production crew: Scriptwriter, director, cinematographer, sound engineer, and editor',
         'Shot on high-end 4K/8K cinema camera systems with professional drone aerial cinematography',
@@ -356,7 +360,7 @@ export default function PortfoliteServicesPage() {
       tag: 'TVCs & Video Ads',
       title: 'TV Commercial Ads',
       subtitle: 'Broadcast-quality TV commercials paired with multi-touch attribution and data analytics',
-      desc: 'TV commercial ads have come a long way since their inception, evolving from simple product pitches to sophisticated multi-channel campaigns. We write, direct, and produce broadcast-standard television commercials and digital ad films. Furthermore, our data-driven TV ad analysis breaks down siloed marketing data to evaluate how on-air broadcasts drive concurrent spikes in Google search traffic, website visits, and direct lead generation.',
+      desc: 'We write, direct, and produce broadcast-standard television commercials and digital ad films. Furthermore, our data analytics connect broadcast airtimes directly to concurrent spikes in Google search volume, website traffic, and qualified lead inquiries.',
       highlights: [
         'Concept development, storyboard creation, cast auditioning, and location permits handled in-house',
         'Cinema-grade lighting, multi-cam shooting, and sound design meeting national broadcast specs',
@@ -371,9 +375,9 @@ export default function PortfoliteServicesPage() {
       aliasIds: ['product-demo-videos', 'product-or-service-demo-videos'],
       category: 'Film Making',
       tag: 'Conversion Video',
-      title: "Product Or Service Demo Video's",
+      title: 'Product & Service Demo Videos',
       subtitle: 'Showcasing product USPs on camera to drive the 73% of viewers who purchase after watching',
-      desc: 'A product demo video is the best way to showcase products or services. It is similar to app demo videos or software walkthroughs, but applies across physical and digital goods. Studies show that 73 percent of visitors who watch a product video make a purchase, and video content contributes to a 49 percent increase in year-over-year revenue. Our product demo films showcase physical build quality and software UI in action.',
+      desc: 'Demonstrating physical machinery or software interfaces in action dramatically accelerates buying decisions. Over 73% of prospects who watch a product video move forward with a purchase inquiry. We produce clear, benefit-driven product demonstration videos that showcase engineering craftsmanship and software workflows with studio lighting and high-resolution camera setups.',
       highlights: [
         'Studio lighting and macro lens capture of physical machinery, industrial components, and consumer products',
         'Slick screen-capture animation and UI walkthroughs for SaaS platforms and software workflows',
@@ -388,9 +392,9 @@ export default function PortfoliteServicesPage() {
       aliasIds: ['product-explanatory-videos', 'explainer-videos'],
       category: 'Film Making',
       tag: 'Explainer Animations',
-      title: "Product Explanatory Video's",
+      title: 'Product Explainer Videos',
       subtitle: 'Short, engaging marketing videos boosting landing page conversion rates by up to 144%',
-      desc: 'Explainer videos are short online marketing videos used to explain your company\'s product or service. Placed prominently on your home page, landing pages, or product portals, explainer videos have been documented to increase conversion rates by up to 144 percent. We blend live-action cinematography, 2D/3D motion graphics, and professional voiceover talent to distill complex enterprise workflows into captivating 60-to-90-second narratives.',
+      desc: 'Explainer videos distill complex enterprise software and industrial workflows into concise 60-to-90-second narratives that lift landing page conversion rates by up to 144%. We blend live-action cinematography with 2D/3D motion graphics and professional studio voiceover to explain your commercial value proposition with speed and clarity.',
       highlights: [
         'Psychological script architecture designed to hook attention in the first five seconds',
         'Hybrid animation combining live footage with 2D motion graphics and 3D kinetic typography',
@@ -405,9 +409,9 @@ export default function PortfoliteServicesPage() {
       aliasIds: ['customer-testimonial-videos', 'customer-testimonials'],
       category: 'Film Making',
       tag: 'Authentic Proof',
-      title: "Customer Testimonial Video's",
+      title: 'Customer Testimonial Videos',
       subtitle: 'Supercharging word-of-mouth social proof to boost website conversions by 34% or more',
-      desc: 'Short, written testimonials work, but customer testimonial videos are transformative. They are great for sales pages and your home page, and have been proven to increase conversions by 34 percent or more. We capture authentic, unscripted client advocates discussing their tangible business outcomes, giving prospective buyers the ultimate proof and confidence required to sign high-value contracts.',
+      desc: 'Video testimonials provide authentic, third-party social proof that builds executive buyer confidence and lifts conversion rates by 34% or more. We film on-location interviews with your satisfied enterprise clients, capturing real-world business results and documented ROI that give prospective buyers the confidence to commit.',
       highlights: [
         'On-location filming of real client advocates, capturing unscripted, credible enterprise success stories',
         'Multi-camera coverage of corporate conferences, exhibitions, panel discussions, and keynotes',
@@ -416,6 +420,124 @@ export default function PortfoliteServicesPage() {
       ],
       metric: '+34%',
       metricLabel: 'Conversion Lift on Reviews',
+    },
+
+    // ─────────────────────────────────────────────────────────────
+    // 5. CORPORATE WORLD NEWS
+    // ─────────────────────────────────────────────────────────────
+    {
+      id: 'corporate-world-news-editorial',
+      aliasIds: ['corporate-world-news', 'cwn-news'],
+      category: 'Corporate World News',
+      tag: 'Corporate Journalism',
+      title: 'Corporate World News & Verified Reporting',
+      subtitle: 'Authoritative corporate journalism, investigative industry features & executive masthead publications',
+      desc: 'Corporate authority in modern markets requires verified empirical data, executive conviction, and direct journalistic relationships. Produced by our dedicated newsroom pod in Sector 63, Noida, we research industry verticals, publish verified press updates, and broadcast executive perspectives to institutional analysts, investors, and enterprise decision-makers.',
+      highlights: [
+        'In-depth corporate journalism covering enterprise technology, AI milestones, and leadership transitions',
+        'Editorial governance compliant with international press standards and factual verification',
+        'Executive thought leadership features and founder op-eds published across leading business portals',
+        'Permanent digital publication dossiers and archival citations indexed across search engines',
+      ],
+      metric: '500+',
+      metricLabel: 'Executive Interviews Broadcast',
+      img: '/images/disciplines/discipline-05-corporate-world-news.jpg',
+      link: '/corporate-world-news',
+    },
+    {
+      id: 'interview-press-releases',
+      aliasIds: ['press-releases', 'executive-interviews'],
+      category: 'Corporate World News',
+      tag: 'Wire Syndication',
+      title: 'Interview & Press Releases',
+      subtitle: 'Multi-camera 4K broadcast studio recordings with AP-compliant Tier-1 media wire syndication',
+      desc: 'Broadcast-grade multi-camera 4K studio recordings, executive podcasts, and authoritative corporate press releases that command journalistic attention with verified Tier-1 financial media syndication across Bloomberg, Reuters, PTI, and business dailies.',
+      highlights: [
+        'Multi-camera 4K cinematic recordings at our Noida soundstage with prime lenses and teleprompters',
+        'Direct pitch syndication to Tier-1 financial dailies, tech publications, and trade magazines',
+        'Full post-production: audio mastering, motion lower-thirds, and b-roll packaging',
+        'Official media room setup, embargo scheduling, and press distribution telemetry',
+      ],
+      metric: '100%',
+      metricLabel: 'Verified Wire Pickup',
+      img: '/images/blogs/blog-08-executive-broadcast-news.webp',
+      link: '/corporate-world-news',
+    },
+    {
+      id: 'corporate-news-ma',
+      aliasIds: ['corporate-news', 'mergers-acquisitions'],
+      category: 'Corporate World News',
+      tag: 'Enterprise Updates',
+      title: 'Corporate News & M&A Announcements',
+      subtitle: 'Real-time coverage of enterprise milestones, mergers & acquisitions, and leadership transitions',
+      desc: 'Breaking enterprise news coverage, merger & acquisition announcements, strategic joint ventures, leadership transitions, and capital expenditure reporting delivered with journalistic precision.',
+      highlights: [
+        'Breaking corporate news distribution and formal announcement structuring',
+        'M&A transaction breakdowns and post-merger integration announcements',
+        'Leadership appointment profiles and corporate governance notifications',
+        'Direct liaison with news desks to ensure accurate media syndication',
+      ],
+      metric: '24/7',
+      metricLabel: 'Newsroom Response SLA',
+      img: '/images/services/ux/website-design.webp',
+      link: '/corporate-world-news',
+    },
+    {
+      id: 'market-update-briefs',
+      aliasIds: ['market-update', 'economic-briefs'],
+      category: 'Corporate World News',
+      tag: 'Business Intelligence',
+      title: 'Market Update & Macroeconomic Tracking',
+      subtitle: 'Daily curated executive briefing notes, regulatory policy shifts & sector outlooks',
+      desc: 'Continuous tracking of regulatory shifts, ministry compliance updates, economic indicators, commodity trends, and technology deployments across emerging enterprise markets, delivering strategic decision-makers with actionable operational intelligence.',
+      highlights: [
+        'Daily curated executive briefing notes and regulatory digests',
+        'Earnings report breakdowns and capital expenditure tracking',
+        'Macroeconomic indicator alerts for commercial decision-makers',
+        'Sector-specific quarterly trend retrospectives and economic outlooks',
+      ],
+      metric: 'Daily',
+      metricLabel: 'Executive Briefings Delivered',
+      img: '/images/products/grid-08-kestrix-thermal.webp',
+      link: '/corporate-world-news',
+    },
+    {
+      id: 'industries-analysis-reports',
+      aliasIds: ['industries-analysis', 'vertical-research'],
+      category: 'Corporate World News',
+      tag: 'Sector Deep-Dives',
+      title: 'Industries Analysis & Valuation Benchmarks',
+      subtitle: 'Deep-dive vertical market research dossiers, technology adoption curves & supply chain telemetry',
+      desc: 'Deep-dive vertical research dossiers built on primary surveys, customs data, supply chain metrics, and economic modeling, providing actionable competitive intelligence for enterprise leadership and boardrooms.',
+      highlights: [
+        'Vertical TAM/SAM sizing and market share migration analysis',
+        'Competitor feature matrices, pricing teardowns, and tech stack audits',
+        'Supply chain vulnerability reports and vendor dependency benchmarks',
+        'Custom research whitepapers published under your brand or co-authored',
+      ],
+      metric: 'Top 1%',
+      metricLabel: 'Empirical Data Rigor',
+      img: '/images/industries/industries-manufacturing.webp',
+      link: '/corporate-world-news',
+    },
+    {
+      id: 'market-research-tam',
+      aliasIds: ['market-research', 'tam-studies'],
+      category: 'Corporate World News',
+      tag: 'Empirical Research',
+      title: 'Market Research & Feasibility Studies',
+      subtitle: 'Rigorous empirical market research, customer sentiment benchmarking & TAM feasibility studies',
+      desc: 'Rigorous empirical market research, customer sentiment benchmarking, Total Addressable Market (TAM) feasibility studies, and competitor positioning matrices.',
+      highlights: [
+        'Primary market research with surveyed customer and enterprise decision-maker cohorts',
+        'Total Addressable Market (TAM), SAM, and SOM financial feasibility studies',
+        'Brand perception audits and customer satisfaction (CSAT/NPS) benchmarks',
+        'Executive board presentation slide decks backed by verified empirical datasets',
+      ],
+      metric: '100%',
+      metricLabel: 'Primary Sourced Data',
+      img: '/images/products/grid-05-plant-seo.webp',
+      link: '/corporate-world-news',
     },
   ];
 
@@ -449,8 +571,8 @@ export default function PortfoliteServicesPage() {
 
   const faqs = [
     {
-      q: 'What makes ARKA Technovation Private Limited the leading digital marketing and engineering company in Noida?',
-      a: 'Unlike traditional agencies that outsource technical tasks or rely on cookie-cutter templates, ARKA Technovation Private Limited houses software developers, technical SEO engineers, cinematographers, and digital marketing strategists under one roof at our corporate office in Sector 63, Noida. This unified model ensures unbroken accountability, deep technical rigor, and seamless cross-disciplinary execution.',
+      q: 'Why do enterprise clients choose your in-house engineering and media model?',
+      a: 'Unlike traditional agencies that outsource technical execution to third parties or rely on cookie-cutter templates, we house software engineers, technical SEO architects, cinematographers, and performance marketing strategists under one roof at our corporate headquarters in Sector 63, Noida. This unified model ensures unbroken accountability, direct communication with craft leads, complete source code ownership, and guaranteed deliverables.',
     },
     {
       q: 'How do you structure custom CRM and ERP development projects?',
@@ -524,6 +646,7 @@ export default function PortfoliteServicesPage() {
               { label: 'Software Development', icon: Code2 },
               { label: 'Search Engine Optimization', icon: Search },
               { label: 'Film Making', icon: Film },
+              { label: 'Corporate World News', icon: Newspaper },
             ].map(({ label, icon: Icon }) => {
               const count = label === 'All' ? disciplines.length : disciplines.filter((d) => d.category === label).length;
               const active = selectedCat === label;
@@ -620,7 +743,7 @@ export default function PortfoliteServicesPage() {
                   {/* ── Visual Panel: Responsive image height on mobile, full editorial height on desktop ── */}
                   <div className="w-full h-48 sm:h-64 lg:h-auto lg:min-h-[440px] lg:w-[42%] xl:w-[40%] shrink-0 relative overflow-hidden bg-zinc-100">
                     <img
-                      src={`/images/services/catalog/${item.id}.webp?v=2`}
+                      src={item.img || `/images/services/catalog/${item.id}.webp?v=2`}
                       alt={`${item.title} — ARKA Technovation`}
                       loading="lazy"
                       decoding="async"
@@ -673,14 +796,25 @@ export default function PortfoliteServicesPage() {
                         </span>
                       ) : <div />}
 
-                      <Link
-                        to="/contact"
-                        className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-black text-white text-xs font-bold hover:bg-zinc-800 transition-colors shadow-sm active:scale-[0.97] w-full sm:w-auto"
-                        style={{ color: '#FFFFFF', backgroundColor: '#000000' }}
-                      >
-                        <span>Request Custom Strategy</span>
-                        <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                      </Link>
+                      <div className="flex flex-wrap items-center gap-2">
+                        {item.link && (
+                          <Link
+                            to={item.link}
+                            className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full border border-black/15 text-xs font-semibold hover:border-black transition-colors"
+                          >
+                            <span>Explore Discipline</span>
+                            <ArrowUpRight className="w-3.5 h-3.5" />
+                          </Link>
+                        )}
+                        <Link
+                          to="/contact"
+                          className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-black text-white text-xs font-bold hover:bg-zinc-800 transition-colors shadow-sm active:scale-[0.97] w-full sm:w-auto"
+                          style={{ color: '#FFFFFF', backgroundColor: '#000000' }}
+                        >
+                          <span>Request Custom Strategy</span>
+                          <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </motion.article>

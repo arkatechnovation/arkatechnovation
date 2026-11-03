@@ -29,36 +29,67 @@ import PortfoliteFooter from '@/components/portfolite/PortfoliteFooter';
 const PILLARS = [
   {
     num: '01',
-    icon: Mic,
-    title: 'Executive Interview Broadcasts & CEO Spotlight',
-    tagline: 'High-Impact Thought Leadership at the C-Suite Level',
-    desc: 'Broadcast-grade multi-camera 4K studio recordings, executive podcasts, and in-depth strategic interviews with founders, managing directors, and industrial leaders. We dig into real operational challenges, technology adoption, and capital allocation.',
+    icon: Newspaper,
+    title: 'Corporate World News',
+    tagline: 'Authoritative Corporate Journalism & Industry Reporting',
+    desc: 'Authoritative corporate journalism and editorial publications that position enterprise organizations at the forefront of their sector. We research market verticals, track economic trends, and report on key technological breakthroughs.',
+    img: '/images/disciplines/discipline-05-corporate-world-news.jpg',
     capabilities: [
-      'Multi-camera 4K cinematic recordings at our Noida soundstage',
-      'Full post-production: audio mastering, motion lower-thirds, and b-roll',
-      'Syndication across YouTube, Spotify, Apple Podcasts, and LinkedIn',
-      'Executive transcript preparation and pull-quote asset packaging',
+      'In-depth corporate journalism covering enterprise technology, AI, and industry milestones',
+      'Editorial governance compliant with international press standards and factual verification',
+      'Executive thought leadership features and founder op-eds published across business portals',
+      'Archived digital publication dossiers accessible to institutional analysts and investors',
     ],
   },
   {
     num: '02',
-    icon: Newspaper,
-    title: 'Strategic Press Releases & Wire Syndication',
-    tagline: 'Direct Distribution to Verified Global Media Outlets',
-    desc: 'Crafting authoritative corporate press releases that command journalistic attention. We bypass automated spam distribution by maintaining direct editorial relationships with leading financial dailies, tech publications, and trade magazines.',
+    icon: Mic,
+    title: 'Interview & Press Releases',
+    tagline: 'C-Suite Broadcast Interviews & Strategic Wire Syndication',
+    desc: 'Broadcast-grade multi-camera 4K studio recordings, executive podcasts, and authoritative corporate press releases that command journalistic attention with verified Tier-1 financial media syndication.',
+    img: '/images/blogs/blog-08-executive-broadcast-news.webp',
     capabilities: [
-      'Journalistic drafting compliant with AP and global editorial standards',
-      'Direct pitch syndication to Tier-1 business and technology journalists',
-      'Embargo scheduling, distribution telemetry, and pickup verification',
-      'Official media room setup and investor relations press dossiers',
+      'Multi-camera 4K cinematic recordings at our Noida soundstage with prime lenses and teleprompters',
+      'Direct pitch syndication to Tier-1 financial dailies, tech publications, and trade magazines',
+      'Full post-production: audio mastering, motion lower-thirds, and b-roll packaging',
+      'Official media room setup, embargo scheduling, and press distribution telemetry',
     ],
   },
   {
     num: '03',
-    icon: BarChart3,
-    title: 'Industries Analysis & Empirical Research',
-    tagline: 'Proprietary Market Sizing & Competitive Benchmarks',
-    desc: 'Deep-dive vertical research dossiers built on primary surveys, customs data, supply chain metrics, and economic modeling. We provide actionable competitive intelligence for enterprise leadership and institutional investors.',
+    icon: Building2,
+    title: 'Corporate News',
+    tagline: 'Breaking Enterprise Updates, M&A & Corporate Announcements',
+    desc: 'Real-time coverage of enterprise milestones, mergers and acquisitions (M&A), strategic joint ventures, leadership transitions, and capital expenditure reporting delivered with journalistic precision.',
+    img: '/images/services/ux/website-design.webp',
+    capabilities: [
+      'Breaking corporate news distribution and formal announcement structuring',
+      'M&A transaction breakdowns and post-merger integration announcements',
+      'Leadership appointment profiles and corporate governance notifications',
+      'Direct liaison with news desks to ensure accurate media syndication',
+    ],
+  },
+  {
+    num: '04',
+    icon: TrendingUp,
+    title: 'Market Update',
+    tagline: 'Daily Business Intelligence & Macroeconomic Tracking',
+    desc: 'Continuous tracking of regulatory shifts, ministry compliance updates, economic indicators, commodity trends, and technology deployments across emerging enterprise markets.',
+    img: '/images/products/grid-08-kestrix-thermal.webp',
+    capabilities: [
+      'Daily curated executive briefing notes and regulatory digests',
+      'Earnings report breakdowns and capital expenditure tracking',
+      'Macroeconomic indicator alerts for commercial decision-makers',
+      'Sector-specific quarterly trend retrospectives and economic outlooks',
+    ],
+  },
+  {
+    num: '05',
+    icon: LineChart,
+    title: 'Industries Analysis',
+    tagline: 'Empirical Sector Deep-Dives & Valuation Metrics',
+    desc: 'Deep-dive vertical research dossiers built on primary surveys, customs data, supply chain metrics, and economic modeling, providing actionable competitive intelligence for enterprise leadership.',
+    img: '/images/industries/industries-manufacturing.webp',
     capabilities: [
       'Vertical TAM/SAM sizing and market share migration analysis',
       'Competitor feature matrices, pricing teardowns, and tech stack audits',
@@ -67,29 +98,17 @@ const PILLARS = [
     ],
   },
   {
-    num: '04',
-    icon: TrendingUp,
-    title: 'Market Updates & Corporate News Reporting',
-    tagline: 'Daily Business Intelligence Across Core Verticals',
-    desc: 'Continuous tracking of regulatory shifts, SEBI and ministry compliance updates, mergers & acquisitions, and breakthrough technology deployments across Indian manufacturing and enterprise software.',
+    num: '06',
+    icon: BarChart3,
+    title: 'Market Research',
+    tagline: 'Proprietary Market Sizing & Competitive Benchmarks',
+    desc: 'Rigorous empirical market research, customer sentiment benchmarking, Total Addressable Market (TAM) feasibility studies, and competitor positioning matrices.',
+    img: '/images/products/grid-05-plant-seo.webp',
     capabilities: [
-      'Daily curated executive briefing notes and regulatory digests',
-      'Earnings report breakdowns and capital expenditure tracking',
-      'Macroeconomic indicator alerts for commercial decision-makers',
-      'Sector-specific quarterly trend retrospectives and outlooks',
-    ],
-  },
-  {
-    num: '05',
-    icon: ShieldCheck,
-    title: 'Crisis Communications & Reputation Management',
-    tagline: '24/7 Narrative Defense and Clarification Protocols',
-    desc: 'When critical events threaten corporate standing, our rapid-response editorial team steps in to draft verified official statements, coordinate factual media releases, and neutralize misinformation across digital channels.',
-    capabilities: [
-      'Immediate crisis messaging frameworks and spokesperson briefing books',
-      'Direct liaison with news editors to issue factual corrections',
-      'Search engine reputation repair and negative sentiment counter-balancing',
-      'Internal stakeholder memo drafting to maintain company-wide alignment',
+      'Primary market research with surveyed customer and enterprise decision-maker cohorts',
+      'Total Addressable Market (TAM), SAM, and SOM financial feasibility studies',
+      'Brand perception audits and customer satisfaction (CSAT/NPS) benchmarks',
+      'Executive board presentation slide decks backed by verified empirical datasets',
     ],
   },
 ];
@@ -190,7 +209,7 @@ export default function CorporateWorldNewsPage() {
               Corporate World News &amp; Market Intelligence
             </h1>
             <p className="text-base sm:text-xl text-zinc-600 font-light leading-relaxed max-w-3xl">
-              Authoritative corporate journalism, executive interview broadcasts, strategic press releases, breaking business updates, and empirical market research produced by ARKA Technovation&apos;s dedicated editorial pods.
+              Authoritative corporate journalism, executive interview broadcasts, strategic press releases, breaking business updates, and empirical market research produced by our dedicated editorial pods in Sector 63, Noida.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4 items-center">
@@ -240,52 +259,92 @@ export default function CorporateWorldNewsPage() {
             Five Core Disciplines
           </p>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-black leading-tight">
-            How ARKA Technovation Positions Industry Leaders
+            How We Position Industry Leaders
           </h2>
           <p className="mt-3 text-sm sm:text-base text-zinc-600 font-light leading-relaxed">
             In an era of generic AI summaries and noisy social feeds, corporate authority is built on verified empirical data, executive conviction, and direct journalistic relationships.
           </p>
         </div>
 
-        <div className="space-y-12">
-          {PILLARS.map((p) => {
-            const Icon = p.icon;
+        <div className="flex flex-col gap-6 sm:gap-10 lg:gap-14">
+          {PILLARS.map((p, idx) => {
+            const isEven = idx % 2 === 0;
             return (
-              <div
+              <article
                 key={p.num}
-                className="grid lg:grid-cols-12 gap-8 items-start p-8 sm:p-12 rounded-3xl bg-[#FAF9F5] border border-black/8 hover:border-black/25 transition-all"
+                id={`pillar-${p.num}`}
+                className={`scroll-mt-36 group rounded-2xl sm:rounded-[28px] lg:rounded-[32px] bg-white border border-black/[0.08] hover:border-black/25 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] overflow-hidden transition-[transform,box-shadow,border-color] duration-300 flex flex-col ${
+                  isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                } relative`}
               >
-                <div className="lg:col-span-5">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="text-xs font-mono font-bold text-[#E8742C]">{p.num}</span>
-                    <span className="w-6 h-px bg-black/20" />
-                    <span className="text-xs font-mono text-zinc-500 uppercase tracking-wider">{p.tagline}</span>
+                {/* ── Visual Panel: Responsive image height on mobile, full editorial height on desktop ── */}
+                <div className="w-full h-48 sm:h-64 lg:h-auto lg:min-h-[440px] lg:w-[42%] xl:w-[40%] shrink-0 relative overflow-hidden bg-zinc-100">
+                  <img
+                    src={p.img}
+                    alt={`${p.title} — ARKA Technovation`}
+                    loading="lazy"
+                    decoding="async"
+                    width={800}
+                    height={600}
+                    className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                  <div className="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-black/80 backdrop-blur-md text-[#E8742C] font-mono text-xs font-bold border border-white/10 tracking-wider">
+                    MODULE {p.num}
+                  </div>
+                </div>
+
+                {/* ── Context & Deliverables Panel: Compact mobile spacing, expansive desktop typography ── */}
+                <div className="w-full lg:w-[58%] xl:w-[60%] p-5 sm:p-8 lg:p-11 flex flex-col justify-between bg-zinc-50/50 group-hover:bg-zinc-50 transition-colors duration-300">
+                  <div>
+                    <div className="flex items-center gap-2 mb-2 font-mono text-xs text-[#E8742C] font-semibold uppercase tracking-wider">
+                      <span>MODULE {p.num}</span>
+                      <span>•</span>
+                      <span>In-House Editorial Pod</span>
+                    </div>
+
+                    <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-black tracking-tight leading-snug font-display text-balance">
+                      {p.title}
+                    </h3>
+
+                    <p className="text-[11px] sm:text-xs lg:text-sm font-mono text-[#E8742C] font-semibold mt-1.5 leading-relaxed">
+                      {p.tagline}
+                    </p>
+
+                    <p className="mt-3 sm:mt-4 text-xs sm:text-sm lg:text-[15px] text-zinc-600 leading-relaxed font-normal text-pretty">
+                      {p.desc}
+                    </p>
+
+                    <div className="mt-4 pt-4 sm:mt-6 sm:pt-6 border-t border-black/8">
+                      <p className="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-zinc-800 font-semibold mb-2.5 sm:mb-3 flex items-center gap-1.5 sm:gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#E8742C]" />
+                        Deliverables &amp; Technical Capabilities:
+                      </p>
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
+                        {p.capabilities.map((c, i) => (
+                          <li key={i} className="flex items-start gap-2 sm:gap-2.5 text-xs sm:text-sm text-zinc-700 font-medium leading-snug">
+                            <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#E8742C] shrink-0 mt-0.5" />
+                            <span>{c}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-black leading-snug mb-4">
-                    {p.title}
-                  </h3>
-
-                  <p className="text-sm sm:text-base text-zinc-600 font-light leading-relaxed">
-                    {p.desc}
-                  </p>
+                  <div className="mt-5 pt-4 sm:mt-8 sm:pt-5 border-t border-black/8 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div className="text-xs font-mono text-zinc-500 flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                      <span>100% In-House · Noida Editorial Pod</span>
+                    </div>
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-black text-white hover:bg-[#E8742C] text-xs sm:text-sm font-semibold transition-[background-color,transform] duration-200 active:scale-[0.98] shadow-sm group/btn w-full sm:w-auto"
+                    >
+                      <span>Schedule Executive Interview</span>
+                      <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform duration-200" />
+                    </Link>
+                  </div>
                 </div>
-
-                <div className="lg:col-span-7 bg-white p-6 sm:p-8 rounded-2xl border border-black/6">
-                  <h4 className="text-xs font-mono uppercase tracking-wider text-zinc-500 mb-4 font-semibold flex items-center gap-2">
-                    <Icon size={14} className="text-[#E8742C]" />
-                    <span>Operational Deliverables &amp; Execution</span>
-                  </h4>
-                  <ul className="space-y-3 text-xs sm:text-sm text-zinc-700">
-                    {p.capabilities.map((c, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <CheckCircle2 size={16} className="text-[#E8742C] shrink-0 mt-0.5" />
-                        <span className="leading-relaxed">{c}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+              </article>
             );
           })}
         </div>

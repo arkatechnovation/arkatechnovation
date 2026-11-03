@@ -61,6 +61,19 @@ export class ArtcraftGalaxyCanvas {
   }
 
   init() {
+    try {
+      if (typeof window === 'undefined') return;
+      const testCanvas = document.createElement('canvas');
+      const gl = testCanvas.getContext('webgl') || testCanvas.getContext('experimental-webgl');
+      if (!gl) {
+        this.isSupported = false;
+        return;
+      }
+    } catch (e) {
+      this.isSupported = false;
+      return;
+    }
+
     this.scene = new THREE.Scene();
 
     const rect = this.container.getBoundingClientRect();

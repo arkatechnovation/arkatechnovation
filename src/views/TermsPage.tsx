@@ -24,26 +24,26 @@ export default function TermsPage() {
       num: '01',
       title: 'Master Services Agreement & Acceptance',
       content: [
-        'These Terms of Service (&quot;Terms&quot;) constitute a legally binding agreement between your organization (&quot;Client&quot;) and ARKA Technovation Private Limited (&quot;Company&quot;, &quot;we&quot;, &quot;us&quot;, formerly known as Jaikvik Technology India Pvt. Ltd.), having its principal corporate office at Rayos Business Park, Office No- 202, C-4, Sector 63, Noida, Uttar Pradesh 201301, India.',
-        'By engaging ARKA Technovation for custom software engineering, Next.js web application development, ERP/CRM deployments, search engine optimization (SEO), digital marketing campaigns, or corporate film production, you agree to these Terms alongside any project-specific Scope of Work (SOW).',
+        'These Terms of Service ("Terms") constitute a legally binding agreement between your organization ("Client") and ARKA Technovation Private Limited ("Company", "we", "us", formerly known as Jaikvik Technology India Pvt. Ltd.), having its principal corporate office at Rayos Business Park, Office No- 202, C-4, Sector 63, Noida, Uttar Pradesh 201301, India.',
+        'By engaging our team for custom software engineering, web application development, ERP/CRM deployments, search engine optimization, digital marketing campaigns, or corporate film production, you agree to these Terms alongside any project-specific Scope of Work (SOW).',
       ],
     },
     {
       num: '02',
-      title: '100% Intellectual Property (IP) Transfer & Zero Lock-In',
+      title: '100% Intellectual Property (IP) Transfer & Zero Vendor Lock-In',
       content: [
-        'Complete Source Code Ownership: Upon receipt of final payment for the designated milestone or project deliverables, 100% of custom source code, database architectures, digital assets, Figma design systems, and video raw footage are fully transferred to the Client.',
-        'Zero Proprietary Lock-In: ARKA Technovation does not hold client source code hostage or enforce proprietary recurring hosting locks. Codebases are deployed directly to the Client\'s dedicated cloud accounts (AWS, Google Cloud, Vercel, Supabase, Azure).',
-        'Company Pre-Existing IP: General algorithmic utilities, open-source libraries, and foundational development boilerplates developed prior to the engagement remain licensed to the Client on a perpetual, irrevocable, royalty-free, worldwide basis.',
+        'Complete Source Code Ownership: Upon receipt of final payment for the designated milestone or project deliverables, 100% of custom source code, database architectures, digital assets, Figma design systems, and raw media footage are fully transferred to the Client with complete copyright assignment.',
+        'Zero Proprietary Lock-In: We do not hold client source code hostage or enforce proprietary recurring hosting locks. Codebases are deployed directly to the Client\'s dedicated cloud accounts (AWS, Google Cloud, Vercel, Supabase, Azure).',
+        'Pre-Existing Toolkits: Foundational algorithmic utilities, open-source libraries, and development scaffolding created prior to the engagement remain licensed to the Client on a perpetual, irrevocable, royalty-free, worldwide basis.',
       ],
     },
     {
       num: '03',
-      title: 'Agile Delivery Sprints & Acceptance Testing',
+      title: 'Milestone Delivery Sprints & Acceptance Testing',
       content: [
-        'Two-Week Sprint Iterations: Development projects are executed in disciplined 14-day sprints with demonstrable staging deployments provided at every milestone review.',
-        'Review & Acceptance Window: The Client has ten (10) business days from delivery of a milestone to review, test, and provide written feedback or acceptance. If no defects are reported within this window, the deliverable is deemed accepted.',
-        'Change Orders: Any material changes to project scope outside the signed Scope of Work will be scoped transparently as an addendum sprint before implementation.',
+        'Iterative Milestone Delivery: Engineering and creative projects are executed in disciplined iterative stages with functional staging deployments provided at every milestone review.',
+        'Review & Acceptance Window: The Client has ten (10) business days from delivery of a milestone on staging to review, test, and provide written feedback or acceptance. If no reproducible defects deviating from the SOW are logged within this window, the deliverable is deemed accepted.',
+        'Change Orders: Any material changes to project scope outside the agreed Scope of Work will be scoped transparently as an addendum before implementation.',
       ],
     },
     {
@@ -57,18 +57,34 @@ export default function TermsPage() {
     },
     {
       num: '05',
-      title: 'Post-Launch Warranty & Technical Support',
+      title: 'Post-Launch Warranty & Support SLA',
       content: [
-        '30-Day Bug-Fix Warranty: All bespoke software deliverables include a comprehensive 30-day post-launch warranty during which any reproducible software bugs or defects deviating from the SOW are remedied at zero additional charge.',
-        'Extended Support & SLA: Ongoing server maintenance, infrastructure scaling, Core Web Vitals optimization, and uptime commitments are governed by our enterprise Support SLA.',
+        '30-Day Defect Warranty: All bespoke software deliverables include a comprehensive 30-day post-launch warranty during which any reproducible software bugs or defects deviating from the SOW are remedied at zero additional charge.',
+        'Enterprise SLA Retainers: Ongoing server maintenance, infrastructure scaling, Core Web Vitals optimization, and uptime commitments are governed by our enterprise Support SLA.',
       ],
     },
     {
       num: '06',
+      title: 'Mutual Confidentiality & Non-Disclosure',
+      content: [
+        'Non-Disclosure: Both parties agree to protect and treat all proprietary business data, strategic plans, source code, and commercial specifications as strictly confidential.',
+        'Permitted Use: Confidential information shall be used exclusively for the performance of obligations under the applicable SOW and will not be disclosed to any third party without prior written consent.',
+      ],
+    },
+    {
+      num: '07',
+      title: 'Limitation of Liability',
+      content: [
+        'Aggregate Cap: To the maximum extent permitted by applicable law, each party\'s total aggregate liability arising out of or related to these Terms or any SOW shall be limited to the total fees paid by the Client under the applicable SOW during the preceding twelve (12) months.',
+        'Exclusions: In no event shall either party be liable for any indirect, incidental, consequential, special, or punitive damages, including loss of profits, data, or business opportunities.',
+      ],
+    },
+    {
+      num: '08',
       title: 'Governing Law & Dispute Resolution',
       content: [
         'Jurisdiction: These Terms and any dispute or claim arising out of or in connection with them shall be governed by and construed in accordance with the laws of India.',
-        'Exclusive Courts: The courts located in Gautam Buddha Nagar (Noida), Uttar Pradesh, India shall have exclusive jurisdiction to settle any disputes arising under or related to these Terms.',
+        'Exclusive Courts: The competent courts located in Gautam Buddha Nagar (Noida), Uttar Pradesh, India shall have exclusive jurisdiction to settle any disputes arising under or related to these Terms.',
       ],
     },
   ];
@@ -154,15 +170,15 @@ export default function TermsPage() {
                 <p className="text-zinc-500 font-mono text-xs">Official Contact:</p>
                 <p className="text-zinc-700 flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-solar shrink-0" />
-                  <span>Rayos Business Park, Office No- 202, C-4, Sector 63, Noida, UP 201301</span>
+                  <span>{COMPANY.address}</span>
                 </p>
                 <p className="text-zinc-700 flex items-center gap-2">
                   <Mail className="w-4 h-4 text-solar shrink-0" />
-                  <span>legal@arkatechnovation.com / info@arkatechnovation.com</span>
+                  <span>legal@arkatechnovation.com / {COMPANY.email}</span>
                 </p>
                 <p className="text-zinc-700 flex items-center gap-2">
                   <Phone className="w-4 h-4 text-solar shrink-0" />
-                  <span>+91 97114 87316</span>
+                  <span>{COMPANY.phone} (Mon–Sat, 9:30 AM – 6:30 PM IST)</span>
                 </p>
               </div>
             </div>

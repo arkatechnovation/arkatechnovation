@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from '@/components/Link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, ArrowRight, Quote, Sparkles, Filter, CheckCircle2 } from 'lucide-react';
 import PortfoliteNav from '../components/portfolite/PortfoliteNav';
@@ -57,7 +58,7 @@ export default function PortfoliteWork() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 text-zinc-600 text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto"
           >
-            Real production systems and marketing campaigns executed over twelve years of craft across manufacturing exporters, high-volume D2C stores, healthcare institutions, and enterprise software.
+            Real production systems and growth campaigns engineered across 10 years of company operations and 18+ years of craft leadership, spanning manufacturing exporters, high-volume e-commerce storefronts, healthcare institutions, and enterprise software.
           </motion.p>
 
           {/* Sector Filter Tabs */}
@@ -222,19 +223,19 @@ export default function PortfoliteWork() {
             Let's evaluate your challenge and determine how our full-stack engineering and marketing disciplines can deliver similar measurable returns.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="site-button px-7 py-3 rounded-full !bg-black !text-white text-sm font-semibold hover:!bg-zinc-800 transition-colors flex items-center gap-2 shadow-[0_4px_20px_rgba(0,0,0,0.15)]"
             >
               <span>Start a Project</span>
               <ArrowRight className="w-4 h-4" />
-            </a>
-            <a
-              href="/services"
+            </Link>
+            <Link
+              to="/services"
               className="px-7 py-3 rounded-full !bg-zinc-100 !border !border-black/15 !text-black text-sm font-medium hover:!bg-zinc-200 transition-colors"
             >
               Explore All Disciplines
-            </a>
+            </Link>
           </div>
         </div>
       </section>

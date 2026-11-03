@@ -35,6 +35,7 @@ export default function PortfoliteCareers() {
     'Technical SEO Architecture',
     'Performance Media & Growth',
     'Corporate Cinema & DaVinci Resolve',
+    'Corporate World News & Market Intelligence',
     'Brand & UX Architecture',
     'Other Specialized Craft',
   ];
@@ -293,7 +294,7 @@ export default function PortfoliteCareers() {
         <div className="max-w-2xl mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/[0.04] border border-black/10 text-xs font-medium text-zinc-700 mb-4">
             <Sparkles className="w-3 h-3 text-solar" />
-            <span>Why Join ARKA Technovation Private Limited</span>
+            <span>Why Join Our Engineering &amp; Creative Team</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-black leading-tight font-display">
             Built for craftspeople who take pride in their work.

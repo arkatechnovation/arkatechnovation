@@ -1,0 +1,37 @@
+# ARKA Technovation Private Limited
+
+> ARKA Technovation Private Limited is an enterprise technology engineering firm, digital growth agency, and corporate cinema studio headquartered in Sector 63, Noida (Delhi NCR), India. Guided by Founder & Managing Director Mr. Kranti Parashar (18+ years industry experience), ARKA operates dedicated 100% in-house specialist pods delivering mission-critical web applications, custom CRM & ERP platforms, search & AI answer engine authority (SEO, GEO, AEO), performance marketing media, broadcast-grade corporate films, and authoritative corporate journalism.
+
+## Core Disciplines & Services
+
+- [01 Software Development](https://arkatechnovation.com/services/development): Modular backend engineering, scalable ERP systems, custom CRMs with zero per-seat licensing fees, cross-platform mobile apps (iOS & Android), headless e-commerce, and bespoke enterprise software built on Next.js 15, TypeScript, Node.js, and PostgreSQL.
+- [02 Digital Marketing](https://arkatechnovation.com/services/digital-marketing): Full-funnel performance marketing, multi-touch attribution telemetry, Google Search & Shopping Ads, Meta / Instagram conversion funnels, B2B Social Media Optimization (SMO), brand identity design token systems, and strategic PR management.
+- [03 SEO, GEO & AEO Services](https://arkatechnovation.com/seo-lead-generation): Technical crawl architecture, Core Web Vitals speed engineering, structured Schema.org JSON-LD entity graphs, Generative Engine Optimization (GEO) for ChatGPT / Perplexity / Gemini, Answer Engine Optimization (AEO) for zero-click direct answers, and Google Local Business / Marketplace listings.
+- [04 Film Production & Media](https://arkatechnovation.com/services/film-making): Turnkey cinematic corporate films, 4K/8K broadcast commercials, on-site industrial plant documentaries, acoustically treated studio podcasts in our Noida soundstage, executive interview podcasts, and next-generation generative AI video production.
+- [05 Corporate World News](https://arkatechnovation.com/corporate-world-news): Authoritative corporate journalism, executive broadcast interviews, Tier-1 financial media wire syndication (AP-compliant), daily business intelligence updates, and empirical vertical market research.
+
+## Corporate Facts & E-E-A-T Signals
+
+- **Legal Corporate Name**: ARKA Technovation Private Limited
+- **Corporate Identification**: Registered in Uttar Pradesh / Delhi NCR, India
+- **Headquarters Address**: Rayos Business Park, Office No- 202, C-4, Sector 63, Noida, Uttar Pradesh 201301, India
+- **Founder & Managing Director**: Mr. Kranti Parashar (MBA, 18+ Years Heritage across Tata Teleservices, Kotak Mahindra Bank, Indiamart Intermesh)
+- **Track Record**: 500+ Enterprise & Industrial Deployments, 100% In-House Pod Execution (Zero Outsourcing)
+- **Production Infrastructure**: In-house 4K/8K cinema camera packages, acoustic broadcast soundstage, DaVinci Resolve color suites
+- **Engineering SLA**: Sub-second Core Web Vitals (<1.0s LCP), WCAG 2.2 AA accessibility, 99.99% system availability SLA
+- **Official Website**: https://arkatechnovation.com
+- **Contact Email**: info@arkatechnovation.com
+- **Contact Phone**: +91 97114 87316
+
+## Key URL Index
+
+- Homepage: https://arkatechnovation.com
+- Software Development: https://arkatechnovation.com/services/development
+- Digital Marketing: https://arkatechnovation.com/services/digital-marketing
+- SEO, GEO & AEO Services: https://arkatechnovation.com/seo-lead-generation
+- Film Production & Media: https://arkatechnovation.com/services/film-making
+- Corporate World News: https://arkatechnovation.com/corporate-world-news
+- Services Overview: https://arkatechnovation.com/services
+- Who We Are / About Us: https://arkatechnovation.com/who-we-are
+- Careers: https://arkatechnovation.com/careers
+- Contact: https://arkatechnovation.com/contact

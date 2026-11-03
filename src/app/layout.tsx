@@ -71,8 +71,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/images/logo/arka-logo-black.png',
-        width: 820,
-        height: 498,
+        width: 1024,
+        height: 562,
         alt: 'ARKA Technovation Private Limited Corporate Logo',
       },
     ],
@@ -83,6 +83,9 @@ export const metadata: Metadata = {
     description:
       'Enterprise software, high-performance web platforms, and growth systems for ambitious brands.',
     images: ['/images/logo/arka-logo-black.png'],
+  },
+  verification: {
+    google: 'sw5bZM3CPpcFf3Ud0TAd9lY2HTfLRnZ0-fhJ3ueDR_w',
   },
 };
 
@@ -133,6 +136,57 @@ const jsonLdSchema = {
         'https://youtube.com',
         'https://x.com',
       ],
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Enterprise Digital Capabilities',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Software Development',
+              url: `${BASE_URL}/services/development`,
+              description: 'Bespoke enterprise software, modular backend architectures, scalable ERP systems, and custom CRMs.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Digital Marketing',
+              url: `${BASE_URL}/services/digital-marketing`,
+              description: 'Full-funnel acquisition campaigns, multi-touch attribution telemetry, and precision conversion optimization.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'SEO, GEO & AEO Services',
+              url: `${BASE_URL}/seo-lead-generation`,
+              description: 'Technical crawl architecture, high-intent keyword mapping, structured Schema.org entity graphs, and generative & answer engine dominance.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Film Production & Media',
+              url: `${BASE_URL}/services/film-making`,
+              description: 'Broadcast-quality corporate films, digital & TV commercials, executive interview pods, and next-gen AI video creation.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Corporate World News',
+              url: `${BASE_URL}/corporate-world-news`,
+              description: 'Authoritative corporate journalism, executive interview broadcasts, strategic press releases, and empirical market research.',
+            },
+          },
+        ],
+      },
     },
     {
       '@type': 'WebSite',
@@ -162,51 +216,31 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta
+          name="google-site-verification"
+          content="sw5bZM3CPpcFf3Ud0TAd9lY2HTfLRnZ0-fhJ3ueDR_w"
+        />
+        <meta
           name="description"
           content="ARKA Technovation Private Limited designs and builds enterprise software, high-performance web platforms, and growth systems for ambitious brands. Corporate HQ in Sector 63, Noida."
         />
         <link
           rel="preload"
-          href="/images/logo/arka-logo-white.webp"
+          href="/images/hero/hero-main-mobile.webp"
           as="image"
           type="image/webp"
+          media="(max-width: 768px)"
           fetchPriority="high"
         />
         <link
           rel="preload"
-          href="/images/logo/arka-logo-black.webp"
+          href="/images/hero/hero-main.webp"
           as="image"
           type="image/webp"
+          media="(min-width: 769px)"
           fetchPriority="high"
         />
-        <link
-          rel="preload"
-          href="/fonts/cabinet-grotesk-400-latin.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/cabinet-grotesk-300-latin.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/geist-400-latin.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/cabinet-grotesk-500-latin.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
+
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchema) }}

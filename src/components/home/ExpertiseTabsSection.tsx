@@ -55,7 +55,7 @@ const DISCIPLINES: DisciplineItem[] = [
     icon: Code2,
     headline: 'Bespoke Enterprise Software, Custom CRM, ERP & Modular Architectures',
     narrative:
-      'We engineer bespoke enterprise software, modular backend architectures, scalable ERP systems, custom CRMs, and automated workflow matrices built for dependable scale. Our dedicated software engineering pods eliminate technical debt and deliver high-availability platforms tailored to complex business logic.',
+      'We engineer custom software, scalable ERP systems, and modular backend architectures tailored to proprietary enterprise logic. Working in two-week agile sprints, our software engineering pods build high-availability platforms with complete source code handover and zero vendor lock-in.',
     pillars: [
       {
         icon: Layout,
@@ -86,7 +86,7 @@ const DISCIPLINES: DisciplineItem[] = [
     icon: Target,
     headline: 'Full-Funnel Acquisition Campaigns & Multi-Touch Attribution Telemetry',
     narrative:
-      'Full-funnel acquisition campaigns, multi-touch attribution telemetry, and precision conversion optimization engineered to accelerate verified business revenue. We build the strategy, manage the spend across Google Ads and Meta Ads, and optimize for pipeline growth rather than vanity metrics.',
+      'We design full-funnel customer acquisition campaigns across Google Search, Performance Max, and Meta. Our media buyers align every rupee of ad spend with CRM conversion tracking, focusing on lowering customer acquisition costs and expanding qualified pipeline.',
     pillars: [
       {
         icon: Target,
@@ -117,7 +117,7 @@ const DISCIPLINES: DisciplineItem[] = [
     icon: Radio,
     headline: 'Technical Crawl Architecture, Schema Entity Graphs & Generative AI Dominance',
     narrative:
-      'Technical crawl architecture, high-intent keyword mapping, structured Schema.org entity graphs, generative & answer engine dominance, and local discovery. We ensure your brand dominates traditional search results while being cited as the authoritative source by ChatGPT, Perplexity, Gemini, and Google AI Overviews.',
+      'We build technical crawl architectures, Schema.org knowledge graphs, and topical content clusters that ensure search engines and LLMs recognize your brand. From Page One Google rankings to direct citations in ChatGPT and Perplexity, we capture buyers at the moment of intent.',
     pillars: [
       {
         icon: Gauge,
@@ -148,7 +148,7 @@ const DISCIPLINES: DisciplineItem[] = [
     icon: Zap,
     headline: 'Broadcast-Quality Corporate Films, TV Commercials & Executive Media',
     narrative:
-      'Broadcast-quality corporate films, digital & TV commercials, executive interview pods, high-end studio photography, and next-gen AI video creation. Our in-house production studio handles everything from scripting, direction, and cinematography to color grading, sound design, and master delivery.',
+      'Operating our own cinema soundstage in Sector 63, Noida, our in-house production crew writes, shoots, and edits commercial films, TV ads, and executive interview series. We handle every step under one roof, delivering broadcast masters and multi-aspect social cut-downs.',
     pillars: [
       {
         icon: Layers,
@@ -179,7 +179,7 @@ const DISCIPLINES: DisciplineItem[] = [
     icon: LineChart,
     headline: 'Authoritative Corporate Journalism, Executive Broadcasts & Market Research',
     narrative:
-      'Authoritative corporate journalism, executive interview broadcasts, strategic press releases, breaking business updates, and rigorous market research. We research market verticals, track economic shifts, and produce verified corporate publications that position industry leaders at the forefront of their sector.',
+      'Our dedicated newsroom in Sector 63, Noida produces verified business journalism, recorded executive interviews, and empirical market research. We help corporate leaders publish strategic press announcements, analyze sector shifts, and syndicate verified news across Tier-1 media wires.',
     pillars: [
       {
         icon: LineChart,
@@ -260,7 +260,7 @@ export default function ExpertiseTabsSection() {
         {/* ======================================================== */}
         <div className="grid lg:grid-cols-12 gap-4 sm:gap-8 items-end mb-6 sm:mb-14 px-1 sm:px-0">
           <div className="lg:col-span-7">
-            <p className="text-xs sm:text-sm font-mono font-semibold uppercase tracking-widest text-[#E8742C] mb-2 sm:mb-3">
+            <p className="text-xs sm:text-sm font-mono font-semibold uppercase tracking-widest text-[#B85014] mb-2 sm:mb-3">
               Expertise
             </p>
             <h2
@@ -387,7 +387,7 @@ export default function ExpertiseTabsSection() {
                         fill
                         sizes="(max-width: 1024px) 100vw, 550px"
                         className="object-cover"
-                        priority
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -406,7 +406,7 @@ export default function ExpertiseTabsSection() {
                           </div>
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-1.5 sm:gap-2 mb-0.5 sm:mb-1">
-                              <span className="font-mono text-[10px] sm:text-[11px] font-bold text-zinc-400 group-hover:text-solar transition-colors">
+                              <span className="font-mono text-[10px] sm:text-[11px] font-bold text-zinc-500 group-hover:text-solar transition-colors">
                                 0{idx + 1}.
                               </span>
                               <h4 className="text-xs sm:text-sm lg:text-[15px] font-bold text-zinc-950 tracking-tight group-hover:text-black transition-colors">
@@ -454,7 +454,7 @@ export default function ExpertiseTabsSection() {
                     fill
                     sizes="(max-width: 1024px) 100vw, 550px"
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                    priority
+                    loading="lazy"
                   />
                 </div>
               </div>

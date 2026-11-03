@@ -18,7 +18,7 @@ export function AboutPage() {
     <>
       <PageHero crumb="Who We Are" eyebrow="Who we are — innovators in tech"
         title="Dedicated to helping businesses in all fields."
-        intro="Arka Technovation helps businesses across every industry improve their marketing, build serious software and get ahead of the competition through full-service digital solutions. We have been helping clients and partners grow for almost fifteen years."
+        intro="We build custom enterprise software, search architectures, and commercial cinema for ambitious brands. Combining 10 years of company operations with over 18 years of founder leadership, our in-house engineering and production pods deliver dependable digital products."
         img="https://images.pexels.com/photos/8102000/pexels-photo-8102000.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1000&w=1800" />
 
       {/* STORY */}
@@ -26,11 +26,11 @@ export function AboutPage() {
         <div className="mt-12 grid md:grid-cols-12 gap-10">
           <Fade className="md:col-span-5">
             <p className="text-[clamp(1.05rem,1.6vw,1.4rem)] font-light leading-[1.65] text-paper/90">
-              {COMPANY.name} carries forward over 17 years of craft — the strategy, software, marketing and film that more than 1,500 brands across India and abroad already trust.
+              {COMPANY.name} (formerly known as Jaikvik Technology India Pvt. Ltd.) carries forward 10 years of company experience and over 18 years of founder leadership, delivering software, search architectures, and commercial media trusted by more than 500 enterprise clients.
             </p>
-            <p className="mt-6 text-[14.5px] font-light text-paper/55 leading-[1.85]">Founded by Kranti, the company operates from its corporate headquarters in Sector 63, Noida. Our team of creative professionals works toward creating perfection in order to achieve the best for our clients.</p>
+            <p className="mt-6 text-[14.5px] font-light text-paper/55 leading-[1.85]">Founded and led by Mr. Kranti Parashar, the company operates from its corporate headquarters in Sector 63, Noida. Our in-house teams collaborate directly with client stakeholders to ensure rigorous technical execution and dependable scale.</p>
             <div className="mt-8 grid grid-cols-3 gap-5 border-t border-paper/15 pt-7">
-              {[['2016', 'Founded'], ['1', 'Corporate HQ'], ['45+', 'Team members']].map(([v, l], i) => (
+              {[['10+ Yrs', 'Experience'], ['1', 'Corporate HQ'], ['45+', 'Team members']].map(([v, l], i) => (
                 <Fade key={l} delay={i * .07} y={12}><div><p className="display text-2xl text-gold">{v}</p><p className="mt-1.5 mono text-[0.55rem] tracking-[0.18em] uppercase text-paper/40">{l}</p></div></Fade>
               ))}
             </div>
@@ -71,7 +71,7 @@ export function AboutPage() {
       <StatBand />
 
       {/* LEADERSHIP */}
-      <Section id="leadership" eyebrow="Leadership & team" title="Awesome team members." tone="light"
+      <Section id="leadership" eyebrow="Leadership & team" title="Dedicated Craft Leads" tone="light"
         aside={<p className="text-[15px] font-light text-void/65 leading-[1.8]">No account managers relaying messages to a team you never meet. You work directly with the people doing the work.</p>}>
         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-void/15">
           {TEAM.map((m, i) => (
@@ -87,12 +87,18 @@ export function AboutPage() {
           ))}
           <Fade delay={.2} y={18}>
             <div className="group relative h-full min-h-[228px] border-r border-b border-void/15 p-6 flex flex-col justify-between bg-void text-paper">
-              <span className="mono text-[0.55rem] tracking-[0.18em] uppercase text-solar">Founder</span>
+              <span className="mono text-[0.55rem] tracking-[0.18em] uppercase text-solar">Founder &amp; Director</span>
               <div>
-                <span className="grid h-14 w-14 place-items-center rounded-full border border-solar/50 display text-2xl text-solar">K</span>
-                <p className="mt-4 display text-[19px]">Kranti</p>
-                <p className="mt-1.5 mono text-[0.55rem] tracking-[0.16em] uppercase text-paper/50">Founder & Managing Director</p>
-                <p className="mt-3 text-[11.5px] font-light text-paper/40 border border-dashed border-paper/20 rounded-lg px-3 py-2">Portrait placeholder — official photograph to follow.</p>
+                <div className="h-16 w-16 rounded-full overflow-hidden border border-solar/50 mb-3">
+                  <img
+                    src="/portfolite/kranti-parashar.webp"
+                    alt="Mr. Kranti Parashar — Founder &amp; Director"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <p className="mt-2 display text-[19px]">Mr. Kranti Parashar</p>
+                <p className="mt-1.5 mono text-[0.55rem] tracking-[0.16em] uppercase text-paper/50">Founder &amp; Managing Director</p>
+                <p className="mt-2 text-[11.5px] font-light text-paper/60">18+ Years Enterprise Technology &amp; Growth Leadership</p>
               </div>
             </div>
           </Fade>

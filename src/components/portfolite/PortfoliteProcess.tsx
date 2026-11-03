@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import { ArtcraftGalaxyCanvas } from '../ArtcraftGalaxyCanvas';
 
 const PROCESS_COLUMNS = [
   {
@@ -218,24 +217,56 @@ const PROCESS_COLUMNS = [
 
 export default function PortfoliteProcess() {
   const galaxyContainerRef = useRef<HTMLDivElement>(null);
-  const galaxyInstanceRef = useRef<ArtcraftGalaxyCanvas | null>(null);
+  const galaxyInstanceRef = useRef<any>(null);
 
   useEffect(() => {
     const container = galaxyContainerRef.current;
     if (!container) return;
 
-    try {
-      const galaxy = new ArtcraftGalaxyCanvas(container, {
-        theme: 'light',
-        offsetX: 0,
-        offsetY: 0,
-      });
-      galaxyInstanceRef.current = galaxy;
-    } catch (err) {
-      console.warn('Failed to initialize ArtcraftGalaxyCanvas in Process section:', err);
+    // Only run on desktop devices (>= 1024px) when near viewport
+    if (typeof window !== 'undefined' && window.innerWidth < 1024) return;
+
+    let isCancelled = false;
+    let observer: IntersectionObserver | null = null;
+
+    const loadGalaxy = () => {
+      import('../ArtcraftGalaxyCanvas')
+        .then(({ ArtcraftGalaxyCanvas }) => {
+          if (isCancelled || !container) return;
+          try {
+            const galaxy = new ArtcraftGalaxyCanvas(container, {
+              theme: 'light',
+              offsetX: 0,
+              offsetY: 0,
+            });
+            galaxyInstanceRef.current = galaxy;
+          } catch (err) {
+            console.warn('Failed to initialize ArtcraftGalaxyCanvas in Process section:', err);
+          }
+        })
+        .catch((err) => {
+          console.warn('Could not load ArtcraftGalaxyCanvas module:', err);
+        });
+    };
+
+    if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+      observer = new IntersectionObserver(
+        (entries) => {
+          if (entries[0]?.isIntersecting) {
+            loadGalaxy();
+            observer?.disconnect();
+          }
+        },
+        { rootMargin: '200px' }
+      );
+      observer.observe(container);
+    } else {
+      loadGalaxy();
     }
 
     return () => {
+      isCancelled = true;
+      observer?.disconnect();
       if (galaxyInstanceRef.current) {
         galaxyInstanceRef.current.destroy();
         galaxyInstanceRef.current = null;
@@ -269,7 +300,7 @@ export default function PortfoliteProcess() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Header */}
         <div className="max-w-3xl mb-10 sm:mb-20">
-          <p className="text-xs uppercase tracking-widest text-[#E8742C] font-mono mb-2.5 sm:mb-3">Our Process</p>
+          <p className="text-xs uppercase tracking-widest text-[#B85014] font-mono mb-2.5 sm:mb-3">Our Process</p>
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-black leading-[1.15]">
             How We Work
           </h2>
@@ -295,7 +326,7 @@ export default function PortfoliteProcess() {
               >
                 {/* Top Meta & Headline */}
                 <div>
-                  <span className="block text-xs sm:text-sm font-normal text-zinc-400 mb-3 sm:mb-4 tracking-normal">
+                  <span className="block text-xs sm:text-sm font-normal text-zinc-500 mb-3 sm:mb-4 tracking-normal">
                     {col.label}
                   </span>
                   <h3 className="text-base sm:text-xl lg:text-[22px] font-bold text-black tracking-tight leading-[1.35] max-w-[280px]">

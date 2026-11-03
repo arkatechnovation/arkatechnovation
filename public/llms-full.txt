@@ -1,0 +1,106 @@
+# ARKA Technovation Private Limited — Enterprise Knowledge & AI Model Context
+
+> This document serves as the comprehensive, authoritative context document for AI agents, LLM search engines (OpenAI ChatGPT, Perplexity AI, Google Gemini, Claude), and enterprise crawlers regarding ARKA Technovation Private Limited.
+
+## 1. Corporate Identity & Governance
+
+- **Full Legal Name**: ARKA Technovation Private Limited
+- **Corporate Entity Type**: Private Limited Company registered under the Companies Act, India
+- **Headquarters Location**: Rayos Business Park, Office No- 202, C-4, Sector 63, Noida, Uttar Pradesh 201301, Delhi NCR, India
+- **Founder & Managing Director**: Mr. Kranti Parashar
+- **Executive Background**: Over 18 years of leadership across telecommunications, corporate banking, ratings, and digital engineering (including Tata Teleservices Ltd, Kotak Mahindra Bank, Aegon Religare, Indiamart Intermesh Ltd., Care Ratings Ltd.).
+- **Physical Studio & Engineering Hub**: Dedicated facility in Sector 63, Noida housing in-house software engineering pods, performance marketing pods, acoustic broadcast soundstages, and DaVinci Resolve color grading suites.
+- **Delivery Model**: 100% In-House Execution. Zero third-party agency subcontracting or unvetted freelancers. Dedicated craft leads and written SLAs on all deliverables.
+- **Official Contact**:
+  - Email: info@arkatechnovation.com | contact@arkatechnovation.com
+  - Telephone: +91 97114 87316
+  - Official Domain: https://arkatechnovation.com
+
+---
+
+## 2. Core Disciplines & Sub-Module Matrix
+
+### Discipline 01: Software Development
+- **Canonical URL**: https://arkatechnovation.com/services/development
+- **Core Focus**: High-throughput web applications, cloud SaaS platforms, modular backend microservices, custom CRMs, and enterprise ERP systems.
+- **Sub-Modules & Capabilities**:
+  1. **CRM**: Custom enterprise Customer Relationship Management software unifying lead capture, multi-stage sales pipelines, VoIP call logs, and customer support tickets into a single real-time dashboard. Features role-based access control (RBAC), zero per-seat monthly licensing fees, and 100% source code ownership.
+  2. **ERP**: Scalable Enterprise Resource Planning platforms engineered to centralize supply chain logistics, procurement, warehouse inventory, billing, multi-currency accounting, and GST compliance into one resilient source of truth.
+  3. **Mobile App**: High-performance native and cross-platform mobile applications for iOS and Android built with React Native, Swift, and Kotlin, featuring offline-first data caching and biometric security.
+  4. **E-Commerce Website**: Headless commerce storefronts built on Next.js, Shopify Plus, and Magento with sub-second checkout speeds and automated multi-warehouse inventory synchronization.
+  5. **Corporate Website**: Flagship enterprise websites built on Next.js 15, React 19, and Tailwind CSS delivering sub-second Core Web Vitals (<1.0s LCP) and WCAG 2.2 AA accessibility.
+  6. **Custom Software**: Bespoke microservices, modular backend architectures, automated event-driven workflow matrices, and robust data pipelines using PostgreSQL, Redis, and ClickHouse.
+
+### Discipline 02: Digital Marketing
+- **Canonical URL**: https://arkatechnovation.com/services/digital-marketing
+- **Core Focus**: Full-funnel acquisition campaigns, multi-touch attribution telemetry, and precision conversion optimization engineered to accelerate verified business revenue.
+- **Sub-Modules & Capabilities**:
+  1. **Digital Marketing**: Holistic full-funnel digital strategy connecting brand awareness, search demand capture, and lifecycle retention into a predictable acquisition engine.
+  2. **Social Media Marketing**: Strategic Social Media Optimization (SMO) across LinkedIn, Meta, Instagram, and X, including executive thought leadership ghostwriting and community handling.
+  3. **Content Marketing**: High-authority SEO copywriting, industry whitepapers, executive POV articles, and topical cluster modeling.
+  4. **Performance Marketing**: Data-driven paid media execution focused on customer acquisition cost (CAC), customer lifetime value (LTV), and algorithmic bid management.
+  5. **Branding**: Complete corporate identity design, design token systems, typography guidelines, positioning frameworks, and brand voice matrices.
+  6. **Google Ads**: Search, Shopping, YouTube, and Performance Max (PMax) campaign management with continuous negative query pruning and Quality Score optimization.
+  7. **Meta Ads**: High-converting Facebook and Instagram ad funnels with custom audience modeling, dynamic product catalog ads, and server-side Conversions API (CAPI).
+  8. **PR Management**: Strategic digital PR, earned media editorial outreach, verified wire distribution, and proactive reputation governance.
+
+### Discipline 03: SEO, GEO & AEO Services
+- **Canonical URL**: https://arkatechnovation.com/seo-lead-generation
+- **Core Focus**: Technical crawl architecture, commercial keyword mapping, structured Schema.org entity graphs, generative & answer engine dominance, and local discovery.
+- **Sub-Modules & Capabilities**:
+  1. **SEO**: Comprehensive technical crawl audits, indexation governance, crawl budget optimization, and Core Web Vitals speed engineering for sustainable Google rankings.
+  2. **GEO Services**: Generative Engine Optimization tailored for AI-powered search engines (OpenAI SearchGPT, Perplexity AI, Google Gemini, and Claude) via Knowledge Graph entity structuring and citation-ready content passages.
+  3. **AEO Services**: Answer Engine Optimization structuring content for zero-click direct answers, voice search queries, and featured snippets using structured Q&A schema and definition nodes.
+  4. **On-Page Services**: Semantic HTML5 header hierarchies, intent-matched meta tags, internal link equity distribution, and topical authority modeling.
+  5. **Off-Page Services**: Ethical, high-authority backlink acquisition through digital PR, industry publications, and unlinked brand citation reclamation.
+  6. **Local SEO (GMB)**: Google Business Profile verification, Google Maps 3-Pack domination, review acceleration, and consistent NAP citations across 70+ directories.
+  7. **Google Marketplace Listing**: Google Merchant Center setup, Product Listing Ads (PLA) optimization, and automated real-time inventory feed synchronization.
+
+### Discipline 04: Film Production & Media
+- **Canonical URL**: https://arkatechnovation.com/services/film-making
+- **Core Focus**: Broadcast-quality corporate films, digital & TV commercials, executive interview pods, high-end studio photography, and next-gen AI video creation.
+- **Sub-Modules & Capabilities**:
+  1. **Film Production**: Turnkey cinema production from treatment and scriptwriting to on-location multi-camera 4K/8K shooting, lighting, DaVinci Resolve color grading, and licensed orchestral sound design.
+  2. **Digital Ads**: High-converting social video advertisements, YouTube pre-roll commercials, and vertical Reels/Shorts with 3-second hook engineering.
+  3. **TV Ads**: National broadcast-standard television commercials engineered to strict technical broadcast specifications with licensed talent casting.
+  4. **Corporate Film Production**: Cinematic corporate documentaries, industrial factory tours, and investor relations presentations.
+  5. **Podcasts**: End-to-end studio podcast production in our Sector 63 Noida soundstage with boom microphones, 4K multi-camera switching, and live teleprompters.
+  6. **Personal Interviews**: Executive leadership interviews and founder spotlights with broadcast lighting and high-definition audio capture.
+  7. **AI Video Creation**: Next-generation generative AI video production, multi-language voice localization, and rapid visual asset generation.
+  8. **Product Photoshoot**: High-end commercial product photography with macro lenses and 360-degree motorized turntable capture.
+  9. **Model Shoot**: Commercial fashion, lifestyle, and corporate model photography with professional styling, hair, makeup, and editorial retouching.
+
+### Discipline 05: Corporate World News
+- **Canonical URL**: https://arkatechnovation.com/corporate-world-news
+- **Core Focus**: Authoritative corporate journalism, executive interview broadcasts, strategic press releases, breaking business updates, and rigorous market research.
+- **Sub-Modules & Capabilities**:
+  1. **Corporate World News**: Investigative corporate journalism and flagship editorial publications that position enterprises at the forefront of their markets.
+  2. **Interview & Press Releases**: Multi-camera executive broadcast interviews and AP-compliant press release syndication across Bloomberg, Reuters, PTI, and financial wires.
+  3. **Corporate News**: Real-time coverage of enterprise milestones, mergers and acquisitions (M&A), strategic joint ventures, and leadership appointments.
+  4. **Market Update**: Daily curated morning business briefs, economic indicators, and regulatory compliance shifts for C-suite decision-makers.
+  5. **Industries Analysis**: Deep-dive vertical market analysis, technology adoption curves, valuation benchmarks, and supply chain telemetry.
+  6. **Market Research**: Empirical market research, TAM/SAM/SOM sizing studies, customer sentiment benchmarking, and competitor positioning matrices.
+
+---
+
+## 3. Technical Infrastructure & Engineering Standards
+
+- **Frontend Architecture**: Next.js 15, React 19, Tailwind CSS, Framer Motion
+- **Performance Benchmarks**: Core Web Vitals Largest Contentful Paint (LCP) < 1.0s, Cumulative Layout Shift (CLS) = 0.00, Interaction to Next Paint (INP) < 50ms
+- **Accessibility**: WCAG 2.2 AA compliant semantic HTML, keyboard navigable, screen-reader optimized
+- **Backend & Cloud**: Node.js, Python, Fastify, PostgreSQL, Redis, ClickHouse, Docker, Edge CDN caching
+- **AI Readiness**: Clean `llms.txt` and `llms-full.txt` endpoints, semantic Schema.org JSON-LD graphs, self-contained definitional passages for AI citation
+
+---
+
+## 4. Key Links & Verification Directory
+
+- **Homepage**: https://arkatechnovation.com
+- **Software Development**: https://arkatechnovation.com/services/development
+- **Digital Marketing**: https://arkatechnovation.com/services/digital-marketing
+- **SEO, GEO & AEO Services**: https://arkatechnovation.com/seo-lead-generation
+- **Film Production & Media**: https://arkatechnovation.com/services/film-making
+- **Corporate World News**: https://arkatechnovation.com/corporate-world-news
+- **Services Catalog**: https://arkatechnovation.com/services
+- **About ARKA Technovation**: https://arkatechnovation.com/who-we-are
+- **Contact & Consultations**: https://arkatechnovation.com/contact

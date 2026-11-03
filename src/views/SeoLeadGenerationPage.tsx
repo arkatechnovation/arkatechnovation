@@ -55,16 +55,16 @@ export default function SeoLeadGenerationPage() {
 
   const allOfferings: ServiceItem[] = [
     // ══════════════════════════════════════════════════════════════
-    // 1. ORGANIC SEARCH
+    // 1. ORGANIC SEARCH, GEO & AEO
     // ══════════════════════════════════════════════════════════════
     {
       id: 'seo-services',
       aliasIds: ['seo', 'organic-search'],
       category: 'organic',
-      tag: 'Organic Search & SEO',
-      title: 'SEO Services',
-      subtitle: 'Keyword cluster mapping, search intent analysis & high-authority white-hat link acquisition',
-      desc: 'Are you looking to grow your business? If so, then SEO (search engine optimization) should be an integral part of your marketing strategy. SEO is a process that helps your website rank higher in relevant search results on search engines like Google. This, in turn, increases the amount of qualified traffic that your website receives. At ARKA Technovation Private Limited, we offer custom SEO campaigns that provide an all-in-one solution to SEO. When you partner with us for an SEO campaign, our full-time in-house team handles all aspects of SEO for you, from on-page optimization to off-page optimization to technical SEO, ensuring your most valuable audience can find you online with ease.',
+      tag: 'Search Engine Optimization',
+      title: 'SEO',
+      subtitle: 'Technical crawl architecture, commercial keyword mapping & white-hat authority acquisition',
+      desc: 'Search engine optimization is the foundation of digital revenue. Our in-house engineering and search team designs technical crawl architectures, indexation controls, on-page semantic hierarchies, and high-tier editorial backlinks to rank your business for high-intent commercial queries.',
       highlights: [
         'Comprehensive keyword research identifying high-intent commercial and transactional queries',
         'Full on-page optimization: titles, meta descriptions, H1/H2 header hierarchies, and internal linking',
@@ -73,48 +73,93 @@ export default function SeoLeadGenerationPage() {
       ],
     },
     {
-      id: 'enterprise-seo-services',
-      aliasIds: ['enterprise-seo', 'enterprise'],
+      id: 'geo-services',
+      aliasIds: ['geo', 'generative-engine-optimization'],
       category: 'organic',
-      tag: 'Enterprise SEO',
-      title: 'Enterprise SEO Services',
-      subtitle: 'Tailored strategies for massive architectures, multi-tier indexing hierarchies & national competition',
-      desc: 'Search offers enterprises an extraordinary commercial advantage. With over 90% of online experiences starting with a search engine, high rankings in competitive search results enable your company to connect with shoppers and enterprise business consumers looking to make their next purchase. Enterprise SEO involves specialized methods tailored to larger corporations and complex website architectures that enable you to rank for highly competitive keywords with massive search volumes across national and global markets.',
+      tag: 'Generative Engine Optimization',
+      title: 'GEO Services',
+      subtitle: 'Dominating AI citations across SearchGPT, Perplexity AI, Claude & Google Gemini',
+      desc: 'Generative Engine Optimization (GEO) positions your enterprise inside AI response engines. As executive decision-makers increasingly research solutions through OpenAI SearchGPT, Perplexity AI, Claude, and Gemini, we structure factual entity nodes and verifiable schema markup so AI models cite your brand as the primary authority.',
       highlights: [
-        'Enterprise keyword cluster modeling and commercial intent mapping across 5,000+ indexed URLs',
-        'Large-scale crawl budget governance, internal link equity distribution, and faceted navigation indexing',
-        'Entity-based SEO and semantic search schema engineering for Google Knowledge Graph recognition',
-        'Automated daily enterprise rank tracking, algorithmic anomaly detection, and rapid response',
+        'Entity vector modeling ensuring your brand is recognized and cited by LLM knowledge bases',
+        'Optimization for OpenAI SearchGPT, Perplexity AI, Google Gemini AI Overviews, and Claude',
+        'Factual data clustering and direct quotation structuring for zero-hallucination AI ingestion',
+        'Tracking AI engine brand mention share, citation accuracy, and generative referral traffic',
       ],
     },
     {
-      id: 'local-seo-services',
-      aliasIds: ['local-seo', 'local'],
+      id: 'aeo-services',
+      aliasIds: ['aeo', 'answer-engine-optimization'],
+      category: 'organic',
+      tag: 'Answer Engine Optimization',
+      title: 'AEO Services',
+      subtitle: 'Capturing featured snippets, zero-click answer boxes, and voice search results',
+      desc: 'Answer Engine Optimization (AEO) formats your content to answer direct transactional and informational queries. With more than half of search queries resolving directly on the results page, AEO ensures search engines pull your exact specifications and answers into featured snippets, knowledge graph cards, and smart assistant responses.',
+      highlights: [
+        'Structured FAQ and Q&A Schema.org JSON-LD integration for instant search engine ingestion',
+        'Targeted optimization for Google Featured Snippets (Paragraphs, Tables, and Lists)',
+        'Voice search query phrasing and conversational natural language processing (NLP) alignment',
+        'Entity definition structuring to secure knowledge graph and rich result badges',
+      ],
+    },
+    {
+      id: 'on-page-services',
+      aliasIds: ['on-page-seo', 'on-page'],
+      category: 'organic',
+      tag: 'On-Page Architecture',
+      title: 'On-Page Services',
+      subtitle: 'Semantic HTML5 hierarchies, metadata architecture, and topical cluster modeling',
+      desc: 'On-page SEO ensures your pages are completely clear to human readers and search crawlers alike. We audit heading structures, craft intent-driven meta tags, optimize image assets, and organize interconnected topical clusters that channel ranking authority directly to your most profitable commercial pages.',
+      highlights: [
+        'Semantic HTML5 header hierarchy (H1-H6) aligned with high-converting search intent',
+        'Topical cluster architecture channeling internal link equity to priority revenue pages',
+        'Clean canonical tag governance preventing duplicate content dilution across parameterized URLs',
+        'Rich multimedia optimization with descriptive image alt tags, WebP/AVIF formats, and schema',
+      ],
+    },
+    {
+      id: 'off-page-services',
+      aliasIds: ['off-page-seo', 'off-page'],
+      category: 'organic',
+      tag: 'Domain Authority & PR',
+      title: 'Off-Page Services',
+      subtitle: 'Ethical digital PR, high-authority backlink acquisition & unassailable search trust',
+      desc: 'Off-page SEO establishes the external credibility and trust of your domain. Search engines rely heavily on third-party verification to award top rankings. Our digital PR specialists secure verified editorial placements, industry citations, and authoritative backlinks from Tier-1 trade and business publications.',
+      highlights: [
+        '100% white-hat editorial backlink acquisition from verified high-domain-authority websites',
+        'Strategic digital PR campaigns generating genuine press mentions and journalist pickups',
+        'Competitor backlink gap analysis identifying easy-win authoritative link opportunities',
+        'Toxic backlink auditing and proactive Google Disavow management to protect domain health',
+      ],
+    },
+    {
+      id: 'local-seo-gmb',
+      aliasIds: ['local-seo', 'gmb-services'],
       category: 'organic',
       tag: 'Local Dominance',
-      title: 'Local SEO Services',
-      subtitle: 'Capturing high-intent local buyers in Noida, Delhi NCR & nationwide across Google 3-Pack',
-      desc: 'Here at ARKA Technovation Private Limited, we are neighborhood search engine optimization experts. Over 46% of all Google searches have local intent, and we help your business appear at the exact moment nearby customers search for your products or services. Get an all-in-one local search solution with our fully-managed local SEO services: custom local SEO strategy, professional campaign implementation, Google Business Profile management, and consistent directory citations that power calls and qualified store visits.',
+      title: 'Local SEO (GMB)',
+      subtitle: 'Dominating Google Maps 3-Pack and capturing high-intent nearby buyers across Noida & NCR',
+      desc: 'Over 46% of all Google searches carry local intent. Local SEO ensures your business appears at the exact moment nearby buyers search for your services. We verify and optimize your Google Business Profile (GBP), manage localized review workflows, and maintain consistent directory citations across 70+ business portals to anchor your firm in the Google 3-Pack.',
       highlights: [
-        'Google Business Profile (GBP) complete verification, weekly geotagged updates, and Category optimization',
+        'Google Business Profile (GBP) complete verification, weekly geotagged updates, and category tuning',
         'Consistent NAP (Name, Address, Phone) citations across 70+ verified local and industry directories',
         'Localized keyword targeting for city, suburban territory, and regional industrial hubs',
         'Call tracking and ROI measurement attributing phone inquiries and quotes directly to local search keywords',
       ],
     },
     {
-      id: 'google-local-services-ads-management',
-      aliasIds: ['google-guaranteed', 'lsa-management'],
+      id: 'google-marketplace-listing',
+      aliasIds: ['google-shopping', 'google-marketplace'],
       category: 'organic',
-      tag: 'Google Guaranteed (LSA)',
-      title: 'Google Local Services Ads Management',
-      subtitle: 'Pay-per-qualified-lead model with green Google Guaranteed trust badge at the top of search',
-      desc: 'More than half of online searchers visit a business within 24 hours of conducting a local search. With Google Local Services Ads (LSA), you can show up at the very top of Google search results—even above standard PPC ads—with the green Google Guaranteed badge. You only pay for valid phone calls and inquiries from real prospective customers. ARKA Technovation Private Limited guides your team through the entire Google Guaranteed verification process, license checks, and background reviews from start to finish.',
+      tag: 'Merchant Commerce',
+      title: 'Google Marketplace Listing',
+      subtitle: 'Google Merchant Center setup, Product Listing Ads (PLA) & live shopping feed sync',
+      desc: 'Maximize product sales and visibility across Google Shopping, Google Lens, and commercial listings. We configure your Google Merchant Center, format high-throughput XML product feeds, implement product schema, and resolve disapproval flags so your full catalog displays in commercial search results.',
       highlights: [
-        'Complete Google Guaranteed application, background check guidance, and badge approval',
-        'Ad setup, service area zoning, and category configuration tailored to your target markets',
-        'Dispute management to contest and refund non-qualified calls or spam inquiries',
-        'Direct integration with CRM lead distribution pipelines and immediate sales rep alerts',
+        'Complete Google Merchant Center account approval, feed verification, and tax/shipping setup',
+        'Automated product feed synchronization with real-time stock levels, pricing, and variant data',
+        'Product, Offer, and AggregateRating Schema.org JSON-LD structured data implementation',
+        'Optimization for Google Free Listings and high-ROAS Product Listing Ads (PLA)',
       ],
     },
     {
@@ -124,7 +169,7 @@ export default function SeoLeadGenerationPage() {
       tag: 'Technical Health',
       title: 'SEO Audits',
       subtitle: 'Deep 150+ point architectural diagnosis to eliminate crawl traps and indexation blocks',
-      desc: 'Our website SEO audit services begin with an overall analysis of your website codebase and analytics telemetry to assess what action is needed to best optimize for search engines. Based on this 150+ point diagnostic analysis, ARKA Technovation Private Limited provides actionable recommendations and direct technical implementations to eliminate crawl traps, fix broken links, resolve duplicate content, and ensure search engine spiders index your commercial pages without friction.',
+      desc: 'Our website SEO audits examine codebase architecture, crawl logs, and analytics telemetry to identify what holds your site back from ranking. Based on this 150+ point diagnostic, we deliver actionable recommendations and direct code fixes to eliminate crawl traps, fix broken links, resolve canonical conflicts, and ensure search bots index your commercial pages without friction.',
       highlights: [
         'Detection and resolution of duplicate content, thin pages, and canonical tag conflicts',
         'Meta title, description, and OpenGraph audit across every indexed URL',
@@ -139,7 +184,7 @@ export default function SeoLeadGenerationPage() {
       tag: 'Speed Engineering',
       title: 'Page Speed & Core Web Vitals Optimization',
       subtitle: 'Sub-second LCP, zero layout shift (CLS), and snappy interaction (INP) speed engineering',
-      desc: 'Website speed optimization services are often an overlooked part of great SEO, but they are crucial for a website\'s success. A slow-loading website loses conversions and revenue, as nearly half of web searchers will not wait more than 3 seconds for a page to load. We engineer your frontend for instant performance, sub-second Largest Contentful Paint (LCP < 1.2s), zero Cumulative Layout Shift (CLS), and instantaneous Interaction to Next Paint (INP) to satisfy Google\'s ranking criteria.',
+      desc: 'Speed directly impacts both search rankings and commercial conversion rates. A slow-loading site loses prospective buyers before they read a single sentence. We engineer your frontend for sub-second Largest Contentful Paint (LCP < 1.2s), zero Cumulative Layout Shift (CLS), and instantaneous Interaction to Next Paint (INP) to satisfy Google’s Core Web Vitals criteria.',
       highlights: [
         'Largest Contentful Paint (LCP) reduction below 1.2 seconds through server optimization and edge caching',
         'Cumulative Layout Shift (CLS) elimination with explicit image, video, and container dimensions',
@@ -158,7 +203,7 @@ export default function SeoLeadGenerationPage() {
       tag: 'Search Engine Advertising',
       title: 'PPC Management Services',
       subtitle: 'High-ROAS Google Search, Display, and Performance Max campaigns with negative keyword harvesting',
-      desc: 'At ARKA Technovation Private Limited, we believe that our technology-powered PPC services are the key to unlocking a powerful advertising duo: deep technical experience and real-time bid data. With our dedicated in-house performance marketing specialists and billions of data points that power our marketing efforts, your business can launch smarter, higher-ROAS Google Search, Display, and Performance Max campaigns that turn clicks into paying clients.',
+      desc: 'We manage search, display, and Performance Max campaigns built on intent-tiered ad groups, continuous negative query harvesting, and closed-loop CRM conversion tracking. Our performance marketing pod ensures every rupee of ad spend is tied to verified commercial inquiries rather than untracked clicks.',
       highlights: [
         'Granular single-keyword ad groups (SKAGs) and intent-tiered campaign structure for maximum Quality Score',
         'Continuous negative keyword harvesting to eliminate wasted ad spend on irrelevant searches',
@@ -173,7 +218,7 @@ export default function SeoLeadGenerationPage() {
       tag: 'Enterprise Media',
       title: 'Enterprise PPC Management Services',
       subtitle: 'High-spend optimization, value-based bidding (VBB), and omnichannel retargeting architecture',
-      desc: 'PPC is a powerful traffic-boosting method with the goal of generating quality leads and high return on ad spend (ROAS). For enterprise firms deploying high-volume advertising budgets, precision bid management becomes critical. Our enterprise PPC specialists architect customized bidding algorithms, audience tiering, and multi-channel retargeting that scale campaign revenue while aggressively suppressing cost-per-acquisition (CPA).',
+      desc: 'For enterprise firms deploying high-volume advertising budgets, precision bid management is essential. Our enterprise PPC specialists architect custom bidding rules, audience tiering, and multi-channel retargeting that scale campaign revenue while aggressively controlling customer acquisition costs.',
       highlights: [
         'Custom bidding rules and value-based bidding (VBB) aligned with profit margins rather than vanity clicks',
         'Omnichannel ad synchronization across Google Search, YouTube, Display Network, and Bing Ads',
@@ -188,7 +233,7 @@ export default function SeoLeadGenerationPage() {
       tag: 'Real-Time Bidding',
       title: 'Programmatic Advertising Services',
       subtitle: 'Automated machine-learning ad exchanges, lookalike modeling & fraud-free impressions',
-      desc: 'Online advertising shouldn\'t be a painful, fragmented process. ARKA Technovation Private Limited offers programmatic advertising services to take the hassle out of digital media buying. Harness machine-learning ad exchanges to buy premium impressions in real-time across thousands of authoritative publisher websites, targeting your most profitable audience segments with custom lookalike modeling, strict brand-safety controls, and click-fraud elimination.',
+      desc: 'We deploy programmatic advertising across real-time machine-learning ad exchanges to purchase premium inventory on authoritative publisher websites. Our campaigns leverage custom lookalike modeling, strict brand-safety controls, and automated fraud filtering to place your message in front of verified decision-makers.',
       highlights: [
         'Real-time bidding (RTB) across Google Ad Manager, AppNexus, OpenX, and premium ad exchanges',
         'Audience lookalike modeling based on your highest-value customer segments and buying patterns',
@@ -203,7 +248,7 @@ export default function SeoLeadGenerationPage() {
       tag: 'Precision Geofencing',
       title: 'Competitor Geofencing Services',
       subtitle: 'Hyper-targeted mobile advertising down to 1,000 square foot boundaries around rival locations',
-      desc: 'Precision is key for successful digital advertising campaigns. By using geofencing technology, ARKA Technovation Private Limited targets custom audiences and physical locations with pinpoint accuracy. Draw razor-sharp virtual boundaries down to 1,000 square feet around competitor locations, industry trade shows, and commercial hubs to deliver ads directly to prospects visiting those premises, capturing high-intent footfall and driving higher ROI.',
+      desc: 'Precision geofencing lets you target audiences based on physical location history. We draw virtual boundaries down to 1,000 square feet around competitor premises, industry trade expos, and commercial hubs to deliver ads directly to prospects visiting those venues, capturing high-intent footfall and driving qualified inquiries.',
       highlights: [
         '1,000 sq ft precision geofences drawn around competitor facilities, showrooms, and commercial centers',
         'Event geofencing targeting attendees at national industry conferences and trade exhibitions',
@@ -218,7 +263,7 @@ export default function SeoLeadGenerationPage() {
       tag: 'Address-Based Targeting',
       title: 'Addressable Geofencing Services',
       subtitle: 'Delivering digital ads to exact household physical boundaries from CRM mailing lists',
-      desc: 'With our addressable geofencing services, your enterprise can launch hyper-targeted, street-address-based advertising campaigns that result in phone calls, quote requests, and sales. By mapping physical CRM client mailing lists, registered voter databases, or zoned commercial real estate parcels directly to mobile advertising IDs, we deliver digital ads to exact household physical boundaries.',
+      desc: 'Addressable geofencing bridges offline customer databases with digital advertising. By mapping physical CRM client addresses or commercial property parcels directly to mobile advertising IDs, we deliver digital campaigns to exact building footprints with zero reliance on third-party browser cookies.',
       highlights: [
         'Mapping CRM physical mailing lists and client street addresses directly to mobile device IDs',
         'Delivery of targeted ads across mobile apps, desktop browsers, and connected TV (CTV)',
@@ -233,7 +278,7 @@ export default function SeoLeadGenerationPage() {
       tag: 'Talent Acquisition',
       title: 'Employment & Recruiting Marketing',
       subtitle: 'Attracting top-tier passive executives, engineers, and specialists via digital recruitment ads',
-      desc: 'If you want to recruit the best candidates for your open positions, you need to use digital recruitment marketing services. Potential candidates rely heavily on digital platforms to find their dream jobs. ARKA Technovation Private Limited crafts digital recruitment marketing campaigns that shape your employer brand, target passive skilled engineers, executives, and specialists on LinkedIn and niche portals, and fill critical hiring pipelines with top-tier talent.',
+      desc: 'Attracting skilled executives and specialized engineers requires proactive recruitment marketing. We design campaigns that strengthen employer branding, target passive candidates across LinkedIn and industry portals, and fill high-priority talent pipelines with qualified applicants.',
       highlights: [
         'Targeted recruitment advertising on LinkedIn, Google Search, and specialized industry job boards',
         'Employer branding video production and career portal landing page optimization',
@@ -252,7 +297,7 @@ export default function SeoLeadGenerationPage() {
       tag: 'Paid Social Funnels',
       title: 'Social Media Advertising',
       subtitle: 'High-impact paid campaigns across Meta, LinkedIn, and X with native lead capture',
-      desc: 'Social media advertising services are a key part of any modern marketing strategy. With ever-changing algorithms, businesses need diversified strategies to reach the right buyers at the right time. ARKA Technovation Private Limited designs, launches, and manages high-converting paid social campaigns across Meta (Facebook & Instagram), LinkedIn, and X, leveraging demographic, firmographic, and behavioral targeting to drive qualified leads.',
+      desc: 'We build and manage targeted paid social campaigns across Meta (Facebook & Instagram), LinkedIn, and X. Combining demographic, firmographic, and behavioral signals with native lead capture forms, we deliver qualified inquiries directly into your sales pipeline.',
       highlights: [
         'Granular demographic and behavioral targeting connecting with active buyers and decision-makers',
         'Lead Generation forms embedded natively within social apps for frictionless contact capture',
@@ -267,7 +312,7 @@ export default function SeoLeadGenerationPage() {
       tag: 'Publishing & Engagement',
       title: 'Social Media Management',
       subtitle: '75% purchase touchpoint: Editorial planning, active community handling, and brand voice',
-      desc: 'Over 75% of people use social media when making purchasing decisions, making it a critical touchpoint for shoppers in both B2C and B2B industries. Companies invest in professional social media management to build brand awareness, foster customer loyalty, and drive inbound inquiries. Our dedicated social media managers handle content creation, daily community interaction, reputation monitoring, and editorial distribution.',
+      desc: 'Over 75% of buyers research brands on social channels before making high-value purchasing decisions. Our social media team handles monthly editorial planning, content production, daily community moderation, and reputation monitoring to maintain an authoritative brand presence.',
       highlights: [
         'Comprehensive monthly content calendar mapped to company product launches and milestones',
         'Active community management, rapid direct message responses, and comment moderation',
@@ -282,7 +327,7 @@ export default function SeoLeadGenerationPage() {
       tag: 'Creative Studio',
       title: 'Social Media Design',
       subtitle: 'Eye-catching branded carousels, cover banners, and motion graphics that stop the scroll',
-      desc: 'As a premier digital marketing agency, we know the importance of professionally designed social media assets. First impressions matter immensely on visual feeds. Our talented in-house graphic designers and motion artists craft eye-catching social banners, carousel decks, story graphics, and branded infographics that represent your enterprise with polish, commanding attention and boosting organic engagement.',
+      desc: 'First impressions on visual feeds directly impact brand trust. Our in-house designers and motion artists produce polished carousel decks, cover banners, story graphics, and branded infographics adhering strictly to your corporate design guidelines.',
       highlights: [
         'Custom profile branding: Facebook cover banners, LinkedIn corporate headers, and profile graphics',
         'Multi-slide carousel graphics engineered for high dwell time and educational value',
@@ -297,7 +342,7 @@ export default function SeoLeadGenerationPage() {
       tag: 'YouTube Cinema Ads',
       title: 'YouTube Social Media Advertising',
       subtitle: 'Broadcast-quality video production, in-stream skippable ads & search attribution',
-      desc: 'YouTube is the world\'s second-largest search engine, with billions of hours of video watched daily. As a full-service YouTube advertising agency with in-house cinema production capabilities, ARKA Technovation Private Limited provides everything your business needs to advertise on YouTube—from scripting and filming commercial-grade video ads to building targeted campaigns that capture ready-to-buy prospects.',
+      desc: 'YouTube combines search intent with cinematic video storytelling. Operating our own cinema production soundstage, we script, film, and edit broadcast-grade video commercials, while managing YouTube ad placements targeted to high-intent search queries.',
       highlights: [
         'Skippable in-stream, non-skippable, bumper, and YouTube Shorts video ad campaign management',
         'Precision contextual targeting placing ads before relevant industry tutorials and competitor reviews',
@@ -312,7 +357,7 @@ export default function SeoLeadGenerationPage() {
       tag: 'Reputation Engineering',
       title: 'Online Review Acceleration',
       subtitle: 'Building overwhelming digital trust, 5-star customer proof, and SERP review schema',
-      desc: 'Our review acceleration and reputation management packages help you build overwhelming social proof. Over 92% of buyers read online reviews before purchasing, making customer feedback critical to your commercial success. ARKA Technovation Private Limited deploys automated review request workflows via SMS and email, captures client feedback post-transaction, and showcases verified 5-star ratings on Google Maps, Trustpilot, and Clutch.',
+      desc: 'Over 92% of buyers read online reviews before committing to a provider. We deploy automated post-purchase review workflows via SMS and email, directing happy clients to Google Maps, Clutch, and Trustpilot while intercepting customer concerns privately.',
       highlights: [
         'Automated SMS and email review requests triggered following client milestone completions',
         'Smart review funnels directing satisfied clients to Google Maps, Clutch, and industry review sites',
@@ -331,7 +376,7 @@ export default function SeoLeadGenerationPage() {
       tag: 'Performance Benchmarks',
       title: 'Our SEO Results',
       subtitle: 'Computing confirmed client income from qualified leads, calls, and organic transactions',
-      desc: 'At ARKA Technovation Private Limited, we compute client income generated from confirmed qualified leads, inbound phone calls, and e-commerce transactions across the search and advertising campaigns we manage. Our data-driven results deliver measurable pipeline expansion, lower cost-per-acquisition (CPA), and sustainable commercial growth that compounds over months and years.',
+      desc: 'We evaluate campaign performance by verified revenue metrics: inbound phone inquiries, qualified form leads, and closed contracts across the search programs we manage. Our focus is long-term pipeline expansion and customer acquisition efficiency that compounds over time.',
       highlights: [
         '+210% average organic traffic lift across enterprise client portfolios within 6 months',
         '4.8× verified client pipeline return on advertising spend (ROAS) across paid search and social',
@@ -346,7 +391,7 @@ export default function SeoLeadGenerationPage() {
       tag: 'Verified Case Studies',
       title: 'Our SEO Case Studies',
       subtitle: 'Real-world search engine optimization examples, architecture revamps & documented ROI',
-      desc: 'Our SEO case studies demonstrate how real-world search engine optimization best practices outmaneuver competitors and drive commercial growth. Rather than relying on abstract theories, our published work highlights verifiable ranking gains, technical architecture transformations, and revenue acceleration across manufacturing, SaaS, e-commerce, and enterprise B2B sectors.',
+      desc: 'Our case studies demonstrate how structured search architecture and authoritative content outrank competitors in competitive markets. Our published work covers verifiable ranking gains, Core Web Vitals revamps, and revenue acceleration across manufacturing, SaaS, e-commerce, and industrial B2B sectors.',
       highlights: [
         'Multi-location B2B manufacturer: 340% organic lead growth via localized keyword cluster architecture',
         'Enterprise SaaS platform: Core Web Vitals overhaul reducing page latency to 850ms, lifting signups by 68%',
@@ -361,7 +406,7 @@ export default function SeoLeadGenerationPage() {
       tag: 'Strategic Guide',
       title: 'What Is an SEO Company?',
       subtitle: 'How an SEO partner drives business through discovery, creation, optimization, and measurement',
-      desc: 'An SEO company helps brands drive business by discovering, creating, optimizing, and measuring their search engine visibility. Success in SEO requires quality content that is thematically structured, lightning-fast pages that load in under 2 seconds, robust technical crawlability, full HTTPS security, and schema metadata that search engines can easily understand to index your pages for high-intent queries.',
+      desc: 'An SEO partner identifies market demand, resolves technical crawl barriers, and crafts content that ranks for high-intent search queries. Sustainable SEO requires clean HTML markup, fast page loads under 1.2 seconds, topical authority clusters, and structured schema that search engines easily parse.',
       highlights: [
         'Discovery: In-depth technical crawl, competitive landscape analysis, and keyword intent research',
         'Creation: High-value, authoritative content structured for human readers and search algorithms',
@@ -376,7 +421,7 @@ export default function SeoLeadGenerationPage() {
       tag: 'Executive Evaluation',
       title: 'How to Find the Best SEO Company',
       subtitle: 'Evaluating in-house talent, white-hat ethics, reporting telemetry & technical capabilities',
-      desc: 'Looking to take your business to the next level with digital marketing? Search Engine Optimization is a powerful way to improve visibility and attract customers. When evaluating an SEO partner, look beyond generic promises. Demand to see verified case studies in your specific industry, transparent reporting methodologies, and a dedicated in-house team of engineers and copywriters rather than outsourced contractors.',
+      desc: 'When evaluating an SEO partner, look past vanity impressions. Ask to see verified case studies in your specific industry, transparent live reporting dashboards, and an in-house engineering team capable of modifying frontend code directly rather than just sending static recommendation decks.',
       highlights: [
         'Verify in-house delivery: Ensure the agency executes work directly without third-party outsourcing',
         'Examine ethical practices: Demand white-hat methodologies compliant with Google\'s search guidelines',
@@ -391,7 +436,7 @@ export default function SeoLeadGenerationPage() {
       tag: 'Leadership Playbook',
       title: 'SEO Guide for Marketing Managers',
       subtitle: 'Aligning search strategy with pipeline revenue, CAC reduction & Core Web Vitals health',
-      desc: 'As the manager or director of a marketing team, having a strong understanding of search engine optimization is essential to business growth. Marketing leaders must view SEO as a predictable revenue generator rather than an isolated vanity metric. Key performance indicators should include qualified pipeline generated, customer acquisition cost (CAC) reduction over time, and Core Web Vitals health.',
+      desc: 'Marketing leaders must manage search as a predictable customer acquisition channel rather than an isolated technical task. Priority indicators include qualified pipeline value, organic lead close rates, customer acquisition cost reduction, and Core Web Vitals health.',
       highlights: [
         'Establish commercial KPIs: Focus on pipeline value and customer acquisition cost rather than raw impressions',
         'Align organic search with paid media: Use PPC search query data to inform organic content clusters',
@@ -406,7 +451,7 @@ export default function SeoLeadGenerationPage() {
       tag: 'Digital Strategy',
       title: 'What Is Digital Marketing?',
       subtitle: 'The comprehensive process of leveraging search, paid media, social, and web technologies',
-      desc: 'Digital marketing is the process of using online channels—search engines, paid advertising, social media platforms, email, and websites—to promote and sell products or services. At ARKA Technovation Private Limited, we utilize our extensive engineering experience and world-class technical knowledge to help businesses reach their full online potential, building cohesive growth engines that drive sustainable revenue.',
+      desc: 'Digital marketing connects search engines, performance advertising, social platforms, and conversion architecture into an integrated customer acquisition engine. Our in-house team in Sector 63, Noida builds cohesive growth programs that lower acquisition costs and drive sustainable revenue.',
       highlights: [
         'Multi-channel synergy: Coordinating search, paid advertising, social media, and video for maximum impact',
         'Data-driven targeting: Connecting with high-intent decision-makers based on demographics and behavior',
@@ -428,15 +473,15 @@ export default function SeoLeadGenerationPage() {
     },
     {
       q: 'What makes Competitor and Addressable Geofencing different from standard radius targeting?',
-      a: 'Standard radius targeting casts a wide net around an entire city or postal code. Competitor Geofencing draws razor-sharp virtual boundaries down to 1,000 square feet around specific competitor buildings or convention halls. Addressable Geofencing takes a street-level list of client addresses and matches mobile advertising IDs to deliver ads directly to those exact households.',
+      a: 'Standard radius targeting casts a wide net around an entire city or postal code. Competitor Geofencing draws virtual boundaries down to 1,000 square feet around specific competitor buildings or convention halls. Addressable Geofencing takes a street-level list of client addresses and matches mobile advertising IDs to deliver ads directly to those exact households.',
     },
     {
-      q: 'How does ARKA Technovation Private Limited handle Google Guaranteed and Local Services Ads?',
+      q: 'How do you handle Google Guaranteed and Local Services Ads?',
       a: 'We guide your company through the entire Google Guaranteed verification process, including background checks, license verification, and insurance compliance. Once approved, your business displays the green Google Guaranteed badge at the very top of local search results, and you only pay for valid phone inquiries.',
     },
     {
-      q: 'Does ARKA Technovation Private Limited outsource any SEO, paid media, or content development?',
-      a: 'No. Every technical audit, schema implementation, keyword strategy, and copywriting piece is executed by our full-time, in-house team located at our Corporate Headquarters in Sector 63, Noida. We believe in 100% direct accountability.',
+      q: 'Do you outsource any SEO, paid media, or content development?',
+      a: 'No. Every technical audit, schema implementation, keyword strategy, and copywriting piece is executed by our full-time, in-house team located at our Corporate Headquarters in Sector 63, Noida. We believe in direct accountability.',
     },
   ];
 
@@ -455,7 +500,7 @@ export default function SeoLeadGenerationPage() {
             </h1>
 
             <p className="mt-6 text-lg sm:text-xl text-zinc-600 max-w-3xl leading-relaxed font-light text-left">
-              With over 90% of online journeys beginning on search engines, top rankings in competitive search results connect your enterprise with ready-to-buy customers and procurement leaders. At {COMPANY.name}, our data-powered SEO campaigns provide an all-in-one revenue acceleration solution covering organic search, enterprise SEO, Google Guaranteed local services, programmatic advertising, addressable geofencing, and review acceleration.
+              Over 90% of commercial journeys begin with a search query. We design technical crawl architectures, Schema.org entity graphs, and high-converting paid campaigns that place your enterprise in front of active buyers across Google, SearchGPT, and Perplexity—turning organic and paid search into a predictable revenue stream.
             </p>
 
             {/* Action CTAs */}

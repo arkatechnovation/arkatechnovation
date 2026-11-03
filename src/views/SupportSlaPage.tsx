@@ -25,32 +25,32 @@ export default function SupportSlaPage() {
   const slaTiers = [
     {
       severity: 'Severity 1 (Critical)',
-      impact: 'Core production systems down, primary revenue funnel halted, or critical data breach.',
-      initialResponse: '< 1 Hour (24/7/365)',
-      resolutionTarget: '< 4 Hours continuous engineering effort until restored',
-      coverage: '24/7/365 Emergency Pager Pod',
+      impact: 'Core production outage, primary transaction flow halted, or critical security compromise.',
+      initialResponse: 'Within 1 Hour (24/7/365)',
+      resolutionTarget: 'Continuous engineering until mitigation; targeted within 4 Hours',
+      coverage: '24/7/365 Emergency Engineering Response',
       color: 'bg-red-500/10 text-red-600 border-red-200',
     },
     {
       severity: 'Severity 2 (Major)',
-      impact: 'Core service degraded, major feature non-functional with high impact on business operations.',
-      initialResponse: '< 2 Hours',
-      resolutionTarget: '< 8 Hours',
-      coverage: 'Extended Business Hours (8:00 AM – 10:00 PM IST)',
+      impact: 'Core system degraded, significant workflow non-functional with high impact on operations.',
+      initialResponse: 'Within 2 Hours',
+      resolutionTarget: 'Targeted within 8 Hours',
+      coverage: 'Extended Coverage (8:00 AM – 10:00 PM IST)',
       color: 'bg-amber-500/10 text-amber-600 border-amber-200',
     },
     {
       severity: 'Severity 3 (Moderate)',
-      impact: 'Non-critical defect, administrative dashboard anomaly, or workflow workaround available.',
-      initialResponse: '< 6 Hours',
-      resolutionTarget: 'Next scheduled sprint or < 24 Hours',
+      impact: 'Non-critical defect, administrative interface anomaly, or verified workaround available.',
+      initialResponse: 'Within 6 Hours',
+      resolutionTarget: 'Next scheduled deployment cycle or within 24 Hours',
       coverage: 'Standard Business Hours (9:30 AM – 6:30 PM IST, Mon–Sat)',
       color: 'bg-blue-500/10 text-blue-600 border-blue-200',
     },
     {
       severity: 'Severity 4 (Low / Request)',
-      impact: 'General cosmetic update, minor copywriting change, new feature scoping or architecture inquiry.',
-      initialResponse: '< 24 Hours',
+      impact: 'Cosmetic refinement, content revision, new feature scoping, or technical inquiry.',
+      initialResponse: 'Within 24 Hours',
       resolutionTarget: 'Prioritized in upcoming milestone backlog',
       coverage: 'Standard Business Hours',
       color: 'bg-zinc-100 text-zinc-700 border-zinc-200',
@@ -60,23 +60,23 @@ export default function SupportSlaPage() {
   const commitments = [
     {
       icon: Server,
-      title: '99.95% Infrastructure Uptime Guarantee',
-      desc: 'All managed Next.js web applications, enterprise ERP portals, and database clusters deployed by ARKA Technovation are architected with automated health checks, edge caching, and failover redundancy to deliver 99.95% production availability.',
+      title: '99.95% Infrastructure Availability Commitment',
+      desc: 'All managed web applications, enterprise portals, and cloud database architectures provisioned by our engineering team feature automated health checks, CDN edge caching, and failover redundancy to deliver 99.95% production availability.',
     },
     {
       icon: RefreshCw,
-      title: 'Automated Daily Backups & Disaster Recovery',
-      desc: 'Point-in-time relational database snapshots and encrypted object storage backups are executed daily across isolated geographical availability zones, with a Recovery Point Objective (RPO) < 1 hour and Recovery Time Objective (RTO) < 4 hours.',
+      title: 'Automated Snapshot Backups & Recovery Protocols',
+      desc: 'Point-in-time relational database snapshots and encrypted object storage backups are executed across isolated cloud availability zones, ensuring dependable disaster recovery with minimal recovery point and recovery time objectives.',
     },
     {
       icon: Lock,
-      title: 'Proactive Security & Dependency Audits',
-      desc: 'Continuous vulnerability scanning across npm dependencies, Docker containers, and API endpoints. Security patches and critical zero-day fixes are rolled out immediately within 24 hours of disclosure.',
+      title: 'Continuous Vulnerability & Dependency Governance',
+      desc: 'Automated security scanning across application dependencies, container images, and authenticated API endpoints. Security patches and zero-day mitigations are evaluated and deployed promptly upon upstream disclosure.',
     },
     {
       icon: Zap,
-      title: 'Dedicated In-House Specialist Pods',
-      desc: 'No third-party subcontractors or generic call centers. Support tickets are triaged and resolved directly by senior full-stack software engineers, cloud architects, and systems specialists based in our Sector 63, Noida headquarters.',
+      title: 'Direct In-House Engineering Pods',
+      desc: 'Zero third-party call centers or unvetted contractors. Support incidents are diagnosed, triaged, and resolved directly by senior full-stack software engineers and cloud infrastructure leads based at our Noida facility.',
     },
   ];
 
@@ -100,11 +100,11 @@ export default function SupportSlaPage() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 text-xs font-mono text-zinc-500">
-            <span>Corporate HQ: Rayos Business Park, Sector 63, Noida</span>
+            <span>Corporate HQ: {COMPANY.hq}</span>
             <span>·</span>
-            <span>Support Line: +91 97114 87316</span>
+            <span>Support Line: {COMPANY.phone}</span>
             <span>·</span>
-            <span>Email: support@arkatechnovation.com</span>
+            <span>Email: {COMPANY.email}</span>
           </div>
         </div>
       </section>
@@ -200,6 +200,17 @@ export default function SupportSlaPage() {
       <section className="py-16 sm:py-24 max-w-5xl mx-auto px-4 sm:px-6">
         <div className="p-8 sm:p-12 rounded-3xl bg-zinc-900 text-white border border-black shadow-xl">
           <div className="max-w-3xl">
+            <div className="mb-4">
+              <img
+                src="/images/logo/arka-logo-white.webp"
+                alt="ARKA Technovation Private Limited"
+                width={190}
+                height={104}
+                className="h-9 sm:h-10 w-auto object-contain opacity-95"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
             <span className="text-xs font-mono uppercase tracking-widest text-solar font-semibold">
               Escalation Protocol
             </span>
@@ -213,15 +224,15 @@ export default function SupportSlaPage() {
             <div className="mt-8 grid sm:grid-cols-3 gap-4 pt-6 border-t border-white/10 text-xs font-mono">
               <div>
                 <p className="text-zinc-400">Headquarters</p>
-                <p className="text-white font-semibold mt-1">Rayos Business Park, Sector 63, Noida</p>
+                <p className="text-white font-semibold mt-1">{COMPANY.hq}</p>
               </div>
               <div>
                 <p className="text-zinc-400">Emergency Support</p>
-                <p className="text-white font-semibold mt-1">+91 97114 87316</p>
+                <p className="text-white font-semibold mt-1">{COMPANY.phone}</p>
               </div>
               <div>
                 <p className="text-zinc-400">Support Ticket Desk</p>
-                <p className="text-white font-semibold mt-1">support@arkatechnovation.com</p>
+                <p className="text-white font-semibold mt-1">{COMPANY.email}</p>
               </div>
             </div>
 
@@ -233,7 +244,7 @@ export default function SupportSlaPage() {
                 Submit Support Request
               </Link>
               <a
-                href="tel:+919711487316"
+                href={`tel:${COMPANY.phone.replace(/[^0-9+]/g, '')}`}
                 className="px-6 py-3 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white font-semibold text-sm transition-colors border border-white/10"
               >
                 Call Hotline

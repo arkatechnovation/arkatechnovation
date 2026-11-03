@@ -9,35 +9,35 @@ const SERVICES = [
     num: '01',
     title: 'Software Development',
     link: '/services/development',
-    text: 'We engineer bespoke enterprise software, modular backend architectures, scalable ERP systems, custom CRMs, and automated workflow matrices built for dependable scale.',
+    text: 'Custom CRM and ERP platforms, high-performance web applications, and modular backend architectures engineered with complete source code ownership.',
     img: '/images/services/cards/service-01-web-development.webp',
   },
   {
     num: '02',
     title: 'Digital Marketing',
     link: '/services/digital-marketing',
-    text: 'Full-funnel acquisition campaigns, multi-touch attribution telemetry, and precision conversion optimization engineered to accelerate verified business revenue.',
+    text: 'Full-funnel customer acquisition campaigns across Google and Meta, powered by multi-touch attribution and focused on pipeline growth.',
     img: '/images/services/cards/service-02-ux-interactives.webp',
   },
   {
     num: '03',
     title: 'SEO, GEO & AEO Services',
     link: '/seo-lead-generation',
-    text: 'Technical crawl architecture, high-intent keyword mapping, structured Schema.org entity graphs, generative & answer engine dominance, and local discovery.',
+    text: 'Technical crawl architecture, Schema.org entity graphs, and localized discovery funnels built for Google, SearchGPT, and Perplexity.',
     img: '/images/services/cards/service-05-seo-leadgen.webp',
   },
   {
     num: '04',
     title: 'Film Production & Media',
     link: '/services/film-making',
-    text: 'Broadcast-quality corporate films, digital & TV commercials, executive interview pods, high-end studio photography, and next-gen AI video creation.',
+    text: 'Commercial films, TV ads, executive interview broadcasts, and studio photography produced in-house on our Noida soundstage.',
     img: '/images/services/cards/service-03-crm-erp.webp',
   },
   {
     num: '05',
     title: 'Corporate World News',
     link: '/corporate-world-news',
-    text: 'Authoritative corporate journalism, executive interview broadcasts, strategic press releases, breaking business updates, and rigorous market research.',
+    text: 'Verified corporate journalism, executive interview broadcasts, vertical industry analysis, and wire-syndicated corporate press releases.',
     img: '/images/services/cards/service-04-data-revenue.webp',
   },
 ];
@@ -431,7 +431,7 @@ export default function ServicesStickySection() {
 
       {/* Desktop Section Header (lg:absolute lg:top-0) */}
       <div className="hidden lg:block max-w-7xl mx-auto px-4 sm:px-8 pt-12 sm:pt-16 pb-0 lg:absolute lg:inset-x-0 lg:top-0 lg:z-20">
-        <p className="eyebrow text-[#E8742C] font-mono tracking-widest uppercase text-xs">Capabilities</p>
+        <p className="eyebrow text-[#B85014] font-mono tracking-widest uppercase text-xs">Capabilities</p>
         <h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight text-black leading-none">
           Services Overview
         </h2>

@@ -88,13 +88,13 @@ export default function PortfoliteFooter() {
               loading="lazy"
               decoding="async"
               width={340}
-              height={112}
+              height={187}
               className="h-14 sm:h-24 md:h-28 w-auto max-w-[240px] sm:max-w-[420px] object-contain object-left transition-all duration-300 group-hover:scale-105 drop-shadow-[0_4px_12px_rgba(0,0,0,0.06)]"
             />
           </Link>
 
           <p className="max-w-sm text-zinc-600 leading-[1.8] text-xs sm:text-sm font-normal">
-            Welcome to {COMPANY.name}. We utilise our experience and world-class knowledge to help businesses reach their full online and digital potential, and ensure steady growth.
+            {COMPANY.name} (formerly known as Jaikvik Technology India Pvt. Ltd.) delivers enterprise software engineering, technical search optimization, and commercial cinema from Sector 63, Noida.
           </p>
 
           <p className="text-[12px] text-zinc-500 font-mono">

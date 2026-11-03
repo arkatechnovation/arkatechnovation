@@ -103,7 +103,7 @@ export default function OurTechnologyPage() {
       tag: 'Unified CDP',
       name: 'Customer Data Platform (CDP)',
       subtitle: 'First-party cookie resolution, 360-degree buyer profiles & real-time omnichannel sync',
-      desc: 'At ARKA Technovation Private Limited, we help enterprises make the most of their first-party data. Our AI-powered Customer Data Platform (CDP) integrates specialized telemetry tools that work in unison to normalize customer interactions across web, email, CRM, and offline channels. Amid third-party cookie deprecation, our persistent CDP database establishes a single, authoritative 360-degree view of your buyer.',
+      desc: 'Our Customer Data Platform (CDP) normalizes first-party customer interactions across web, email, CRM, and offline channels. Amid third-party cookie deprecation, our persistent CDP database establishes a single, authoritative 360-degree view of your buyer.',
       capabilities: [
         'Collects, cleanses, and unifies fragmented interactions from web, apps, and POS into 360° buyer profiles',
         'First-party cookie identity resolution and cross-device visitor tracking without third-party reliance',
@@ -260,7 +260,7 @@ export default function OurTechnologyPage() {
       tag: 'M&A Intelligence',
       name: 'Digital Due Diligence',
       subtitle: 'Auditing digital infrastructure, traffic authenticity, code quality, and cybersecurity for M&A',
-      desc: 'Your next acquisition doesn’t have to be a gamble. With digital due diligence services from ARKA Technovation Private Limited, your firm can get insight into a target company’s true digital health before finalizing mergers or investments. We perform deep forensic audits of website traffic quality (filtering bot fraud), organic search sustainability, technical codebase architecture, cloud security, and customer database retention.',
+      desc: 'Our digital due diligence audits evaluate a target company’s true digital health before finalizing mergers or acquisitions. We perform forensic audits of website traffic quality (filtering bot fraud), organic search sustainability, technical codebase architecture, cloud security, and customer database retention.',
       capabilities: [
         'Forensic web traffic audit identifying authentic human visitors vs disguised bot networks and click farms',
         'SEO equity audit evaluating risk of algorithmic Google penalties and unmasking toxic backlink profiles',
@@ -281,7 +281,7 @@ export default function OurTechnologyPage() {
       tag: 'Target Account ABM',
       name: 'Account-Based Marketing Services',
       subtitle: 'Securing high-value enterprise accounts with synchronized multi-stakeholder campaigns',
-      desc: 'ARKA Technovation Private Limited offers industry-leading Account-Based Marketing (ABM) services that help your business secure high-value enterprise clients. Rather than broadcasting broad generic messages, ABM treats individual target accounts as markets of one. We coordinate bespoke content, LinkedIn executive outreach, IP-targeted display advertising, and personalized email journeys tailored specifically to decision-makers and buying committees.',
+      desc: 'Our Account-Based Marketing (ABM) programs help your enterprise secure high-value commercial accounts. Rather than broadcasting generic messages, ABM coordinates tailored content, LinkedIn executive outreach, IP-targeted display advertising, and personalized email journeys aimed directly at buying committees.',
       capabilities: [
         'Target account list (TAL) selection and tiered prioritization based on ideal customer profile (ICP) fit',
         'Firmographic IP-targeted digital advertising serving bespoke ads exclusively to employees of target accounts',
@@ -315,7 +315,7 @@ export default function OurTechnologyPage() {
       tag: 'Template Engineering',
       name: 'Email Marketing Testing & Design',
       subtitle: 'Custom responsive HTML templates tested across 40+ email clients and dark-mode settings',
-      desc: 'Email marketing is one of the most tried and true digital marketing strategies available. At ARKA Technovation Private Limited, we know that great email marketing requires stunning visual design paired with technical inbox deliverability. We design custom responsive HTML/CSS email templates, execute rigorous multivariate A/B testing across subject lines, sender names, and layouts, ensuring maximum click-to-open rates (CTOR).',
+      desc: 'Effective email marketing requires clean visual design paired with technical inbox deliverability. We design custom responsive HTML/CSS email templates, execute rigorous multivariate A/B testing across subject lines, sender names, and layouts, ensuring maximum click-to-open rates (CTOR).',
       capabilities: [
         'Custom responsive email templates rigorously tested across 40+ email clients and dark-mode settings',
         'Multivariate A/B testing of subject lines, preview text, content length, and CTA buttons',
@@ -366,7 +366,7 @@ export default function OurTechnologyPage() {
       tag: 'Turnkey Email Ops',
       name: 'Email Marketing Management Services',
       subtitle: 'Turnkey campaign execution, list segmentation, inbox deliverability & weekly reporting',
-      desc: 'At ARKA Technovation Private Limited, we take complete care of your email marketing operations. We manage your subscriber lists, craft engaging copy, design responsive templates, execute timely broadcasts, and monitor technical inbox deliverability. Our turnkey email marketing management services allow your leadership team to focus on core operations while your email list generates predictable recurring revenue.',
+      desc: 'We manage end-to-end email marketing operations: subscriber list hygiene, copywriting, responsive template design, broadcast scheduling, and technical inbox deliverability monitoring.',
       capabilities: [
         'Complete broadcast scheduling, list segmentation, and campaign execution handled by our dedicated pod',
         'Dedicated IP warming, SPF, DKIM, and DMARC authentication protocols ensuring 99%+ deliverability',
@@ -514,7 +514,7 @@ export default function OurTechnologyPage() {
 
   const faqs = [
     {
-      q: 'How does ARKA Technovation Private Limited handle data privacy and first-party cookie deprecation?',
+      q: 'How do you handle data privacy and first-party cookie deprecation?',
       a: 'We architect Customer Data Platforms (CDPs) and first-party telemetry pipelines that collect and normalize data directly on your own domain infrastructure. By eliminating reliance on vulnerable third-party tracking cookies, our clients maintain 100% compliance with GDPR and Indian DPDP regulations while building persistent, high-accuracy buyer profiles.',
     },
     {
@@ -648,7 +648,7 @@ export default function OurTechnologyPage() {
             Revenue Systems, Attribution &amp; Automation
           </h2>
           <p className="mt-4 text-zinc-600 text-base sm:text-lg leading-relaxed font-light text-pretty">
-            Explore all 24 enterprise platforms, attribution algorithms, and cloud data pipelines engineered by ARKA Technovation Private Limited. Filter by category above to review comprehensive technical specifications.
+            Explore all 24 enterprise platforms, attribution algorithms, and cloud data pipelines engineered by our in-house teams. Filter by category above to review comprehensive technical specifications.
           </p>
         </div>
 

@@ -23,6 +23,19 @@ export class LiquidCanvas {
   }
 
   init() {
+    try {
+      if (typeof window === 'undefined') return;
+      const testCanvas = document.createElement('canvas');
+      const gl = testCanvas.getContext('webgl') || testCanvas.getContext('experimental-webgl');
+      if (!gl) {
+        this.isSupported = false;
+        return;
+      }
+    } catch (e) {
+      this.isSupported = false;
+      return;
+    }
+
     this.scene = new THREE.Scene();
 
     // Fullscreen orthographic camera setup
@@ -163,7 +176,9 @@ export class LiquidCanvas {
     u.useGrain.value = t.useGrain;
     u.effectDepth.value = t.effectDepth;
 
-    this.renderer.render(this.scene, this.camera);
+    if (this.renderer) {
+      this.renderer.render(this.scene, this.camera);
+    }
   }
 
   destroy() {
@@ -172,6 +187,8 @@ export class LiquidCanvas {
     if (this.canvas && this.canvas.parentNode) {
       this.canvas.parentNode.removeChild(this.canvas);
     }
-    this.renderer.dispose();
+    if (this.renderer) {
+      this.renderer.dispose();
+    }
   }
 }
