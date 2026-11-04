@@ -1,5 +1,7 @@
 'use client';
 
+import { useState, useEffect } from 'react';
+
 interface Brand {
   name: string;
   url: string;
@@ -149,8 +151,16 @@ const BRANDS: Brand[] = [
 ];
 
 export default function PortfoliteLogosMarquee() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // Mount brand logos smoothly after critical hero paint to dedicate initial network bandwidth to LCP
+    const timer = setTimeout(() => setMounted(true), 120);
+    return () => clearTimeout(timer);
+  }, []);
+
   // 2 identical sets for seamless -50% marquee loop
-  const displayBrands = [...BRANDS, ...BRANDS];
+  const displayBrands = mounted ? [...BRANDS, ...BRANDS] : [];
 
   return (
     <section
@@ -161,7 +171,7 @@ export default function PortfoliteLogosMarquee() {
       <div className="absolute left-0 inset-y-0 w-20 sm:w-40 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
       <div className="absolute right-0 inset-y-0 w-20 sm:w-40 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
 
-      <div className="overflow-hidden flex py-1">
+      <div className="overflow-hidden flex py-1 min-h-[32px] sm:min-h-[44px] items-center">
         <div
           className="animate-marquee flex items-center gap-14 sm:gap-20 opacity-90 hover:opacity-100 transition-opacity will-change-transform"
           style={{ animationDuration: '48s' }}

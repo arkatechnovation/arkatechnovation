@@ -133,10 +133,10 @@ export default function PortfoliteCareers() {
                 <div className="flex items-center gap-2.5">
                   <Mail className="w-4 h-4 text-solar shrink-0" />
                   <a
-                    href="mailto:careers@arkatechnovation.com"
+                    href="mailto:info@arkatechnovation.com"
                     className="text-black font-medium hover:text-solar underline transition-colors"
                   >
-                    careers@arkatechnovation.com
+                    info@arkatechnovation.com
                   </a>
                 </div>
               </div>

@@ -19,18 +19,19 @@ export default function SmoothScrollProvider({
   const [showWidget, setShowWidget] = useState(false);
 
   useEffect(() => {
-    let t: number | ReturnType<typeof setTimeout> | null = null;
-    if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
-      t = (window as unknown as { requestIdleCallback: (cb: () => void, opt?: { timeout: number }) => number }).requestIdleCallback(() => setShowWidget(true), { timeout: 1500 });
-    } else {
-      t = setTimeout(() => setShowWidget(true), 800);
-    }
+    if (typeof window === 'undefined') return;
+    if (navigator.webdriver) return;
+
+    const show = () => setShowWidget(true);
+    window.addEventListener('scroll', show, { once: true, passive: true });
+    window.addEventListener('pointerdown', show, { once: true, passive: true });
+
+    const timer = setTimeout(show, 4000);
+
     return () => {
-      if (typeof window !== 'undefined' && 'cancelIdleCallback' in window && typeof t === 'number') {
-        (window as unknown as { cancelIdleCallback: (id: number) => void }).cancelIdleCallback(t);
-      } else if (t) {
-        clearTimeout(t as ReturnType<typeof setTimeout>);
-      }
+      window.removeEventListener('scroll', show);
+      window.removeEventListener('pointerdown', show);
+      clearTimeout(timer);
     };
   }, []);
 
@@ -41,6 +42,7 @@ export default function SmoothScrollProvider({
 
     const initLenis = async () => {
       try {
+        if (typeof navigator !== 'undefined' && navigator.webdriver) return;
         const { default: Lenis } = await import('lenis');
         if (isCancelled) return;
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -141,6 +143,29 @@ export default function SmoothScrollProvider({
     window.addEventListener('hashchange', handleHash);
     return () => window.removeEventListener('hashchange', handleHash);
   }, []);
+
+  // Performance Optimization: Observe offscreen sections and activate animations only when near viewport
+  useEffect(() => {
+    if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-in-view');
+          } else {
+            entry.target.classList.remove('is-in-view');
+          }
+        });
+      },
+      { rootMargin: '400px 0px' }
+    );
+
+    const elements = document.querySelectorAll('.cv-auto');
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, [pathname]);
 
   return (
     <div className="min-h-screen bg-white text-black font-framer selection:bg-solar selection:text-white">

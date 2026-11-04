@@ -49,7 +49,7 @@ export default function NewsPage() {
           </div>
 
           <div className="max-w-3xl">
-            <p className="text-xs sm:text-sm font-mono font-semibold uppercase tracking-widest text-[#E8742C] mb-3">
+            <p className="text-xs sm:text-sm font-mono font-semibold uppercase tracking-widest text-[#B84E12] mb-3">
               Editorial &amp; Engineering Research
             </p>
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-black leading-[1.08] mb-4">
@@ -134,7 +134,7 @@ export default function NewsPage() {
                 <div className="grid lg:grid-cols-12 items-center">
                   {/* Image container: Pure image with ZERO overlaid badges */}
                   <Link
-                    href={`/blogs/${featuredPost.slug}`}
+                    href={`/news/${featuredPost.slug}`}
                     className="lg:col-span-7 block aspect-[16/10] w-full overflow-hidden bg-zinc-100"
                   >
                     <img
@@ -150,10 +150,10 @@ export default function NewsPage() {
                   {/* Editorial Details */}
                   <div className="lg:col-span-5 p-8 sm:p-12 flex flex-col justify-between">
                     <div>
-                      <p className="text-xs font-mono uppercase tracking-widest text-[#E8742C] font-semibold mb-2">
+                      <p className="text-xs font-mono uppercase tracking-widest text-[#B84E12] font-semibold mb-2">
                         {featuredPost.category} · Featured Analysis
                       </p>
-                      <Link href={`/blogs/${featuredPost.slug}`} className="block">
+                      <Link href={`/news/${featuredPost.slug}`} className="block">
                         <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-black group-hover:text-[#E8742C] transition-colors leading-[1.18] mb-4">
                           {featuredPost.title}
                         </h2>
@@ -169,7 +169,7 @@ export default function NewsPage() {
                         <span>{featuredPost.date} · {featuredPost.readTime}</span>
                       </div>
                       <Link
-                        href={`/blogs/${featuredPost.slug}`}
+                        href={`/news/${featuredPost.slug}`}
                         className="inline-flex items-center gap-1.5 font-bold text-black group-hover:text-[#E8742C] transition-colors"
                       >
                         <span>Read Analysis</span>
@@ -200,7 +200,7 @@ export default function NewsPage() {
                     <div>
                       {/* Image Container: Clean image with NO badges overlaid */}
                       <Link
-                        href={`/blogs/${post.slug}`}
+                        href={`/news/${post.slug}`}
                         className="block aspect-[16/10] w-full overflow-hidden bg-zinc-100 border-b border-black/10"
                       >
                         <img
@@ -217,16 +217,16 @@ export default function NewsPage() {
                       <div className="p-6">
                         {/* Meta information row (clean text, no badge) */}
                         <div className="flex items-center justify-between text-xs font-mono mb-3">
-                          <span className="font-semibold text-[#E8742C] uppercase tracking-wider">
+                          <span className="font-semibold text-[#B84E12] uppercase tracking-wider">
                             {post.category}
                           </span>
-                          <span className="text-zinc-400">
+                          <span className="text-zinc-600">
                             {post.readTime}
                           </span>
                         </div>
 
                         {/* Title */}
-                        <Link href={`/blogs/${post.slug}`} className="block">
+                        <Link href={`/news/${post.slug}`} className="block">
                           <h4 className="text-lg font-bold tracking-tight text-black group-hover:text-[#E8742C] transition-colors leading-snug mb-3 line-clamp-2">
                             {post.title}
                           </h4>
@@ -243,7 +243,7 @@ export default function NewsPage() {
                     <div className="px-6 pb-6 pt-4 border-t border-black/6 flex items-center justify-between text-xs font-mono text-zinc-500">
                       <span>{post.date}</span>
                       <Link
-                        href={`/blogs/${post.slug}`}
+                        href={`/news/${post.slug}`}
                         className="font-bold text-black group-hover:text-[#E8742C] inline-flex items-center gap-1 transition-colors"
                       >
                         <span>Read</span>

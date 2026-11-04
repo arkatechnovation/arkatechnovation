@@ -49,9 +49,6 @@ export const metadata: Metadata = {
     icon: [
       { url: '/favicon.ico', sizes: '48x48 32x32 16x16', type: 'image/x-icon' },
       { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
-      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
-      { url: '/favicon-192x192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/favicon-512x512.png', sizes: '512x512', type: 'image/png' },
       { url: '/favicon.svg', type: 'image/svg+xml' },
     ],
     shortcut: '/favicon.ico',
@@ -225,7 +222,7 @@ export default function RootLayout({
         />
         <link
           rel="preload"
-          href="/images/hero/hero-main-mobile.webp"
+          href="/images/hero/slider/hero-slide-1-mobile.webp"
           as="image"
           type="image/webp"
           media="(max-width: 768px)"
@@ -233,11 +230,39 @@ export default function RootLayout({
         />
         <link
           rel="preload"
-          href="/images/hero/hero-main.webp"
+          href="/images/hero/slider/hero-slide-1.webp"
           as="image"
           type="image/webp"
           media="(min-width: 769px)"
           fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          href="/images/logo/arka-logo-black-mobile.webp"
+          as="image"
+          type="image/webp"
+          media="(max-width: 640px)"
+        />
+        <link
+          rel="preload"
+          href="/images/logo/arka-logo-black.webp"
+          as="image"
+          type="image/webp"
+          media="(min-width: 641px)"
+        />
+        <link
+          rel="preload"
+          href="/fonts/cabinet-grotesk-300-latin.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/geist-400-latin.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
         />
 
 

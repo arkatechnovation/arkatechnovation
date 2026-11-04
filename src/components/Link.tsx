@@ -8,14 +8,15 @@ export interface LinkProps extends Omit<React.AnchorHTMLAttributes<HTMLAnchorEle
   href?: string;
   children?: React.ReactNode;
   scroll?: boolean;
+  prefetch?: boolean;
 }
 
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
-  { to, href, scroll, ...props },
+  { to, href, scroll, prefetch = false, ...props },
   ref
 ) {
   const destination = href || to || '/';
-  return <NextLink ref={ref} href={destination} scroll={scroll} {...props} />;
+  return <NextLink ref={ref} href={destination} scroll={scroll} prefetch={prefetch} {...props} />;
 });
 
 export default Link;

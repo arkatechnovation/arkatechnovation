@@ -680,7 +680,7 @@ export default function ScalableArchitectureSection() {
                 </>
               ) : (
                 <>
-                  <Copy className="w-3.5 h-3.5 text-zinc-500" />
+                  <Copy className="w-3.5 h-3.5 text-zinc-600" />
                   <span>Copy</span>
                 </>
               )}
@@ -693,7 +693,7 @@ export default function ScalableArchitectureSection() {
               {/* Line Numbers */}
               <div
                 aria-hidden="true"
-                className="select-none text-right pr-4 sm:pr-6 text-zinc-500 border-r border-black/8 mr-4 sm:mr-6 shrink-0"
+                className="select-none text-right pr-4 sm:pr-6 text-zinc-600 border-r border-black/8 mr-4 sm:mr-6 shrink-0"
               >
                 {codeLines.map((_, i) => (
                   <div key={i} className="leading-relaxed">
@@ -739,7 +739,7 @@ export default function ScalableArchitectureSection() {
               </Link>
             </div>
 
-            <div className="flex items-center gap-2 text-zinc-500 text-[11px] sm:text-xs">
+            <div className="flex items-center gap-2 text-zinc-600 text-[11px] sm:text-xs">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
               <span>Sub-15ms Execution · Zero Technical Debt</span>
             </div>
@@ -759,7 +759,7 @@ function formatCodeLine(line: string): React.ReactNode {
 
   // Comments
   if (line.trim().startsWith('#') || line.trim().startsWith('//')) {
-    return <span className="text-zinc-500 italic">{line}</span>;
+    return <span className="text-zinc-600 italic">{line}</span>;
   }
 
   // Token replacement for bright syntax highlighting

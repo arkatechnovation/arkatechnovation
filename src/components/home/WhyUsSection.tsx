@@ -59,11 +59,10 @@ export default function WhyUsSection() {
     let rafId = 0;
     let isInView = false;
 
-    let imageHeights = images.map((image) => image?.offsetHeight ?? 0);
+    let imageHeights: number[] = [];
     const measureHeights = () => {
       imageHeights = images.map((image) => image?.offsetHeight ?? 0);
     };
-    measureHeights();
 
     const updateParallax = () => {
       rafId = 0;
@@ -79,7 +78,7 @@ export default function WhyUsSection() {
         // Parallax image shift
         if (!isReduced && images[idx]) {
           const progress = clamp01((winH - rect.top) / (winH + rect.height));
-          const offset = (progress * (imageHeights[idx] * 0.153)).toFixed(1);
+          const offset = (progress * ((imageHeights[idx] || 300) * 0.153)).toFixed(1);
           images[idx].style.setProperty('--py', offset);
         }
 
@@ -95,6 +94,9 @@ export default function WhyUsSection() {
     };
 
     const scheduleUpdate = () => {
+      if (imageHeights.length === 0) {
+        measureHeights();
+      }
       if (isInView && !rafId) rafId = requestAnimationFrame(updateParallax);
     };
 

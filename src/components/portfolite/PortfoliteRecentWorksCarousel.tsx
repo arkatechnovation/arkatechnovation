@@ -415,7 +415,7 @@ const SHOWCASE_CARDS: ShowcaseCardItem[] = [
     mosaicVariant: 'navy',
     glassWidget: (
       <div className="text-left w-full select-none">
-        <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 font-semibold mb-2">
+        <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-600 font-semibold mb-2">
           ENGINEERING · STACK
         </div>
         <div className="space-y-2 text-xs sm:text-[12.5px] font-mono">
@@ -424,21 +424,21 @@ const SHOWCASE_CARDS: ShowcaseCardItem[] = [
               <span className="w-2 h-2 rounded-full bg-blue-600 shrink-0" />
               <span>Next.js · React</span>
             </span>
-            <span className="text-zinc-500 text-[11px] font-normal">Modern Stack</span>
+            <span className="text-zinc-600 text-[11px] font-normal">Modern Stack</span>
           </div>
           <div className="flex items-center justify-between text-zinc-900 font-medium">
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-indigo-500 shrink-0" />
               <span>Strict TypeScript</span>
             </span>
-            <span className="text-zinc-500 text-[11px] font-normal">Clean Code</span>
+            <span className="text-zinc-600 text-[11px] font-normal">Clean Code</span>
           </div>
           <div className="flex items-center justify-between text-zinc-900 font-medium">
             <span className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
+              <span className="w-2 h-2 rounded-full bg-zinc-600 shrink-0" />
               <span>Node.js Backend</span>
             </span>
-            <span className="text-emerald-700 text-[11px] font-normal">Scalable</span>
+            <span className="text-zinc-600 text-[11px] font-normal">Scalable</span>
           </div>
         </div>
       </div>
@@ -462,30 +462,30 @@ const SHOWCASE_CARDS: ShowcaseCardItem[] = [
     mosaicVariant: 'olive',
     glassWidget: (
       <div className="text-left w-full select-none">
-        <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 font-semibold mb-2">
+        <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-600 font-semibold mb-2">
           PIPELINE · OPERATIONS
         </div>
         <div className="space-y-2 text-xs sm:text-[12.5px] font-mono">
           <div className="flex items-center justify-between text-zinc-800 font-medium">
             <span className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0 animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-zinc-600 shrink-0" />
               <span>Production Build</span>
             </span>
-            <span className="text-emerald-700 font-medium text-[11px]">Deployed</span>
+            <span className="text-zinc-600 font-medium text-[11px]">Deployed</span>
           </div>
           <div className="flex items-center justify-between text-zinc-800 font-medium">
             <span className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
+              <span className="w-2 h-2 rounded-full bg-zinc-600 shrink-0" />
               <span>Automated Tests</span>
             </span>
-            <span className="text-zinc-500 font-normal text-[11px]">All Passed</span>
+            <span className="text-zinc-600 font-normal text-[11px]">All Passed</span>
           </div>
           <div className="flex items-center justify-between text-zinc-800 font-medium">
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full border border-zinc-700 shrink-0" />
               <span>Edge Verification</span>
             </span>
-            <span className="text-zinc-500 font-normal text-[11px]">Active</span>
+            <span className="text-zinc-600 font-normal text-[11px]">Active</span>
           </div>
         </div>
       </div>
@@ -509,7 +509,7 @@ const SHOWCASE_CARDS: ShowcaseCardItem[] = [
     mosaicVariant: 'terracotta',
     glassWidget: (
       <div className="text-left w-full select-none">
-        <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 font-semibold mb-2">
+        <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-600 font-semibold mb-2">
           SEARCH TELEMETRY
         </div>
         <div className="space-y-2 text-xs sm:text-[12.5px] font-mono">
@@ -518,21 +518,21 @@ const SHOWCASE_CARDS: ShowcaseCardItem[] = [
               <span className="w-2 h-2 rounded-full bg-orange-500 shrink-0" />
               <span>Schema.org JSON-LD</span>
             </span>
-            <span className="text-emerald-700 font-medium text-[11px]">Structured</span>
+            <span className="text-zinc-600 font-medium text-[11px]">Structured</span>
           </div>
           <div className="flex items-center justify-between text-zinc-800 font-medium">
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-orange-500 shrink-0" />
               <span>Core Web Vitals</span>
             </span>
-            <span className="text-emerald-700 font-medium text-[11px]">All Green</span>
+            <span className="text-zinc-600 font-medium text-[11px]">Verified</span>
           </div>
           <div className="flex items-center justify-between text-zinc-800 font-medium">
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-orange-500 shrink-0" />
               <span>Entity Indexing</span>
             </span>
-            <span className="text-zinc-500 font-normal text-[11px]">Active</span>
+            <span className="text-zinc-600 font-normal text-[11px]">Active</span>
           </div>
         </div>
       </div>
@@ -556,7 +556,7 @@ const SHOWCASE_CARDS: ShowcaseCardItem[] = [
     mosaicVariant: 'mauve',
     glassWidget: (
       <div className="text-left w-full select-none">
-        <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 font-semibold mb-2">
+        <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-600 font-semibold mb-2">
           ENTERPRISE · WORKFLOWS
         </div>
         <div className="space-y-2 text-xs sm:text-[12.5px] font-mono">
@@ -572,7 +572,7 @@ const SHOWCASE_CARDS: ShowcaseCardItem[] = [
               <span className="w-2 h-2 rounded-full bg-purple-600 shrink-0" />
               <span>ERP Sync Pipeline</span>
             </span>
-            <span className="text-emerald-700 font-medium text-[11px]">Live</span>
+            <span className="text-zinc-600 font-medium text-[11px]">Live</span>
           </div>
           <div className="flex items-center justify-between text-zinc-800 font-medium">
             <span className="flex items-center gap-2">
@@ -603,7 +603,7 @@ const SHOWCASE_CARDS: ShowcaseCardItem[] = [
     mosaicVariant: 'graphite',
     glassWidget: (
       <div className="text-left w-full select-none">
-        <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 font-semibold mb-2">
+        <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-600 font-semibold mb-2">
           BROADCAST · PRODUCTION
         </div>
         <div className="space-y-2 text-xs sm:text-[12.5px] font-mono">
@@ -626,7 +626,7 @@ const SHOWCASE_CARDS: ShowcaseCardItem[] = [
               <span className="w-2 h-2 rounded-full bg-zinc-700 shrink-0" />
               <span>On-Location Filming</span>
             </span>
-            <span className="text-emerald-700 font-medium text-[11px]">In-House Crew</span>
+            <span className="text-zinc-600 font-medium text-[11px]">In-House Crew</span>
           </div>
         </div>
       </div>
@@ -650,7 +650,7 @@ const SHOWCASE_CARDS: ShowcaseCardItem[] = [
     mosaicVariant: 'sand',
     glassWidget: (
       <div className="text-left w-full select-none">
-        <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 font-semibold mb-2">
+        <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-600 font-semibold mb-2">
           COMMERCIAL · OWNERSHIP
         </div>
         <div className="space-y-2 text-xs sm:text-[12.5px] font-mono">
@@ -659,7 +659,7 @@ const SHOWCASE_CARDS: ShowcaseCardItem[] = [
               <span className="w-2 h-2 rounded-full bg-amber-600 shrink-0" />
               <span>Full Source Code</span>
             </span>
-            <span className="text-emerald-700 font-medium text-[11px]">Full Handover</span>
+            <span className="text-zinc-600 font-medium text-[11px]">Full Handover</span>
           </div>
           <div className="flex items-center justify-between text-zinc-800 font-medium">
             <span className="flex items-center gap-2">
@@ -673,7 +673,7 @@ const SHOWCASE_CARDS: ShowcaseCardItem[] = [
               <span className="w-2 h-2 rounded-full bg-amber-600 shrink-0" />
               <span>Proprietary Lock-In</span>
             </span>
-            <span className="text-zinc-500 font-normal text-[11px]">Zero Lock-In</span>
+            <span className="text-zinc-600 font-normal text-[11px]">Zero Lock-In</span>
           </div>
         </div>
       </div>

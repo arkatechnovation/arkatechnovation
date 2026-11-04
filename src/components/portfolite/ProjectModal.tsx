@@ -96,7 +96,7 @@ export default function ProjectModal({ project, onClose, onBookCall }: ProjectMo
               </div>
               <div>
                 <p className="text-zinc-500 text-xs uppercase tracking-wider">Impact</p>
-                <p className="text-emerald-600 font-semibold mt-1">{project.results}</p>
+                <p className="text-black font-semibold mt-1">{project.results}</p>
               </div>
             </div>
 
@@ -117,7 +117,7 @@ export default function ProjectModal({ project, onClose, onBookCall }: ProjectMo
                 <ul className="space-y-2.5">
                   {project.deliverables.map((item, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-zinc-700 text-sm">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-zinc-900 shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}

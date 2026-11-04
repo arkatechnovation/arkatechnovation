@@ -5,7 +5,7 @@ import React, { useEffect, useRef } from 'react';
 const PROCESS_COLUMNS = [
   {
     label: '01 · Discovery & System Planning',
-    title: 'Business requirement analysis, system architecture mapping, and technical specifications.',
+    title: 'System architecture & technical roadmap.',
     illustration: (
       <svg
         viewBox="0 0 200 130"
@@ -57,7 +57,7 @@ const PROCESS_COLUMNS = [
   },
   {
     label: '02 · Interface Design & Modeling',
-    title: 'User journey prototyping, modular component libraries, and relational schema modeling.',
+    title: 'UI/UX prototyping & modular design systems.',
     illustration: (
       <svg
         viewBox="0 0 200 130"
@@ -103,7 +103,7 @@ const PROCESS_COLUMNS = [
   },
   {
     label: '03 · Full-Stack Software Development',
-    title: 'Clean frontend components, secure backend services, and enterprise integration workflows.',
+    title: 'Custom web apps, secure APIs & cloud backend.',
     illustration: (
       <svg
         viewBox="0 0 200 130"
@@ -154,7 +154,7 @@ const PROCESS_COLUMNS = [
   },
   {
     label: '04 · Quality Assurance & Deployment',
-    title: 'Automated regression testing, production cloud deployment, and continuous system monitoring.',
+    title: 'Automated QA, cloud rollout & 24/7 monitoring.',
     illustration: (
       <svg
         viewBox="0 0 200 130"
@@ -326,10 +326,10 @@ export default function PortfoliteProcess() {
               >
                 {/* Top Meta & Headline */}
                 <div>
-                  <span className="block text-xs sm:text-sm font-normal text-zinc-500 mb-3 sm:mb-4 tracking-normal">
+                  <span className="block text-xs sm:text-sm font-normal text-zinc-600 mb-3 sm:mb-4 tracking-normal">
                     {col.label}
                   </span>
-                  <h3 className="text-base sm:text-xl lg:text-[22px] font-bold text-black tracking-tight leading-[1.35] max-w-[280px]">
+                  <h3 className="text-sm sm:text-base lg:text-base xl:text-[17px] font-semibold text-black tracking-tight leading-snug max-w-[260px]">
                     {col.title}
                   </h3>
                 </div>

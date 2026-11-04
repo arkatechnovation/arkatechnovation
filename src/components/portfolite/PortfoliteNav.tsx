@@ -310,15 +310,22 @@ export default function PortfoliteNav() {
             {/* Official ARKA Technovation Logo */}
             <Link to="/" className="relative flex items-center group cursor-pointer shrink-0 py-1" aria-label="ARKA Technovation Private Limited Home">
               <div className="relative h-10 sm:h-12 lg:h-[46px] w-[150px] sm:w-[175px] lg:w-[190px] xl:w-[215px]">
-                <img
-                  src="/images/logo/arka-logo-black.webp"
-                  alt="ARKA Technovation Private Limited"
-                  loading="eager"
-                  decoding="async"
-                  width={215}
-                  height={118}
-                  className="h-full w-auto max-w-full object-contain object-left transition-transform duration-300 group-hover:scale-105 drop-shadow-[0_1px_3px_rgba(0,0,0,0.12)]"
-                />
+                <picture className="h-full w-auto block">
+                  <source
+                    media="(max-width: 640px)"
+                    srcSet="/images/logo/arka-logo-black-mobile.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="/images/logo/arka-logo-black.webp"
+                    alt="ARKA Technovation Private Limited"
+                    loading="eager"
+                    decoding="async"
+                    width={215}
+                    height={118}
+                    className="h-full w-auto max-w-full object-contain object-left transition-transform duration-300 group-hover:scale-105 drop-shadow-[0_1px_3px_rgba(0,0,0,0.12)]"
+                  />
+                </picture>
               </div>
             </Link>
 
@@ -379,7 +386,7 @@ export default function PortfoliteNav() {
                         style={{ color: isOverHero ? '#ffffff' : undefined }}
                         className={`w-3.5 h-3.5 shrink-0 transition-transform duration-300 ${
                           isOpen ? 'rotate-180' : ''
-                        } ${isOverHero ? 'text-white' : isOpen ? 'text-solar' : 'text-zinc-400 group-hover:text-black'}`}
+                        } ${isOverHero ? 'text-white' : isOpen ? 'text-solar' : 'text-zinc-600 group-hover:text-black'}`}
                       />
                     )}
                     <span
@@ -678,7 +685,7 @@ export default function PortfoliteNav() {
                   <span style={{ color: '#FFFFFF' }}>Start a project</span>
                   <CircleArrow size={14} className="!text-white" style={{ color: '#FFFFFF', stroke: '#FFFFFF' }} />
                 </Link>
-                <div className="font-mono text-[9px] tracking-[0.16em] uppercase text-zinc-500 space-y-1 text-center">
+                <div className="font-mono text-[9px] tracking-[0.16em] uppercase text-zinc-600 space-y-1 text-center">
                   <p>{COMPANY.phones[0]}</p>
                   <p>{COMPANY.email}</p>
                   <p>Rayos Business Park, Office No- 202, C-4, Sector 63, Noida, Uttar Pradesh 201301, India</p>

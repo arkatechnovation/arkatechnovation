@@ -19,7 +19,7 @@ export const COMPANY = {
   years: 10,
   founderYears: '18+',
   email: 'info@arkatechnovation.com',
-  careers: 'careers@arkatechnovation.com',
+  careers: 'info@arkatechnovation.com',
   phone: '+91 97114 87316',
   phones: ['+91 97114 87316'],
   hq: 'Rayos Business Park, Office No- 202, C-4, Sector 63, Noida, Uttar Pradesh 201301, India',

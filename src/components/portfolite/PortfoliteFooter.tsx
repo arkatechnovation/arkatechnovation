@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Link from '@/components/Link';
-import { motion } from 'framer-motion';
 import { ArrowUp, Phone, Mail, MapPin, Sparkles } from 'lucide-react';
 import { SERVICES, COMPANY, OFFICES } from '../../lib/data';
 import { CircleArrow } from '../ui';
@@ -97,7 +96,7 @@ export default function PortfoliteFooter() {
             {COMPANY.name} (formerly known as Jaikvik Technology India Pvt. Ltd.) delivers enterprise software engineering, technical search optimization, and commercial cinema from Sector 63, Noida.
           </p>
 
-          <p className="text-[12px] text-zinc-500 font-mono">
+          <p className="text-[12px] text-zinc-600 font-mono">
             Carrying forward {COMPANY.years} years of craft.
           </p>
 
@@ -124,7 +123,7 @@ export default function PortfoliteFooter() {
 
         {/* Col 3: Useful Links (Navbar Pages) */}
         <div className="col-span-1">
-          <p className="mono text-[0.62rem] tracking-[0.24em] uppercase text-zinc-500 mb-5 font-semibold">
+          <p className="mono text-[0.62rem] tracking-[0.24em] uppercase text-zinc-600 mb-5 font-semibold">
             Useful Links
           </p>
           <ul className="space-y-3">
@@ -150,7 +149,7 @@ export default function PortfoliteFooter() {
 
         {/* Col 4: Services (5 Core Disciplines) */}
         <div className="col-span-1 pl-5 sm:pl-8 lg:pl-0">
-          <p className="mono text-[0.62rem] tracking-[0.24em] uppercase text-zinc-500 mb-5 font-semibold">
+          <p className="mono text-[0.62rem] tracking-[0.24em] uppercase text-zinc-600 mb-5 font-semibold">
             Services
           </p>
           <ul className="space-y-3">
@@ -175,7 +174,7 @@ export default function PortfoliteFooter() {
 
         {/* Col 5: Location & Contact */}
         <div className="col-span-2 sm:col-span-1 lg:col-span-1">
-          <p className="mono text-[0.62rem] tracking-[0.24em] uppercase text-zinc-500 mb-5 font-semibold">
+          <p className="mono text-[0.62rem] tracking-[0.24em] uppercase text-zinc-600 mb-5 font-semibold">
             Contact Details
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-1 gap-4 sm:gap-4 text-xs">
@@ -229,23 +228,6 @@ export default function PortfoliteFooter() {
             <Link to="/terms" className="hover:text-[#09090B] transition-colors">Terms</Link>
           </div>
         </div>
-      </div>
-
-      {/* ── Colossal Signature Bottom ARKA Animation ── */}
-      <div className="relative overflow-hidden select-none pointer-events-none -mt-4 sm:-mt-6">
-        <motion.div
-          initial={{ y: 35, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true, margin: '-5%' }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          className="w-full text-center"
-        >
-          <p
-            className="select-none text-center display leading-[0.72] text-[clamp(4.5rem,19vw,16rem)] font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-black/[0.12] via-black/[0.04] to-transparent -mb-[0.11em] transition-all duration-700"
-          >
-            ARKA
-          </p>
-        </motion.div>
       </div>
     </footer>
   );

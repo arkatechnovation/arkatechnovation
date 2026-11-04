@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface HeroSlide {
@@ -10,6 +10,7 @@ interface HeroSlide {
   subtitle: string;
   href: string;
   imgWebp: string;
+  imgMobileWebp?: string;
   imgPng: string;
   bgColor: string;
   accentColor: string;
@@ -22,6 +23,7 @@ const SLIDES: HeroSlide[] = [
     subtitle: 'Innovate. Build. Grow. Custom enterprise software solutions.',
     href: '/services/development',
     imgWebp: '/images/hero/slider/hero-slide-1.webp',
+    imgMobileWebp: '/images/hero/slider/hero-slide-1-mobile.webp',
     imgPng: '/images/hero/HERO IMAGES/1.png',
     bgColor: '#f6f8fd',
     accentColor: '#1060E0',
@@ -87,14 +89,39 @@ export default function PortfoliteHero() {
     setActiveIndex((prev) => (prev - 1 + SLIDES.length) % SLIDES.length);
   }, []);
 
-  // Autoplay timer
+  const [hasInteracted, setHasInteracted] = useState(false);
+
+  // Listen for user engagement before enabling secondary slide assets & autoplay
   useEffect(() => {
-    if (isPaused) return;
+    if (hasInteracted) return;
+
+    const handleInteraction = () => {
+      setHasInteracted(true);
+    };
+
+    window.addEventListener('pointermove', handleInteraction, { once: true, passive: true });
+    window.addEventListener('scroll', handleInteraction, { once: true, passive: true });
+    window.addEventListener('touchstart', handleInteraction, { once: true, passive: true });
+    window.addEventListener('keydown', handleInteraction, { once: true, passive: true });
+
+    return () => {
+      window.removeEventListener('pointermove', handleInteraction);
+      window.removeEventListener('scroll', handleInteraction);
+      window.removeEventListener('touchstart', handleInteraction);
+      window.removeEventListener('keydown', handleInteraction);
+    };
+  }, [hasInteracted]);
+
+  // Autoplay timer: cycles every 5s once engaged, pauses on hover or touch
+  useEffect(() => {
+    if (!hasInteracted || isPaused) return;
+
     const timer = setInterval(() => {
       nextSlide();
     }, AUTOPLAY_INTERVAL_MS);
+
     return () => clearInterval(timer);
-  }, [isPaused, nextSlide]);
+  }, [hasInteracted, isPaused, nextSlide]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -179,10 +206,11 @@ export default function PortfoliteHero() {
         {/* Slides Track */}
         {SLIDES.map((slide, index) => {
           const isActive = index === activeIndex;
+          const transitionClass = hasInteracted ? 'transition-opacity duration-700 ease-in-out' : '';
           return (
             <div
               key={slide.id}
-              className={`absolute inset-0 w-full h-full flex items-center justify-center transition-opacity duration-700 ease-in-out ${
+              className={`absolute inset-0 w-full h-full flex items-center justify-center ${transitionClass} ${
                 isActive ? 'opacity-100 z-10 pointer-events-auto' : 'opacity-0 z-0 pointer-events-none'
               }`}
               style={{ backgroundColor: slide.bgColor }}
@@ -191,22 +219,29 @@ export default function PortfoliteHero() {
               <Link
                 href={slide.href}
                 onClick={handleLinkClick}
+                tabIndex={isActive ? 0 : -1}
                 className="block w-full h-full cursor-pointer focus:outline-none relative flex items-center justify-center"
                 aria-label={`${slide.title} — ${slide.subtitle}`}
               >
-                <picture className="block w-full h-full flex items-center justify-center">
-                  <source srcSet={slide.imgWebp} type="image/webp" />
-                  <img
-                    src={slide.imgPng}
-                    alt={`${slide.title} — ARKA Technovation`}
-                    width={1946}
-                    height={808}
-                    className="w-full h-full object-contain object-center select-none"
-                    loading={index === 0 ? 'eager' : 'lazy'}
-                    fetchPriority={index === 0 ? 'high' : 'auto'}
-                    decoding={index === 0 ? 'sync' : 'async'}
-                  />
-                </picture>
+                {(index === 0 || hasInteracted || isActive) && (
+                  <picture className="block w-full h-full flex items-center justify-center">
+                    <source
+                      media="(min-width: 769px)"
+                      srcSet={slide.imgWebp}
+                      type="image/webp"
+                    />
+                    <img
+                      src={slide.imgMobileWebp || slide.imgWebp}
+                      alt={`${slide.title} — ARKA Technovation`}
+                      width={1946}
+                      height={808}
+                      className="w-full h-full object-contain object-center select-none"
+                      loading={index === 0 ? 'eager' : 'lazy'}
+                      fetchPriority={index === 0 ? 'high' : 'auto'}
+                      decoding="async"
+                    />
+                  </picture>
+                )}
               </Link>
             </div>
           );

@@ -1724,5 +1724,54 @@ img {
   contain-intrinsic-size: 1px 700px;
 }
 
+/* Neutralize legacy data-reveal delayed animations that block the main thread */
+[data-reveal],
+[data-img-reveal],
+.scr-host.scr-wait {
+  animation: none !important;
+}
+
+/* GPU-Composited Floating Keyframes (Zero Main-Thread JavaScript Execution) */
+@keyframes floatShowcaseImg {
+  0%, 100% {
+    transform: translate3d(0, -7px, 0);
+  }
+  50% {
+    transform: translate3d(0, 7px, 0);
+  }
+}
+
+.animate-float-showcase {
+  animation: floatShowcaseImg 5.2s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Pause offscreen continuous animations until near viewport to prevent CPU throttling & TBT starvation */
+.cv-auto:not(.is-in-view) .mg-pixel-1,
+.cv-auto:not(.is-in-view) .mg-pixel-2,
+.cv-auto:not(.is-in-view) .mg-pixel-3,
+.cv-auto:not(.is-in-view) .mg-pixel-4,
+.cv-auto:not(.is-in-view) .mg-pane-left,
+.cv-auto:not(.is-in-view) .mg-pane-right,
+.cv-auto:not(.is-in-view) .mg-cursor-pane,
+.cv-auto:not(.is-in-view) .mg-march-ants,
+.cv-auto:not(.is-in-view) .mg-slider-thumb,
+.cv-auto:not(.is-in-view) .mg-slider-cursor,
+.cv-auto:not(.is-in-view) .mg-property-bar,
+.cv-auto:not(.is-in-view) .mg-databus,
+.cv-auto:not(.is-in-view) .mg-node-ping,
+.cv-auto:not(.is-in-view) .mg-packet-1,
+.cv-auto:not(.is-in-view) .mg-packet-2,
+.cv-auto:not(.is-in-view) .mg-milestone-1,
+.cv-auto:not(.is-in-view) .mg-milestone-2,
+.cv-auto:not(.is-in-view) .mg-milestone-3,
+.cv-auto:not(.is-in-view) .mg-spark,
+.cv-auto:not(.is-in-view) .mg-trajectory-cursor,
+.cv-auto:not(.is-in-view) .mg-waterfall,
+.cv-auto:not(.is-in-view) .animate-marquee-showcase,
+.cv-auto:not(.is-in-view) .animate-float-showcase {
+  animation-play-state: paused !important;
+}
+
 
 

@@ -11,7 +11,6 @@ import {
   Code2,
   Video,
   Search,
-  CheckCircle2,
   ArrowRight,
   Sparkles,
   Award,
@@ -269,19 +268,12 @@ export default function WhoWeArePage() {
                 className="p-8 sm:p-10 rounded-2xl bg-white border border-black/10 hover:border-black/25 hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <span className="font-mono text-xs px-3 py-1 rounded-full bg-zinc-100 border border-black/10 text-solar font-medium tracking-wide">
-                    Methodology {m.num}
-                  </span>
-                  <h3 className="text-2xl font-bold text-black mt-4 tracking-tight">
+                  <h3 className="text-2xl font-bold text-black tracking-tight">
                     {m.title}
                   </h3>
                   <p className="mt-3 text-sm sm:text-base text-zinc-600 leading-relaxed font-light">
                     {m.desc}
                   </p>
-                </div>
-                <div className="mt-6 pt-4 border-t border-black/8 flex items-center gap-2 text-xs font-mono text-zinc-500">
-                  <CheckCircle2 className="w-4 h-4 text-solar" />
-                  <span>Standardized across every client engagement</span>
                 </div>
               </div>
             ))}

@@ -32,7 +32,7 @@ export default function PortfoliteAbout() {
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-black leading-[1.12]">
               Meet Founder
             </h2>
-            <p className="text-xs text-zinc-500 font-mono mt-1 mb-2">
+            <p className="text-xs text-zinc-600 font-mono mt-1 mb-2">
               Mr. Kranti Parashar · Founder &amp; Managing Director
             </p>
 
@@ -57,7 +57,7 @@ export default function PortfoliteAbout() {
                 <div className="absolute bottom-4 inset-x-4 flex items-end justify-between z-10">
                   <div>
                     <p className="text-white font-bold text-base">Mr. Kranti Parashar</p>
-                    <p className="text-zinc-300 text-xs">Founder &amp; Director · ARKA Technovation Private Limited</p>
+                    <p className="text-zinc-200 text-xs">Founder &amp; Director · ARKA Technovation Private Limited</p>
                   </div>
                   <div className="px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-[11px] font-semibold flex-shrink-0">
                     18+ Years
@@ -68,7 +68,7 @@ export default function PortfoliteAbout() {
 
             {/* Worked in Companies */}
             <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-black/10 w-full">
-              <p className="text-xs font-mono uppercase tracking-wider text-zinc-500 mb-2.5 sm:mb-3">
+              <p className="text-xs font-mono uppercase tracking-wider text-zinc-600 mb-2.5 sm:mb-3">
                 Worked in:
               </p>
               <div className="flex flex-wrap gap-1.5 sm:gap-2">
@@ -101,7 +101,7 @@ export default function PortfoliteAbout() {
               <div className="absolute bottom-6 inset-x-6 flex items-end justify-between z-10">
                 <div>
                   <p className="text-white font-bold text-base sm:text-lg">Mr. Kranti Parashar</p>
-                  <p className="text-zinc-300 text-xs">Founder &amp; Director · ARKA Technovation Private Limited</p>
+                  <p className="text-zinc-200 text-xs">Founder &amp; Director · ARKA Technovation Private Limited</p>
                 </div>
                 <div className="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-[11px] font-semibold">
                   18+ Years

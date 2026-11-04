@@ -469,7 +469,7 @@ export default function ServicesStickySection() {
           {/* Mobile Header + Counter (closely & optically grouped right above the card) */}
           <div className="pf__head-mobile block lg:hidden">
             <div>
-              <p className="text-[11px] font-mono uppercase tracking-widest text-zinc-500 font-semibold m-0">
+              <p className="text-[11px] font-mono uppercase tracking-widest text-zinc-600 font-semibold m-0">
                 Core Capabilities &amp; Architecture
               </p>
               <h2 className="mt-0.5 text-2xl font-bold tracking-tight text-black leading-tight m-0">

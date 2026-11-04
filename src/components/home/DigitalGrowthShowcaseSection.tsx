@@ -161,7 +161,7 @@ export default function DigitalGrowthShowcaseSection() {
 
             {/* 7 Capabilities Interactive List (Clean, no pills, matching reference) */}
             <div className="mt-8 w-full">
-              <div className="text-xs font-mono uppercase tracking-wider text-zinc-500 font-semibold mb-3 flex items-center gap-2">
+              <div className="text-xs font-mono uppercase tracking-wider text-zinc-600 font-semibold mb-3 flex items-center gap-2">
                 <Layers className="w-3.5 h-3.5 text-solar" />
                 <span>Core Capabilities &amp; Execution Verticals</span>
               </div>
@@ -192,7 +192,7 @@ export default function DigitalGrowthShowcaseSection() {
                           <span className="text-sm font-semibold text-zinc-900 group-hover:text-solar transition-colors block truncate">
                             {srv.name}
                           </span>
-                          <span className="text-[11px] text-zinc-500 block truncate font-light">
+                          <span className="text-[11px] text-zinc-600 block truncate font-light">
                             {srv.highlight}
                           </span>
                         </div>
@@ -218,7 +218,7 @@ export default function DigitalGrowthShowcaseSection() {
                   <span className="text-xs sm:text-sm font-semibold text-zinc-800 mt-1">
                     Projects Delivered
                   </span>
-                  <span className="text-[11px] sm:text-xs text-zinc-500 font-light mt-0.5">
+                  <span className="text-[11px] sm:text-xs text-zinc-600 font-light mt-0.5">
                     Web, ERP &amp; media deliverables
                   </span>
                 </div>
@@ -234,7 +234,7 @@ export default function DigitalGrowthShowcaseSection() {
                   <span className="text-xs sm:text-sm font-semibold text-zinc-800 mt-1">
                     Client Testimonials
                   </span>
-                  <span className="text-[11px] sm:text-xs text-zinc-500 font-light mt-0.5">
+                  <span className="text-[11px] sm:text-xs text-zinc-600 font-light mt-0.5">
                     Verified enterprise reviews
                   </span>
                 </div>
@@ -256,9 +256,11 @@ export default function DigitalGrowthShowcaseSection() {
               {/* Secondary CTA: Learn More */}
               <Link
                 href="/services"
+                aria-label="Learn more about ARKA digital and enterprise services"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 min-h-[48px] rounded-full bg-white text-zinc-900 border border-zinc-300 font-medium text-sm hover:bg-zinc-50 hover:border-zinc-400 active:scale-[0.98] transition-all shadow-sm group"
               >
                 <span>Learn More</span>
+                <span className="sr-only"> about ARKA digital services</span>
                 <ArrowUpRight className="w-4 h-4 text-zinc-500 group-hover:text-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
               </Link>
             </div>

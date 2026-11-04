@@ -324,12 +324,12 @@ export default function ExpertiseTabsSection() {
                       )}
                       <span
                         className="relative z-10 font-mono text-[11px] font-bold tabular-nums transition-colors"
-                        style={{ color: isActive ? 'var(--color-solar, #E8742C)' : '#a1a1aa' }}
+                        style={{ color: isActive ? 'var(--color-solar, #E8742C)' : '#52525b' }}
                       >
                         {item.num}
                       </span>
                       <Icon
-                        className={`relative z-10 w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 transition-colors ${isActive ? 'text-solar' : 'text-zinc-500'
+                        className={`relative z-10 w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 transition-colors ${isActive ? 'text-solar' : 'text-zinc-600'
                           }`}
                         strokeWidth={2.2}
                       />
@@ -406,7 +406,7 @@ export default function ExpertiseTabsSection() {
                           </div>
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-1.5 sm:gap-2 mb-0.5 sm:mb-1">
-                              <span className="font-mono text-[10px] sm:text-[11px] font-bold text-zinc-500 group-hover:text-solar transition-colors">
+                              <span className="font-mono text-[10px] sm:text-[11px] font-bold text-zinc-600 group-hover:text-solar transition-colors">
                                 0{idx + 1}.
                               </span>
                               <h4 className="text-xs sm:text-sm lg:text-[15px] font-bold text-zinc-950 tracking-tight group-hover:text-black transition-colors">

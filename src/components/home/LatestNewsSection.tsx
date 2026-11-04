@@ -23,7 +23,7 @@ const NEWS_ARTICLES: NewsArticle[] = [
     readTime: '9 min read',
     excerpt: 'A deep dive into sub-second LCP, minimal TTFB, and zero-CLS layouts that keep competitive enterprise keywords ranking on page one through major Google algorithm updates.',
     slug: 'sub-second-core-web-vitals-seo-dominance',
-    img: 'https://cdn.sanity.io/images/j2nbmkw7/production/8c4efb1854fac9a1bb7d27dd7c7adbab945226ca-2000x1125.webp?w=1400&q=80&auto=format',
+    img: '/images/blogs/blog-07-core-web-vitals-speed.webp',
     alt: 'Sub-Second Core Web Vitals and technical SEO dominance',
   },
   {
@@ -34,7 +34,7 @@ const NEWS_ARTICLES: NewsArticle[] = [
     readTime: '6 min read',
     excerpt: 'How modern manufacturing leaders unify sales pipelines, approval matrices, and live Tally & WhatsApp synchronization without paying per-seat SaaS taxes.',
     slug: 'custom-enterprise-crm-workflow-automation',
-    img: 'https://cdn.sanity.io/images/j2nbmkw7/production/817ec85c9f7e7b5441e95ff073f4898771670b9c-2930x1648.webp?w=1400&q=80&auto=format',
+    img: '/images/blogs/blog-03-enterprise-crm-erp.webp',
     alt: 'Replacing spreadsheets with custom CRM and ERP automation',
   },
   {
@@ -45,7 +45,7 @@ const NEWS_ARTICLES: NewsArticle[] = [
     readTime: '7 min read',
     excerpt: 'From click heatmaps to dynamic content personalization: the design systems, micro-interactions, and psychological triggers that turn industrial traffic into qualified inquiries.',
     slug: 'b2b-landing-page-ux-cro-framework',
-    img: 'https://cdn.sanity.io/images/j2nbmkw7/production/096cfc2bc0c1f499bd5782fc75365e4ef54ba139-3840x2160.webp?w=1400&q=80&auto=format',
+    img: '/images/blogs/blog-06-accessible-ui-design.webp',
     alt: 'B2B landing page UX and conversion rate optimization',
   },
   {
@@ -56,7 +56,7 @@ const NEWS_ARTICLES: NewsArticle[] = [
     readTime: '9 min read',
     excerpt: 'How 1,000 sq ft location fences around industry trade shows and corporate parks deliver precision pipeline acceleration with verifiable return on ad spend (ROAS).',
     slug: 'addressable-geofencing-ppc-lead-generation',
-    img: 'https://cdn.sanity.io/images/j2nbmkw7/production/24d5fe67470fb4e2e8d82a96228a38e693cb9db1-1920x1080.webp?w=1400&q=80&auto=format',
+    img: '/images/blogs/blog-05-b2b-digital-marketing.webp',
     alt: 'Addressable geofencing and PPC paid media strategy',
   },
   {
@@ -67,7 +67,7 @@ const NEWS_ARTICLES: NewsArticle[] = [
     readTime: '4 min read',
     excerpt: 'Connecting first-party customer profiles, dynamic call attribution, and ETL data streams so sales pods always know the true commercial intent behind every touchpoint.',
     slug: 'customer-data-platform-attribution-pipelines',
-    img: 'https://cdn.sanity.io/images/j2nbmkw7/production/4954d62904c23cd1b51d1014dc190000003fe471-1920x1080.webp?w=1400&q=80&auto=format',
+    img: '/images/blogs/blog-02-seo-topical-authority.webp',
     alt: 'Customer Data Platforms and CRM retargeting pipelines',
   },
   {
@@ -78,7 +78,7 @@ const NEWS_ARTICLES: NewsArticle[] = [
     readTime: '11 min read',
     excerpt: 'Sub-second server components, edge rendering, and seamless headless API integrations: why modern web applications deliver 3× higher engagement than WordPress and Drupal.',
     slug: 'nextjs-15-headless-web-performance',
-    img: 'https://cdn.sanity.io/images/j2nbmkw7/production/c2d5feeb2385c376ff72987017b05be6bd192fd2-1920x1080.webp?w=1400&q=80&auto=format',
+    img: '/images/blogs/blog-01-web-architecture.webp',
     alt: 'Next.js 15 and headless web architecture performance',
   },
   {
@@ -89,7 +89,7 @@ const NEWS_ARTICLES: NewsArticle[] = [
     readTime: '5 min read',
     excerpt: 'A camera on a tripod is not enough. How cinematic factory storytelling, real-time drone shots, and technical precision establish unshakeable buyer trust in high-value procurement.',
     slug: 'corporate-film-making-industrial-storytelling',
-    img: 'https://cdn.sanity.io/images/j2nbmkw7/production/c08e7972a3cc7e1aa1a0ef50197fde17397aed93-3840x2160.png?w=1400&q=80&auto=format',
+    img: '/images/blogs/blog-04-corporate-film-production.webp',
     alt: 'Corporate film making and industrial storytelling',
   },
   {
@@ -100,7 +100,7 @@ const NEWS_ARTICLES: NewsArticle[] = [
     readTime: '5 min read',
     excerpt: 'Mastering proximity relevance, sentiment review acceleration, and verified GBP entity signals to capture the 46% of all Google searches that carry high local buying intent.',
     slug: 'google-guarantee-local-seo-map-pack',
-    img: 'https://cdn.sanity.io/images/j2nbmkw7/production/12f53f88f9d9599d978fadaf5249c08e98ae9058-1920x1080.webp?w=1400&q=80&auto=format',
+    img: '/images/blogs/blog-08-executive-broadcast-news.webp',
     alt: 'Google Guarantee and local SEO map dominance',
   },
 ];
@@ -219,7 +219,7 @@ export default function LatestNewsSection() {
           </button>
         </div>
       </div>
-      <div className="hn__strip" data-hn-strip data-reveal>
+      <div className="hn__strip" data-hn-strip>
         <ul className="hn__track" ref={trackRef} data-hn-track>
           {NEWS_ARTICLES.map((article) => (
             <li key={article.slug} className="hn__item" data-hn-item>
