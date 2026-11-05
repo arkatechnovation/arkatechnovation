@@ -59,7 +59,7 @@ const SERVICES_LIST: ServiceItem[] = [
     id: 'crm-erp',
     name: 'Enterprise CRM & ERP Systems',
     category: 'Enterprise Infrastructure',
-    slug: '/services/development#erp-module',
+    slug: '/services/crm-software',
     highlight: 'Centralized supply chain logistics, inventory & zero per-seat fees',
   },
   {

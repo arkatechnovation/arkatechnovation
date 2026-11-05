@@ -75,8 +75,8 @@ const DISCIPLINES: DisciplineItem[] = [
     ],
     link: '/services/development',
     ctaText: 'Explore Software Development',
-    image: '/images/disciplines/discipline-01-software-development.jpg',
-    imageAlt: 'ARKA Technovation - Software Engineering, Enterprise CRM and Custom Platform Development',
+    image: '/images/disciplines/discipline-01-software-dev-portrait.webp',
+    imageAlt: 'ARKA Technovation - Enterprise Software Engineering Pod Collaborating on Architecture',
   },
   {
     id: 'digital-marketing',
@@ -84,30 +84,30 @@ const DISCIPLINES: DisciplineItem[] = [
     label: 'Digital Marketing',
     category: '02 / Performance Media',
     icon: Target,
-    headline: 'Full-Funnel Acquisition Campaigns & Multi-Touch Attribution Telemetry',
+    headline: 'Full-Funnel Acquisition Architecture, Conversion Telemetry & Revenue Attribution',
     narrative:
-      'We design full-funnel customer acquisition campaigns across Google Search, Performance Max, and Meta. Our media buyers align every rupee of ad spend with CRM conversion tracking, focusing on lowering customer acquisition costs and expanding qualified pipeline.',
+      'We deploy data-driven omnichannel acquisition engines designed to replace speculative media spend with verifiable business growth. Operating dedicated performance pods, our specialists implement server-side signal telemetry, marketing mix modeling, and high-converting demand capture funnels across global paid media networks.',
     pillars: [
       {
         icon: Target,
         title: 'Google & Meta Paid Media',
-        desc: 'Search, Performance Max, and social campaigns managed against strict cost-per-acquisition (CPA) and return on ad spend (ROAS).',
+        desc: 'Search, Performance Max, and social campaigns managed against strict cost-per-acquisition (CPA) thresholds and verified return on ad spend (ROAS).',
       },
       {
         icon: Sparkles,
-        title: 'Branding & Social Management',
-        desc: 'Comprehensive multi-channel social media marketing, high-impact content marketing, and brand identity governance.',
+        title: 'Brand Positioning & Social Authority',
+        desc: 'Comprehensive multi-channel social media management, executive thought leadership, and corporate visual design governance.',
       },
       {
         icon: BarChart3,
-        title: 'Conversion Optimization (CRO)',
-        desc: 'Multi-touch attribution telemetry, dynamic landing page testing, and PR management that compound lead volume.',
+        title: 'Conversion Optimization (CRO) & PR',
+        desc: 'Server-side conversion APIs, dynamic landing page testing, and Tier-1 public relations management that compound qualified commercial pipeline.',
       },
     ],
     link: '/services/digital-marketing',
     ctaText: 'Explore Digital Marketing',
-    image: '/images/disciplines/discipline-02-digital-marketing.jpg',
-    imageAlt: 'ARKA Technovation - Performance Marketing, Paid Media and Attribution Telemetry',
+    image: '/images/disciplines/discipline-02-digital-marketing-portrait.webp',
+    imageAlt: 'ARKA Technovation - Enterprise Growth Marketing & Conversion Telemetry Strategy',
   },
   {
     id: 'seo-geo-aeo',
@@ -115,30 +115,30 @@ const DISCIPLINES: DisciplineItem[] = [
     label: 'SEO, GEO & AEO',
     category: '03 / Search & AI Engines',
     icon: Radio,
-    headline: 'Technical Crawl Architecture, Schema Entity Graphs & Generative AI Dominance',
+    headline: 'Technical Crawl Architecture, Knowledge Entity Graphs & Generative AI Dominance',
     narrative:
-      'We build technical crawl architectures, Schema.org knowledge graphs, and topical content clusters that ensure search engines and LLMs recognize your brand. From Page One Google rankings to direct citations in ChatGPT and Perplexity, we capture buyers at the moment of intent.',
+      'We construct technical crawl architectures, Schema.org knowledge graphs, and topical content clusters that ensure search engines and LLMs recognize your brand as the definitive authority. From top Google rankings to direct citations across ChatGPT, Perplexity, and Claude, we capture buyers at the precise moment of intent.',
     pillars: [
       {
         icon: Gauge,
-        title: 'Technical Crawl & Schema Graphs',
-        desc: 'Sub-second Core Web Vitals, semantic HTML hierarchy, and interconnected Schema.org entity knowledge graphs.',
+        title: 'Technical Crawl & Schema Governance',
+        desc: 'Sub-second Core Web Vitals speed tuning, semantic HTML5 hierarchies, and interconnected Schema.org entity graphs eliminating indexation friction.',
       },
       {
         icon: TrendingUp,
         title: 'Generative & Answer Engines (GEO/AEO)',
-        desc: 'Passage indexing optimization and AI engine answer extraction for maximum citability in LLM-driven search.',
+        desc: 'llms.txt corpus protocols, semantic definition nodes, and Position Zero snippet optimization commanding expanded visibility in AI-driven search.',
       },
       {
         icon: Compass,
-        title: 'High-Intent Keywords & Local SEO',
-        desc: 'On-page and off-page optimization, local Google Business Profile (GMB) rank maps, and Google Marketplace listings.',
+        title: 'Commercial Intent & Local Authority',
+        desc: 'High-intent keyword mapping, white-hat digital PR editorial backlinks, Google Business Profile local 3-Pack rank maps, and Merchant Center listings.',
       },
     ],
     link: '/seo-lead-generation',
     ctaText: 'Explore SEO & AI Optimization',
-    image: '/images/disciplines/discipline-03-search-ai-engines.jpg',
-    imageAlt: 'ARKA Technovation - SEO, GEO and AI Answer Engine Optimization',
+    image: '/images/disciplines/discipline-03-search-ai-portrait.webp',
+    imageAlt: 'ARKA Technovation - Technical Search Architecture, Crawl Analytics & Knowledge Graphs',
   },
   {
     id: 'film-production',
@@ -146,30 +146,30 @@ const DISCIPLINES: DisciplineItem[] = [
     label: 'Film Production',
     category: '04 / Production Studio',
     icon: Zap,
-    headline: 'Broadcast-Quality Corporate Films, TV Commercials & Executive Media',
+    headline: 'Broadcast-Quality Commercial Cinema, TV Commercials & Executive Media',
     narrative:
-      'Operating our own cinema soundstage in Sector 63, Noida, our in-house production crew writes, shoots, and edits commercial films, TV ads, and executive interview series. We handle every step under one roof, delivering broadcast masters and multi-aspect social cut-downs.',
+      'Operating dedicated private soundstages with cinema-grade camera packages, our full-time production crew directs, shoots, and finishes corporate films, broadcast commercials, and executive interview series. We orchestrate every phase in-house, delivering 4K/8K broadcast masters and modular social cut-downs.',
     pillars: [
       {
         icon: Layers,
         title: 'Corporate Films & TV Commercials',
-        desc: 'Cinematic corporate documentaries, TV ads, digital commercials, and industrial facility shoots with aerial drone footage.',
+        desc: 'Cinematic corporate documentaries, national TV commercials, and industrial facility tours with aerial drone footage and DaVinci Resolve color grading.',
       },
       {
         icon: MessageSquare,
-        title: 'Podcasts & Personal Interviews',
-        desc: 'Broadcast-quality executive podcasts, CEO leadership interviews, and thought-leadership video pods in our studio.',
+        title: 'Executive Podcasts & Leadership Series',
+        desc: 'Acoustically isolated studio soundstage featuring multi-camera 4K switching, broadcast audio mastering, and modular short-form social syndication.',
       },
       {
         icon: Sparkles,
-        title: 'AI Video & Studio Photography',
-        desc: 'Commercial product photography, model shoots, and cutting-edge generative AI video creation for multi-platform distribution.',
+        title: 'AI Video Synthesis & Studio Photography',
+        desc: 'Commercial product photography with macro craftsmanship, 360-degree interactive spins, and enterprise-safe generative AI video creation.',
       },
     ],
     link: '/services/film-making',
     ctaText: 'Explore Film Production',
-    image: '/images/disciplines/discipline-04-film-production.jpg',
-    imageAlt: 'ARKA Technovation - Cinematic Corporate Film Production and Soundstage Studio',
+    image: '/images/disciplines/discipline-04-film-production-portrait.webp',
+    imageAlt: 'ARKA Technovation - Cinema Camera Rig on Professional Soundstage Studio',
   },
   {
     id: 'corporate-world-news',
@@ -177,38 +177,38 @@ const DISCIPLINES: DisciplineItem[] = [
     label: 'Corporate World News',
     category: '05 / Editorial & Market Intelligence',
     icon: LineChart,
-    headline: 'Authoritative Corporate Journalism, Executive Broadcasts & Market Research',
+    headline: 'Authoritative Corporate Journalism, Executive Broadcasts & Empirical Market Research',
     narrative:
-      'Our dedicated newsroom in Sector 63, Noida produces verified business journalism, recorded executive interviews, and empirical market research. We help corporate leaders publish strategic press announcements, analyze sector shifts, and syndicate verified news across Tier-1 media wires.',
+      'Our dedicated corporate newsroom produces verified business journalism, recorded executive interviews, and empirical market intelligence for enterprise decision-makers. We assist corporate leadership in articulating strategic milestones, analyzing vertical sector shifts, and syndicating verified corporate news across Tier-1 media wires.',
     pillars: [
       {
         icon: LineChart,
         title: 'Interview & Press Releases',
-        desc: 'Strategic corporate press releases, executive interview broadcasts, and global distribution to verified media outlets.',
+        desc: 'Multi-camera executive broadcast interviews and AP-compliant corporate press release drafting syndicated directly across Tier-1 financial media wires.',
       },
       {
         icon: BarChart3,
-        title: 'Industries Analysis & Research',
-        desc: 'Rigorous empirical market research, vertical benchmarks, and deep competitive intelligence for strategic decision-makers.',
+        title: 'Industries Analysis & TAM Research',
+        desc: 'Exhaustive vertical sector analysis, technology adoption benchmarks, Total Addressable Market sizing, and competitor intelligence slide decks.',
       },
       {
         icon: Zap,
         title: 'Market Updates & Corporate News',
-        desc: 'Daily business news updates, industry trend reporting, and authoritative analysis across emerging technology markets.',
+        desc: 'Daily curated executive briefing notes, macroeconomic indicator monitoring, and breaking enterprise M&A announcement reporting.',
       },
     ],
     link: '/corporate-world-news',
     ctaText: 'Explore Corporate World News',
-    image: '/images/disciplines/discipline-05-corporate-world-news.jpg',
-    imageAlt: 'ARKA Technovation - Corporate World News, Journalism and Market Intelligence',
+    image: '/images/disciplines/discipline-05-corporate-news-portrait.webp',
+    imageAlt: 'ARKA Technovation - Press Conference & Executive Media Broadcast Microphones',
   },
 ];
 
 export default function ExpertiseTabsSection() {
-  const [activeId, setActiveId] = useState<string>('digital-marketing');
+  const [activeId, setActiveId] = useState<string>('software-development');
   const tabButtonRefs = useRef<Record<string, HTMLButtonElement | null>>({});
 
-  const active = DISCIPLINES.find((d) => d.id === activeId) || DISCIPLINES[2];
+  const active = DISCIPLINES.find((d) => d.id === activeId) || DISCIPLINES[0];
 
   // Auto-scroll the active tab into the center on mobile/tablet
   const handleTabClick = useCallback((id: string) => {
@@ -357,10 +357,10 @@ export default function ExpertiseTabsSection() {
             transition={{ duration: 0.22, ease: [0.2, 0, 0, 1] }}
             className="relative rounded-2xl sm:rounded-[36px] bg-white border border-zinc-200/90 p-4 sm:p-8 lg:p-12 xl:p-14 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.06),0_1px_2px_rgba(0,0,0,0.02)] overflow-hidden"
           >
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-8 lg:gap-12 xl:gap-14 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-8 lg:gap-12 xl:gap-14 items-stretch">
 
               {/* Left Column (Desktop 7 cols): Header, Narrative, Pillars, Action Buttons */}
-              <div className="lg:col-span-7 flex flex-col justify-between">
+              <div className="lg:col-span-7 flex flex-col justify-between h-full">
                 <div>
                   {/* Primary Headline (Clean, no description eyebrow badge above it) */}
                   <h3
@@ -380,13 +380,13 @@ export default function ExpertiseTabsSection() {
 
                   {/* Mobile-Only Visual Image: positioned right above pillars for immediate mobile context */}
                   <div className="block lg:hidden w-full mb-5">
-                    <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden border border-black/10 shadow-sm bg-zinc-100">
+                    <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-black/10 shadow-sm bg-zinc-100">
                       <Image
                         src={active.image}
                         alt={active.imageAlt}
                         fill
                         sizes="(max-width: 1024px) 100vw, 550px"
-                        className="object-cover"
+                        className="object-cover object-center"
                         loading="lazy"
                       />
                     </div>
@@ -445,17 +445,19 @@ export default function ExpertiseTabsSection() {
                 </div>
               </div>
 
-              {/* Desktop-Only Visual Column (Desktop 5 cols): Pure Unobstructed High-Definition Image */}
-              <div className="hidden lg:block lg:col-span-5 w-full">
-                <div className="relative w-full aspect-[4/3] xl:aspect-[4/3] rounded-3xl overflow-hidden border border-black/10 shadow-[0_16px_40px_-10px_rgba(0,0,0,0.1)] bg-zinc-100 group">
+              {/* Desktop-Only Visual Column (Desktop 5 cols): Pure Unobstructed High-Definition Image Matching Left Height */}
+              <div className="hidden lg:flex lg:col-span-5 w-full h-full flex-col self-stretch">
+                <div className="relative w-full h-full min-h-[580px] rounded-2xl sm:rounded-3xl overflow-hidden border border-black/10 shadow-[0_16px_40px_-10px_rgba(0,0,0,0.1)] bg-zinc-900 group">
                   <Image
                     src={active.image}
                     alt={active.imageAlt}
                     fill
                     sizes="(max-width: 1024px) 100vw, 550px"
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                     loading="lazy"
                   />
+                  {/* Subtle luxury edge vignette */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none" />
                 </div>
               </div>
 

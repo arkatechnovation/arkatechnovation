@@ -1,22 +1,30 @@
 import type { Metadata } from 'next';
-import SeoLeadGenerationPage from '@/views/SeoLeadGenerationPage';
+import PortfoliteServiceDetail from '@/views/PortfoliteServiceDetail';
+import { getServiceBySlug } from '@/lib/data';
 
-export const metadata: Metadata = {
-  title: 'SEO, GEO & Lead Generation Services | High-Intent B2B Pipelines',
-  description:
-    'Scale organic and generative search dominance and drive qualified enterprise pipeline with ARKA Technovation Private Limited. Technical audits, schema architecture, high-intent keyword mapping, and full-funnel CRO.',
-  alternates: {
-    canonical: '/seo-lead-generation',
-  },
-  openGraph: {
-    title: 'SEO, GEO & Lead Generation Services | ARKA Technovation Private Limited',
-    description:
-      'Technical audits, semantic schema, high-intent B2B keywords, and conversion-optimized landing page architecture.',
-    url: '/seo-lead-generation',
-    type: 'website',
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const service = getServiceBySlug('seo-lead-generation');
+  const title = service ? `${service.title} | ARKA Technovation` : 'SEO, GEO & Lead Generation Services | High-Intent B2B Pipelines';
+  const description =
+    service?.short ||
+    'Scale organic and generative search dominance and drive qualified enterprise pipeline with ARKA Technovation Private Limited. Technical audits, schema architecture, high-intent keyword mapping, and full-funnel CRO.';
+  const url = '/seo-lead-generation';
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: 'article',
+    },
+  };
+}
 
 export default function Page() {
-  return <SeoLeadGenerationPage />;
+  return <PortfoliteServiceDetail initialSlug="seo-lead-generation" />;
 }

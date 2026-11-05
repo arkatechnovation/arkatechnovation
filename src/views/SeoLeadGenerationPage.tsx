@@ -675,7 +675,31 @@ export default function SeoLeadGenerationPage() {
                     </div>
 
                     {/* Card Footer Action Bar */}
-                    <div className="mt-5 pt-4 sm:mt-8 sm:pt-5 border-t border-black/8 flex items-center justify-end">
+                    <div className="mt-5 pt-4 sm:mt-8 sm:pt-5 border-t border-black/8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
+                      {(() => {
+                        const targetLink =
+                          service.id === 'seo-services' ? '/services/google-seo' :
+                          service.id === 'geo-services' ? '/services/geo-services' :
+                          service.id === 'aeo-services' ? '/services/aeo-services' :
+                          service.id === 'on-page-services' ? '/services/on-page-seo' :
+                          service.id === 'off-page-services' ? '/services/off-page-seo' :
+                          service.id === 'local-seo-gmb' ? '/services/local-seo' :
+                          service.id === 'google-marketplace-listing' ? '/services/marketplace-listing' :
+                          service.id === 'seo-audits' || service.id.includes('core-web-vitals') ? '/services/google-seo' :
+                          service.id.includes('ppc') || service.id.includes('geofencing') ? '/services/search-engine-marketing' :
+                          '/services/seo-lead-generation';
+
+                        return (
+                          <Link
+                            to={targetLink}
+                            className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full border border-black/15 text-xs font-semibold hover:border-black hover:bg-black hover:text-white transition-all shadow-xs w-fit group/sub"
+                          >
+                            <span>Explore Detailed Discipline</span>
+                            <ArrowRight className="w-3.5 h-3.5 group-hover/sub:translate-x-0.5 transition-transform" />
+                          </Link>
+                        );
+                      })()}
+
                       <Link
                         to="/contact"
                         className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-black text-white hover:bg-solar text-xs sm:text-sm font-semibold transition-[background-color,transform] duration-200 active:scale-[0.98] shadow-sm group/btn w-full sm:w-auto"

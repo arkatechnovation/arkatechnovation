@@ -93,7 +93,7 @@ export default function PortfoliteFooter() {
           </Link>
 
           <p className="max-w-sm text-zinc-600 leading-[1.8] text-xs sm:text-sm font-normal">
-            {COMPANY.name} (formerly known as Jaikvik Technology India Pvt. Ltd.) delivers enterprise software engineering, technical search optimization, and commercial cinema from Sector 63, Noida.
+            {COMPANY.name} (formerly known as Jaikvik Technology India Pvt. Ltd.) delivers enterprise software engineering, technical search optimization, and commercial cinema.
           </p>
 
           <p className="text-[12px] text-zinc-600 font-mono">

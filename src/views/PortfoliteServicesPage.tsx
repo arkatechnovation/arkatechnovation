@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from '@/components/Link';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -53,6 +54,7 @@ interface DisciplineItem {
 }
 
 export default function PortfoliteServicesPage() {
+  const router = useRouter();
   const [selectedCat, setSelectedCat] = useState<CategoryFilter>('All');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -83,8 +85,9 @@ export default function PortfoliteServicesPage() {
         'Consistent brand voice development, editorial planning, and creative asset production',
         'Community handling, rapid reputation response, and customer conversion funnels',
       ],
-      metric: '+240%',
-      metricLabel: 'Social Engagement Lift',
+      metric: 'Enterprise',
+      metricLabel: 'Social Architecture',
+      link: '/services/social-media-handling',
     },
     {
       id: 'ecommerce-seo-and-ppc-services',
@@ -100,8 +103,9 @@ export default function PortfoliteServicesPage() {
         'Visual search optimization allowing customer image search directly into product catalogs',
         'Google Shopping / PLA (Product Listing Ads) optimization with live pricing and review badges',
       ],
-      metric: '+65%',
-      metricLabel: 'Mobile Conversion Lift',
+      metric: 'Accelerated',
+      metricLabel: 'Checkout Framework',
+      link: '/services/ecommerce-seo-ppc',
     },
     {
       id: 'ecomerce_social_media_advertising',
@@ -117,8 +121,9 @@ export default function PortfoliteServicesPage() {
         'Creative split-testing of video hooks, carousel cards, and offer architectures',
         'Direct integration with Shopify Plus, Magento, WooCommerce, and custom checkouts',
       ],
-      metric: '4.8×',
-      metricLabel: 'Average Social ROAS',
+      metric: 'Full-Funnel',
+      metricLabel: 'Attribution Tracking',
+      link: '/services/ecommerce-social-ads',
     },
     {
       id: 'email_sms_whatsapp_marketing',
@@ -134,8 +139,9 @@ export default function PortfoliteServicesPage() {
         'Automated lifecycle email journeys for welcome sequences, abandoned carts, and re-orders',
         'Rigorous list hygiene, unsubscribe compliance, and customer segmentation by purchase history',
       ],
-      metric: '98%',
-      metricLabel: 'WhatsApp Open Rate',
+      metric: 'Verified',
+      metricLabel: 'Official Business API',
+      link: '/services/email-sms-whatsapp',
     },
     {
       id: 'google_social_media_ads_compaign',
@@ -151,8 +157,9 @@ export default function PortfoliteServicesPage() {
         'Click fraud filtering, negative keyword management, and bid automation',
         'End-to-end multi-touch attribution connecting clicks to bottom-line closed revenue',
       ],
-      metric: '-38%',
-      metricLabel: 'Cost Per Acquisition',
+      metric: 'Dedicated',
+      metricLabel: 'Specialist Craft Pod',
+      link: '/services/google-social-ads',
     },
 
     // ─────────────────────────────────────────────────────────────
@@ -172,8 +179,9 @@ export default function PortfoliteServicesPage() {
         'Custom role-based permissions, automated approval hierarchies, and pipeline deal scoring',
         'Seamless integration with WhatsApp API, email servers, VoIP call tracking, and accounting tools',
       ],
-      metric: '12h+',
-      metricLabel: 'Saved Per Team Weekly',
+      metric: 'Zero-License',
+      metricLabel: 'Full Source Code Handover',
+      link: '/services/crm-software',
     },
     {
       id: 'erp_solution',
@@ -189,8 +197,9 @@ export default function PortfoliteServicesPage() {
         'HR management modules covering payroll, attendance tracking, and performance scorecards',
         'Custom executive reporting dashboards delivering real-time operational health metrics',
       ],
-      metric: '100%',
-      metricLabel: 'Data Synchronization',
+      metric: 'Unified',
+      metricLabel: 'ERP Ledger Architecture',
+      link: '/services/erp-solution',
     },
     {
       id: 'website_development',
@@ -206,8 +215,9 @@ export default function PortfoliteServicesPage() {
         'Database design, indexing, and query optimization on PostgreSQL, MySQL, and Redis',
         'Full REST and GraphQL API development for headless architectures and microservices',
       ],
-      metric: '<1.2s',
-      metricLabel: 'Average Page Load',
+      metric: 'High-Throughput',
+      metricLabel: 'Next.js 15 Web Systems',
+      link: '/services/website-development',
     },
     {
       id: 'lead_management_system',
@@ -223,8 +233,9 @@ export default function PortfoliteServicesPage() {
         'Comprehensive corporate learning module management with interactive video lessons and testing',
         'Automated progress tracking, compliance certification, and detailed performance telemetry',
       ],
-      metric: '<60s',
-      metricLabel: 'Lead Route Velocity',
+      metric: 'Instant',
+      metricLabel: 'Multi-Channel Ingestion',
+      link: '/services/lead-management-system',
     },
     {
       id: 'mobile_application',
@@ -240,8 +251,9 @@ export default function PortfoliteServicesPage() {
         'Biometric authentication, secure payment gateway integrations, and instant push notifications',
         'App Store and Google Play Store deployment, review compliance, and ongoing maintenance retainers',
       ],
-      metric: '4.9★',
-      metricLabel: 'App Store Ratings',
+      metric: 'Native',
+      metricLabel: 'iOS & Android Architecture',
+      link: '/services/mobile-application',
     },
 
     // ─────────────────────────────────────────────────────────────
@@ -261,8 +273,9 @@ export default function PortfoliteServicesPage() {
         'Crawl budget optimization, canonicalization, and indexation management across large domains',
         'Continuous algorithmic tracking against Google Core, Helpful Content, and Spam updates',
       ],
-      metric: '92%+',
-      metricLabel: 'Page-One Keyword Share',
+      metric: 'White-Hat',
+      metricLabel: 'Algorithmic Search Standards',
+      link: '/services/google-seo',
     },
     {
       id: 'search-engine-marketing',
@@ -278,8 +291,9 @@ export default function PortfoliteServicesPage() {
         'High-converting landing page development engineered for Quality Score optimization',
         'Transparent budget reporting tracking Cost Per Click (CPC) and Return on Ad Spend (ROAS)',
       ],
-      metric: '5.2×',
-      metricLabel: 'Campaign ROAS Lift',
+      metric: 'High-Intent',
+      metricLabel: 'Commercial Query Bidding',
+      link: '/services/search-engine-marketing',
     },
     {
       id: 'on-page-seo',
@@ -295,8 +309,9 @@ export default function PortfoliteServicesPage() {
         'Complete technical setup: Robots.txt creation, XML sitemap generation, and schema.org integration',
         'Internal link architecture and topical cluster modeling to channel link equity to priority URLs',
       ],
-      metric: '85+',
-      metricLabel: 'Average Domain Authority',
+      metric: 'Clean Code',
+      metricLabel: 'Semantic Crawl Health',
+      link: '/services/on-page-seo',
     },
     {
       id: 'ecommerce-seo',
@@ -312,8 +327,9 @@ export default function PortfoliteServicesPage() {
         'Product, Offer, AggregateRating, and InStock Schema.org JSON-LD structured data',
         'Faceted navigation indexing controls preventing duplicate content penalties on filter combinations',
       ],
-      metric: '+185%',
-      metricLabel: 'Organic Catalog Traffic',
+      metric: 'Structured',
+      metricLabel: 'Catalog Indexation',
+      link: '/services/ecommerce-seo',
     },
     {
       id: 'local-seo',
@@ -322,15 +338,16 @@ export default function PortfoliteServicesPage() {
       tag: 'Local Citations',
       title: 'Local SEO',
       subtitle: 'Dominating Google Maps 3-Pack and capturing the 46% of searches with local intent',
-      desc: 'Local SEO plays a significant role in any business that wants to bring in more clients from an area or areas of preference. With 46 percent of all Google searches seeking products, services, or companies in their local area, local search visibility is a primary revenue engine. We optimize your Google Business Profile (GBP), manage localized citations across 70+ business directories, and implement local schema so your business dominates the Google 3-pack.',
+      desc: 'Local SEO plays a significant role in any business that wants to bring in more clients from an area or areas of preference. With the vast majority of commercial inquiries carrying local procurement intent, local search visibility is a primary revenue engine. We optimize your Google Business Profile (GBP), manage localized citations across 70+ business directories, and implement local schema so your business dominates the Google 3-pack.',
       highlights: [
         'Complete Google Business Profile (GBP) audit, claim verification, and weekly optimization',
         'Consistent NAP (Name, Address, Phone) citations across Google, Bing, Justdial, and industry directories',
         'Localized keyword targeting for city, suburb, and industrial territory search queries',
         'Proactive review generation and reputation monitoring to build verified local social proof',
       ],
-      metric: '+180%',
-      metricLabel: 'Local Inbound Calls',
+      metric: 'Verified',
+      metricLabel: 'Local Citations Authority',
+      link: '/services/local-seo',
     },
 
     // ─────────────────────────────────────────────────────────────
@@ -350,8 +367,9 @@ export default function PortfoliteServicesPage() {
         'Executive leadership interviews and facility tours highlighting operational scale',
         'Turnkey post-production: Editing, DaVinci color grading, licensed original score, and motion titles',
       ],
-      metric: '8K/4K',
-      metricLabel: 'Broadcast Resolution',
+      metric: 'Broadcast',
+      metricLabel: '4K/8K Cinema Master',
+      link: '/services/commercial-presentation-video',
     },
     {
       id: 'tv_ads',
@@ -367,8 +385,9 @@ export default function PortfoliteServicesPage() {
         'Data-driven broadcast analysis mapping ad airtimes to organic search and website conversion spikes',
         'Optimized aspect ratio cut-downs (16:9, 9:16 vertical, 1:1) for YouTube, Instagram Reels, and Meta',
       ],
-      metric: '100%',
-      metricLabel: 'Broadcast Compliant',
+      metric: 'National Standard',
+      metricLabel: 'Broadcast Airing Clearance',
+      link: '/services/tv-ads',
     },
     {
       id: 'products_demo_videos',
@@ -376,16 +395,17 @@ export default function PortfoliteServicesPage() {
       category: 'Film Making',
       tag: 'Conversion Video',
       title: 'Product & Service Demo Videos',
-      subtitle: 'Showcasing product USPs on camera to drive the 73% of viewers who purchase after watching',
-      desc: 'Demonstrating physical machinery or software interfaces in action dramatically accelerates buying decisions. Over 73% of prospects who watch a product video move forward with a purchase inquiry. We produce clear, benefit-driven product demonstration videos that showcase engineering craftsmanship and software workflows with studio lighting and high-resolution camera setups.',
+      subtitle: 'Showcasing product USPs on camera to provide prospective buyers with clear technical conviction',
+      desc: 'Demonstrating physical machinery or software interfaces in action dramatically accelerates buying decisions. Prospective enterprise buyers gain immediate technical conviction from watching clear product workflows in action. We produce clear, benefit-driven product demonstration videos that showcase engineering craftsmanship and software workflows with studio lighting and high-resolution camera setups.',
       highlights: [
         'Studio lighting and macro lens capture of physical machinery, industrial components, and consumer products',
         'Slick screen-capture animation and UI walkthroughs for SaaS platforms and software workflows',
         'Clear, benefit-driven scriptwriting highlighting competitive differentiators and real-world results',
         'Optimized video cut-downs tailored for landing pages, trade show displays, and sales reps',
       ],
-      metric: '73%',
-      metricLabel: 'Viewer Purchase Rate',
+      metric: 'Studio Macro',
+      metricLabel: 'Turntable Photography',
+      link: '/services/products-demo-videos',
     },
     {
       id: 'product_explantory',
@@ -393,7 +413,7 @@ export default function PortfoliteServicesPage() {
       category: 'Film Making',
       tag: 'Explainer Animations',
       title: 'Product Explainer Videos',
-      subtitle: 'Short, engaging marketing videos boosting landing page conversion rates by up to 144%',
+      subtitle: 'Short, engaging marketing videos maximizing landing page conversion clarity and viewer engagement',
       desc: 'Explainer videos distill complex enterprise software and industrial workflows into concise 60-to-90-second narratives that lift landing page conversion rates by up to 144%. We blend live-action cinematography with 2D/3D motion graphics and professional studio voiceover to explain your commercial value proposition with speed and clarity.',
       highlights: [
         'Psychological script architecture designed to hook attention in the first five seconds',
@@ -401,8 +421,9 @@ export default function PortfoliteServicesPage() {
         'Professional studio voiceover recorded in multiple languages for domestic and international markets',
         'Engineered for maximum retention and rapid comprehension on mobile screens',
       ],
-      metric: '+144%',
-      metricLabel: 'Landing Page Conversion',
+      metric: 'High-Retention',
+      metricLabel: 'Narrative Storytelling',
+      link: '/services/product-explanatory',
     },
     {
       id: 'customer_testimonial',
@@ -411,15 +432,16 @@ export default function PortfoliteServicesPage() {
       tag: 'Authentic Proof',
       title: 'Customer Testimonial Videos',
       subtitle: 'Supercharging word-of-mouth social proof to boost website conversions by 34% or more',
-      desc: 'Video testimonials provide authentic, third-party social proof that builds executive buyer confidence and lifts conversion rates by 34% or more. We film on-location interviews with your satisfied enterprise clients, capturing real-world business results and documented ROI that give prospective buyers the confidence to commit.',
+      desc: 'Video testimonials provide authentic, third-party social proof that builds executive buyer confidence and builds executive buyer conviction and expedites procurement sign-offs. We film on-location interviews with your satisfied enterprise clients, capturing real-world business results and documented ROI that give prospective buyers the confidence to commit.',
       highlights: [
         'On-location filming of real client advocates, capturing unscripted, credible enterprise success stories',
         'Multi-camera coverage of corporate conferences, exhibitions, panel discussions, and keynotes',
         'Fast same-week turnaround for social media event highlight videos and press releases',
         'High-definition audio capture ensuring crystal-clear executive and client sound bites',
       ],
-      metric: '+34%',
-      metricLabel: 'Conversion Lift on Reviews',
+      metric: 'Documented',
+      metricLabel: 'Enterprise Case Studies',
+      link: '/services/customer-testimonial',
     },
 
     // ─────────────────────────────────────────────────────────────
@@ -439,8 +461,8 @@ export default function PortfoliteServicesPage() {
         'Executive thought leadership features and founder op-eds published across leading business portals',
         'Permanent digital publication dossiers and archival citations indexed across search engines',
       ],
-      metric: '500+',
-      metricLabel: 'Executive Interviews Broadcast',
+      metric: 'In-House',
+      metricLabel: 'Noida Soundstage Studio',
       img: '/images/disciplines/discipline-05-corporate-world-news.jpg',
       link: '/corporate-world-news',
     },
@@ -458,10 +480,10 @@ export default function PortfoliteServicesPage() {
         'Full post-production: audio mastering, motion lower-thirds, and b-roll packaging',
         'Official media room setup, embargo scheduling, and press distribution telemetry',
       ],
-      metric: '100%',
-      metricLabel: 'Verified Wire Pickup',
+      metric: 'Tier-1',
+      metricLabel: 'Financial Wire Syndication',
       img: '/images/blogs/blog-08-executive-broadcast-news.webp',
-      link: '/corporate-world-news',
+      link: '/services/interview-press-releases',
     },
     {
       id: 'corporate-news-ma',
@@ -477,10 +499,10 @@ export default function PortfoliteServicesPage() {
         'Leadership appointment profiles and corporate governance notifications',
         'Direct liaison with news desks to ensure accurate media syndication',
       ],
-      metric: '24/7',
-      metricLabel: 'Newsroom Response SLA',
+      metric: 'Continuous',
+      metricLabel: 'Newsroom Monitoring SLA',
       img: '/images/services/ux/website-design.webp',
-      link: '/corporate-world-news',
+      link: '/services/corporate-news-ma',
     },
     {
       id: 'market-update-briefs',
@@ -496,10 +518,10 @@ export default function PortfoliteServicesPage() {
         'Macroeconomic indicator alerts for commercial decision-makers',
         'Sector-specific quarterly trend retrospectives and economic outlooks',
       ],
-      metric: 'Daily',
-      metricLabel: 'Executive Briefings Delivered',
+      metric: 'Curated',
+      metricLabel: 'Executive Sector Briefings',
       img: '/images/products/grid-08-kestrix-thermal.webp',
-      link: '/corporate-world-news',
+      link: '/services/market-update-briefs',
     },
     {
       id: 'industries-analysis-reports',
@@ -515,10 +537,10 @@ export default function PortfoliteServicesPage() {
         'Supply chain vulnerability reports and vendor dependency benchmarks',
         'Custom research whitepapers published under your brand or co-authored',
       ],
-      metric: 'Top 1%',
-      metricLabel: 'Empirical Data Rigor',
+      metric: 'Empirical',
+      metricLabel: 'Methodological Rigor',
       img: '/images/industries/industries-manufacturing.webp',
-      link: '/corporate-world-news',
+      link: '/services/industries-analysis-reports',
     },
     {
       id: 'market-research-tam',
@@ -534,10 +556,10 @@ export default function PortfoliteServicesPage() {
         'Brand perception audits and customer satisfaction (CSAT/NPS) benchmarks',
         'Executive board presentation slide decks backed by verified empirical datasets',
       ],
-      metric: '100%',
-      metricLabel: 'Primary Sourced Data',
+      metric: 'Primary',
+      metricLabel: 'Survey & Market Research',
       img: '/images/products/grid-05-plant-seo.webp',
-      link: '/corporate-world-news',
+      link: '/services/market-research-tam',
     },
   ];
 
@@ -731,9 +753,24 @@ export default function PortfoliteServicesPage() {
                   exit={{ opacity: 0, y: -16 }}
                   transition={{ duration: 0.3, ease: 'easeOut' }}
                   id={item.id}
-                  className={`scroll-mt-36 group rounded-2xl sm:rounded-[28px] lg:rounded-[32px] bg-white border border-black/[0.08] hover:border-black/25 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] overflow-hidden transition-[transform,box-shadow,border-color] duration-300 flex flex-col ${
+                  onClick={() => {
+                    if (item.link) {
+                      router.push(item.link);
+                    }
+                  }}
+                  role="link"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      if (item.link) {
+                        router.push(item.link);
+                      }
+                    }
+                  }}
+                  className={`scroll-mt-36 group rounded-2xl sm:rounded-[28px] lg:rounded-[32px] bg-white border border-black/[0.08] hover:border-black/30 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.09)] overflow-hidden transition-[transform,box-shadow,border-color] duration-300 flex flex-col ${
                     isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                  } relative`}
+                  } relative cursor-pointer`}
                 >
                   {/* Alias anchors for deep linking */}
                   {item.aliasIds?.map((alias) => (
@@ -749,13 +786,14 @@ export default function PortfoliteServicesPage() {
                       decoding="async"
                       className="absolute inset-0 w-full h-full object-cover object-top sm:object-center transition-transform duration-700 ease-out group-hover:scale-105"
                     />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/[0.04] transition-colors duration-300 pointer-events-none" />
                   </div>
 
                   {/* ── Context & Deliverables Panel: Compact mobile spacing, expansive desktop typography ── */}
                   <div className="w-full lg:w-[58%] xl:w-[60%] p-5 sm:p-8 lg:p-11 flex flex-col justify-between bg-zinc-50/50 group-hover:bg-zinc-50 transition-colors duration-300 flex-1">
                     <div>
                       {/* Title */}
-                      <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-black tracking-tight leading-snug font-display text-balance">
+                      <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-black group-hover:text-solar tracking-tight leading-snug font-display text-balance transition-colors duration-200">
                         {item.title}
                       </h3>
 
@@ -796,17 +834,19 @@ export default function PortfoliteServicesPage() {
 
                       <div className="flex flex-wrap items-center gap-2">
                         {item.link && (
-                          <Link
-                            to={item.link}
-                            className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full border border-black/15 text-xs font-semibold hover:border-black transition-colors"
+                          <span
+                            className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full border border-black/15 text-xs font-semibold group-hover:border-black group-hover:bg-black group-hover:text-white transition-all shadow-sm"
                           >
                             <span>Explore Discipline</span>
-                            <ArrowUpRight className="w-3.5 h-3.5" />
-                          </Link>
+                            <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                          </span>
                         )}
                         <Link
                           to="/contact"
-                          className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-black text-white text-xs font-bold hover:bg-zinc-800 transition-colors shadow-sm active:scale-[0.97] w-full sm:w-auto"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                          }}
+                          className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-black text-white text-xs font-bold hover:bg-zinc-800 transition-colors shadow-sm active:scale-[0.97] w-full sm:w-auto relative z-10"
                           style={{ color: '#FFFFFF', backgroundColor: '#000000' }}
                         >
                           <span>Request Custom Strategy</span>

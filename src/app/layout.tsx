@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import '../index.css';
 import SmoothScrollProvider from '@/components/SmoothScrollProvider';
+import Script from 'next/script';
 
 const BASE_URL = 'https://arkatechnovation.com';
 
@@ -286,6 +287,19 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-white text-black antialiased selection:bg-solar selection:text-white">
+        {/* Google Analytics 4 — Measurement ID: G-7B39DMT35D */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-7B39DMT35D"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7B39DMT35D');
+          `}
+        </Script>
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>
     </html>
