@@ -1,9 +1,12 @@
 /**
  * ARKA Technovation Private Limited
- * Custom Responsive HTML Email Templates for Form Submissions
+ * Minimalist, Subtle & Editorial HTML Email Templates
  *
- * Each page and section has its own branded email template with customized
- * color palette, badges, field hierarchy, and direct response actions.
+ * Inspired by contemporary Dribbble & Pinterest design aesthetics:
+ * - Clean Swiss-style typography with generous breathing room
+ * - Soft neutral canvases, delicate hairline borders, and subtle status badges
+ * - Calm, muted palettes (no loud or saturated marketing boxes)
+ * - Clear, elegant data hierarchy with sleek pill actions
  */
 
 export interface FormSubmissionPayload {
@@ -30,31 +33,25 @@ export interface FormSubmissionPayload {
   ip?: string;
 }
 
-const BRAND_NAME = 'ARKA Technovation Private Limited';
-const BRAND_HQ = 'Rayos Business Park, Office No- 202, C-4, Sector 63, Noida, UP 201301';
+const BRAND_NAME = 'ARKA Technovation';
 const BRAND_WEBSITE = 'https://arkatechnovation.com';
+const BRAND_LOCATION = 'Sector 63, Noida, India';
 
 /**
- * Base email layout wrapper with modern email client compatibility
+ * Base layout: Minimalist, clean, and subtle (Dribbble / Pinterest aesthetic)
  */
 function emailLayout({
   preheader,
-  headerBadge,
-  headerBadgeBg,
-  headerBadgeColor,
+  badgeText,
   title,
   subtitle,
   bodyContent,
-  accentColor,
 }: {
   preheader: string;
-  headerBadge: string;
-  headerBadgeBg: string;
-  headerBadgeColor: string;
+  badgeText: string;
   title: string;
   subtitle: string;
   bodyContent: string;
-  accentColor: string;
 }): string {
   return `<!DOCTYPE html>
 <html lang="en">
@@ -67,44 +64,46 @@ function emailLayout({
     body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
     table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
     img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
-    body { margin: 0; padding: 0; width: 100% !important; background-color: #F4F4F5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .email-container { max-width: 620px; margin: 0 auto; background-color: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
-    .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: #71717A; font-weight: 600; font-family: monospace; }
-    .value { font-size: 14px; color: #09090B; font-weight: 500; line-height: 1.5; margin-top: 4px; }
-    .pill { display: inline-block; padding: 4px 10px; border-radius: 9999px; font-size: 11px; font-weight: 600; margin: 2px 4px 2px 0; background-color: #F4F4F5; color: #18181B; border: 1px solid #E4E4E7; }
-    @media only screen and (max-width: 620px) {
-      .email-container { width: 100% !important; border-radius: 0 !important; }
-      .responsive-padding { padding: 24px 18px !important; }
+    body { margin: 0; padding: 0; width: 100% !important; background-color: #F8F9FA; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    .card { max-width: 580px; margin: 0 auto; background-color: #FFFFFF; border: 1px solid #EAEAEA; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+    .label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: #8E8E93; margin-bottom: 4px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    .value { font-size: 14px; font-weight: 500; color: #1C1C1E; line-height: 1.5; }
+    .badge { display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 9999px; font-size: 11px; font-weight: 500; letter-spacing: 0.04em; background-color: #F4F4F6; color: #52525B; border: 1px solid #E4E4E7; }
+    .pill { display: inline-block; padding: 4px 11px; border-radius: 9999px; font-size: 11.5px; font-weight: 500; color: #3F3F46; background-color: #FAFAFA; border: 1px solid #E4E4E7; margin: 2px 4px 2px 0; }
+    .quote-box { background-color: #FAFAFA; border: 1px solid #ECECEC; border-radius: 10px; padding: 16px 18px; font-size: 13.5px; line-height: 1.6; color: #27272A; white-space: pre-wrap; }
+    .btn-primary { display: inline-block; background-color: #18181B; color: #FFFFFF !important; text-decoration: none; font-size: 13px; font-weight: 500; padding: 10px 22px; border-radius: 9999px; }
+    .btn-secondary { display: inline-block; background-color: #FFFFFF; color: #27272A !important; text-decoration: none; font-size: 13px; font-weight: 500; padding: 10px 20px; border-radius: 9999px; border: 1px solid #E4E4E7; }
+    @media only screen and (max-width: 600px) {
+      .card { width: 100% !important; border-radius: 0 !important; border-left: none !important; border-right: none !important; }
+      .px-responsive { padding-left: 20px !important; padding-right: 20px !important; }
     }
   </style>
 </head>
-<body style="margin: 0; padding: 24px 0; background-color: #F4F4F5;">
-  <!-- Hidden preheader text for inbox preview -->
-  <div style="display: none; font-size: 1px; color: #F4F4F5; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
+<body style="margin: 0; padding: 36px 0; background-color: #F8F9FA;">
+  <!-- Hidden preheader text -->
+  <div style="display: none; font-size: 1px; color: #F8F9FA; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
     ${preheader}
   </div>
 
   <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
       <td align="center" style="padding: 12px;">
-        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" class="email-container" style="max-width: 620px; background-color: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 16px; overflow: hidden;">
+        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" class="card">
           
-          <!-- BRAND TOP BAR -->
+          <!-- SUBTLE MINIMALIST HEADER -->
           <tr>
-            <td style="background-color: #09090B; padding: 24px 32px; border-bottom: 3px solid ${accentColor}; text-align: left;" class="responsive-padding">
+            <td style="padding: 24px 32px 20px 32px; border-bottom: 1px solid #F0F0F2;" class="px-responsive">
               <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                 <tr>
-                  <td>
-                    <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #FFFFFF; font-family: monospace;">
-                      ARKA TECHNOVATION
-                    </div>
-                    <div style="font-size: 10px; color: #A1A1AA; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 3px;">
-                      Enterprise In-House Dispatch
-                    </div>
+                  <td align="left" valign="middle">
+                    <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #18181B; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+                      ${BRAND_NAME}
+                    </span>
                   </td>
-                  <td align="right">
-                    <span style="display: inline-block; padding: 4px 12px; border-radius: 9999px; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; background-color: ${headerBadgeBg}; color: ${headerBadgeColor};">
-                      ${headerBadge}
+                  <td align="right" valign="middle">
+                    <span class="badge">
+                      <span style="display: inline-block; width: 5px; height: 5px; border-radius: 50%; background-color: #10B981; margin-right: 6px;"></span>
+                      ${badgeText}
                     </span>
                   </td>
                 </tr>
@@ -112,40 +111,41 @@ function emailLayout({
             </td>
           </tr>
 
-          <!-- HERO HEADER -->
+          <!-- TITLE & SUMMARY -->
           <tr>
-            <td style="padding: 32px 32px 20px 32px;" class="responsive-padding">
-              <h1 style="margin: 0; font-size: 22px; font-weight: 700; color: #09090B; line-height: 1.3;">
+            <td style="padding: 32px 32px 16px 32px;" class="px-responsive">
+              <h1 style="margin: 0; font-size: 21px; font-weight: 600; color: #111827; letter-spacing: -0.02em; line-height: 1.35;">
                 ${title}
               </h1>
-              <p style="margin: 8px 0 0 0; font-size: 13px; color: #71717A; line-height: 1.5;">
+              <p style="margin: 6px 0 0 0; font-size: 13px; color: #6B7280; font-weight: 400; line-height: 1.5;">
                 ${subtitle}
               </p>
             </td>
           </tr>
 
-          <!-- MAIN BODY CONTENT -->
+          <!-- MAIN CONTENT BODY -->
           <tr>
-            <td style="padding: 0 32px 32px 32px;" class="responsive-padding">
+            <td style="padding: 12px 32px 32px 32px;" class="px-responsive">
               ${bodyContent}
             </td>
           </tr>
 
-          <!-- FOOTER -->
+          <!-- SUBTLE MINIMALIST FOOTER -->
           <tr>
-            <td style="background-color: #FAFAFA; border-top: 1px solid #E4E4E7; padding: 24px 32px; text-align: center; font-size: 11px; color: #71717A; line-height: 1.6;" class="responsive-padding">
-              <div style="font-weight: 600; color: #27272A; margin-bottom: 4px;">
-                ${BRAND_NAME}
-              </div>
-              <div>${BRAND_HQ}</div>
-              <div style="margin-top: 6px;">
-                <a href="${BRAND_WEBSITE}" style="color: ${accentColor}; text-decoration: none; font-weight: 500;">arkatechnovation.com</a>
-                &nbsp;·&nbsp;
-                <a href="tel:+919711487316" style="color: #71717A; text-decoration: none;">+91 97114 87316</a>
-              </div>
-              <div style="margin-top: 12px; font-size: 10px; color: #A1A1AA;">
-                Automated transmission via website form dispatch. Reply directly to this email to contact the submitter.
-              </div>
+            <td style="background-color: #FAFAFA; border-top: 1px solid #F0F0F2; padding: 22px 32px; text-align: left;" class="px-responsive">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td align="left" style="font-size: 11.5px; color: #8E8E93; line-height: 1.6;">
+                    <span style="color: #374151; font-weight: 500;">ARKA Technovation Private Limited</span>
+                    &nbsp;·&nbsp; ${BRAND_LOCATION}
+                    <br>
+                    <a href="${BRAND_WEBSITE}" style="color: #6B7280; text-decoration: underline;">arkatechnovation.com</a>
+                  </td>
+                  <td align="right" valign="middle" style="font-size: 11px; color: #A1A1AA;">
+                    Web Dispatch
+                  </td>
+                </tr>
+              </table>
             </td>
           </tr>
 
@@ -158,295 +158,256 @@ function emailLayout({
 }
 
 /**
- * 1. Contact / Project Inquiry Template (/contact, /contact-us)
+ * 1. Contact / Project Proposal Template (Dribbble Minimalist Ref)
  */
 export function renderContactEmail(p: FormSubmissionPayload): { subject: string; html: string; text: string } {
-  const subject = `[Project Inquiry] ${p.name}${p.company ? ` · ${p.company}` : ''} (${(p.services || []).join(', ') || 'General Scope'})`;
-  const preheader = `New project inquiry from ${p.name}${p.company ? ` at ${p.company}` : ''}: "${(p.message || '').slice(0, 100)}..."`;
+  const subject = `[Project Inquiry] ${p.name}${p.company ? ` · ${p.company}` : ''}`;
+  const preheader = `Inquiry from ${p.name}${p.company ? ` (${p.company})` : ''}: ${(p.message || '').slice(0, 90)}`;
 
   const servicesHtml = (p.services && p.services.length > 0)
-    ? p.services.map((s) => `<span class="pill" style="display:inline-block; padding:4px 10px; border-radius:9999px; font-size:11px; font-weight:600; margin:2px 4px 2px 0; background-color:#FEF3C7; color:#92400E; border:1px solid #FDE68A;">${s}</span>`).join(' ')
-    : '<span style="font-size:13px; color:#71717A;">Not specified</span>';
+    ? p.services.map((s) => `<span class="pill">${escapeHtml(s)}</span>`).join('')
+    : '<span style="font-size: 13px; color: #9CA3AF;">Not specified</span>';
 
   const bodyContent = `
-    <!-- SENDER HIGHLIGHT BOX -->
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#F8FAFC; border:1px solid #E2E8F0; border-radius:12px; margin-bottom:24px;">
+    <!-- INFO ROW 1 -->
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 20px; border-bottom: 1px solid #F4F4F6; padding-bottom: 16px;">
       <tr>
-        <td style="padding:20px;">
-          <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-            <tr>
-              <td width="50%" valign="top" style="padding-bottom:14px;">
-                <div class="label">CLIENT NAME</div>
-                <div class="value" style="font-size:16px; font-weight:700; color:#0F172A;">${escapeHtml(p.name)}</div>
-              </td>
-              <td width="50%" valign="top" style="padding-bottom:14px;">
-                <div class="label">WORK EMAIL</div>
-                <div class="value"><a href="mailto:${escapeHtml(p.email)}" style="color:#E8742C; text-decoration:none; font-weight:600;">${escapeHtml(p.email)}</a></div>
-              </td>
-            </tr>
-            <tr>
-              <td width="50%" valign="top">
-                <div class="label">PHONE / WHATSAPP</div>
-                <div class="value"><a href="tel:${escapeHtml(p.phone || '')}" style="color:#0F172A; text-decoration:none;">${escapeHtml(p.phone || 'Not provided')}</a></div>
-              </td>
-              <td width="50%" valign="top">
-                <div class="label">COMPANY / ORGANIZATION</div>
-                <div class="value">${escapeHtml(p.company || 'Not provided')}</div>
-              </td>
-            </tr>
-          </table>
+        <td width="50%" valign="top" style="padding-right: 12px;">
+          <div class="label">Client</div>
+          <div class="value" style="font-size: 15px; font-weight: 600; color: #111827;">${escapeHtml(p.name)}</div>
+          ${p.company ? `<div style="font-size: 12.5px; color: #6B7280; margin-top: 2px;">${escapeHtml(p.company)}</div>` : ''}
+        </td>
+        <td width="50%" valign="top">
+          <div class="label">Work Email</div>
+          <div class="value">
+            <a href="mailto:${escapeHtml(p.email)}" style="color: #111827; text-decoration: underline; font-weight: 500;">
+              ${escapeHtml(p.email)}
+            </a>
+          </div>
+          ${p.phone ? `
+          <div style="font-size: 12.5px; color: #6B7280; margin-top: 2px;">
+            <a href="tel:${escapeHtml(p.phone)}" style="color: #6B7280; text-decoration: none;">${escapeHtml(p.phone)}</a>
+          </div>` : ''}
         </td>
       </tr>
     </table>
 
-    <!-- SERVICES REQUESTED -->
-    <div style="margin-bottom:20px;">
-      <div class="label" style="margin-bottom:8px;">CAPABILITIES & SERVICES REQUESTED</div>
+    <!-- CAPABILITIES REQUIRED -->
+    <div style="margin-bottom: 22px;">
+      <div class="label" style="margin-bottom: 6px;">Requested Capabilities</div>
       <div>${servicesHtml}</div>
     </div>
 
     <!-- PROJECT SCOPE -->
-    <div style="margin-bottom:24px;">
-      <div class="label" style="margin-bottom:6px;">PROJECT GOALS & TECHNICAL REQUIREMENTS</div>
-      <div style="background-color:#FFFFFF; border:1px solid #E4E4E7; border-left:4px solid #E8742C; border-radius:8px; padding:16px; font-size:14px; line-height:1.6; color:#18181B; white-space:pre-wrap;">${escapeHtml(p.message || 'No description provided')}</div>
+    <div style="margin-bottom: 26px;">
+      <div class="label" style="margin-bottom: 6px;">Project Notes & Goals</div>
+      <div class="quote-box">${escapeHtml(p.message || 'No description provided')}</div>
     </div>
 
-    <!-- ACTION BUTTONS -->
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-top:24px; padding-top:20px; border-top:1px solid #E4E4E7;">
+    <!-- ACTIONS -->
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="padding-top: 6px;">
       <tr>
-        <td>
-          <a href="mailto:${escapeHtml(p.email)}?subject=Re:%20ARKA%20Technovation%20Project%20Proposal" style="display:inline-block; padding:12px 24px; background-color:#09090B; color:#FFFFFF; text-decoration:none; font-size:13px; font-weight:600; border-radius:9999px; margin-right:10px;">
-            Reply to ${escapeHtml(p.name)} &rarr;
+        <td align="left">
+          <a href="mailto:${escapeHtml(p.email)}?subject=Re:%20ARKA%20Technovation%20Project%20Proposal" class="btn-primary" style="margin-right: 8px;">
+            Reply to ${escapeHtml(p.name.split(' ')[0] || 'Client')} &rarr;
           </a>
           ${p.phone ? `
-          <a href="https://wa.me/${escapeHtml(p.phone.replace(/[^0-9]/g, ''))}" style="display:inline-block; padding:12px 20px; background-color:#25D366; color:#FFFFFF; text-decoration:none; font-size:13px; font-weight:600; border-radius:9999px;">
-            Chat on WhatsApp
+          <a href="https://wa.me/${escapeHtml(p.phone.replace(/[^0-9]/g, ''))}" class="btn-secondary">
+            WhatsApp
           </a>` : ''}
         </td>
       </tr>
     </table>
 
-    <!-- METADATA FOOTNOTE -->
-    <div style="margin-top:20px; font-size:11px; color:#A1A1AA; font-family:monospace;">
-      Source Page: ${escapeHtml(p.pageUrl || '/contact')} · Time: ${p.submittedAt || new Date().toISOString()}${p.ip ? ` · IP: ${p.ip}` : ''}
+    <!-- SUBTLE METADATA -->
+    <div style="margin-top: 22px; font-size: 11px; color: #9CA3AF;">
+      Source: ${escapeHtml(p.pageUrl || '/contact')} · ${p.submittedAt || new Date().toISOString()}
     </div>
   `;
 
   const html = emailLayout({
     preheader,
-    headerBadge: 'Project Inquiry',
-    headerBadgeBg: '#FEF3C7',
-    headerBadgeColor: '#B45309',
-    title: 'New Client Project Inquiry & Proposal Request',
+    badgeText: 'Project Inquiry',
+    title: 'New Project Proposal Request',
     subtitle: 'A prospective client has submitted a proposal request through the website.',
     bodyContent,
-    accentColor: '#E8742C',
   });
 
   const text = `
-NEW CLIENT PROJECT INQUIRY
-ARKA Technovation Private Limited
-
-Client Name: ${p.name}
-Work Email: ${p.email}
-Phone: ${p.phone || 'N/A'}
+NEW PROJECT INQUIRY
+Client: ${p.name}
 Company: ${p.company || 'N/A'}
-Capabilities Needed: ${(p.services || []).join(', ') || 'N/A'}
+Email: ${p.email}
+Phone: ${p.phone || 'N/A'}
+Capabilities: ${(p.services || []).join(', ') || 'N/A'}
 
-Project Goals / Scope:
+Project Notes:
 ${p.message || 'N/A'}
 
-Source Page: ${p.pageUrl || '/contact'}
-Submitted At: ${p.submittedAt || new Date().toISOString()}
+Source: ${p.pageUrl || '/contact'}
+Time: ${p.submittedAt || new Date().toISOString()}
   `.trim();
 
   return { subject, html, text };
 }
 
 /**
- * 2. Career / Talent Application Template (/careers, /career)
+ * 2. Career / Talent Application Template (Clean & Editorial)
  */
 export function renderCareerEmail(p: FormSubmissionPayload): { subject: string; html: string; text: string } {
   const discipline = p.discipline || 'General Application';
-  const subject = `[Career Application] ${p.name} — ${discipline}`;
-  const preheader = `New application from ${p.name} for ${discipline}: Portfolio URL ${p.portfolio || ''}`;
+  const subject = `[Talent Application] ${p.name} — ${discipline}`;
+  const preheader = `New application from ${p.name} for ${discipline}`;
 
   const bodyContent = `
-    <!-- CANDIDATE HIGHLIGHT BOX -->
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#F0FDF4; border:1px solid #BBF7D0; border-radius:12px; margin-bottom:24px;">
+    <!-- SENDER ROW -->
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 20px; border-bottom: 1px solid #F4F4F6; padding-bottom: 16px;">
       <tr>
-        <td style="padding:20px;">
-          <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-            <tr>
-              <td width="50%" valign="top" style="padding-bottom:14px;">
-                <div class="label">CANDIDATE NAME</div>
-                <div class="value" style="font-size:16px; font-weight:700; color:#14532D;">${escapeHtml(p.name)}</div>
-              </td>
-              <td width="50%" valign="top" style="padding-bottom:14px;">
-                <div class="label">TARGET DISCIPLINE</div>
-                <div class="value" style="color:#059669; font-weight:700;">${escapeHtml(discipline)}</div>
-              </td>
-            </tr>
-            <tr>
-              <td width="50%" valign="top">
-                <div class="label">EMAIL ADDRESS</div>
-                <div class="value"><a href="mailto:${escapeHtml(p.email)}" style="color:#059669; text-decoration:none; font-weight:600;">${escapeHtml(p.email)}</a></div>
-              </td>
-              <td width="50%" valign="top">
-                <div class="label">PHONE NUMBER</div>
-                <div class="value"><a href="tel:${escapeHtml(p.phone || '')}" style="color:#14532D; text-decoration:none;">${escapeHtml(p.phone || 'Not provided')}</a></div>
-              </td>
-            </tr>
-          </table>
+        <td width="50%" valign="top" style="padding-right: 12px;">
+          <div class="label">Candidate</div>
+          <div class="value" style="font-size: 15px; font-weight: 600; color: #111827;">${escapeHtml(p.name)}</div>
+          <div style="font-size: 12.5px; color: #4B5563; margin-top: 2px;">${escapeHtml(discipline)}</div>
+        </td>
+        <td width="50%" valign="top">
+          <div class="label">Contact</div>
+          <div class="value">
+            <a href="mailto:${escapeHtml(p.email)}" style="color: #111827; text-decoration: underline; font-weight: 500;">
+              ${escapeHtml(p.email)}
+            </a>
+          </div>
+          ${p.phone ? `
+          <div style="font-size: 12.5px; color: #6B7280; margin-top: 2px;">
+            <a href="tel:${escapeHtml(p.phone)}" style="color: #6B7280; text-decoration: none;">${escapeHtml(p.phone)}</a>
+          </div>` : ''}
         </td>
       </tr>
     </table>
 
-    <!-- PORTFOLIO / WORK URL -->
-    <div style="margin-bottom:20px;">
-      <div class="label" style="margin-bottom:6px;">PORTFOLIO / GITHUB / REEL LINK</div>
-      <div style="background-color:#F8FAFC; border:1px solid #E2E8F0; border-radius:8px; padding:12px 16px;">
+    <!-- PORTFOLIO LINK -->
+    <div style="margin-bottom: 22px;">
+      <div class="label" style="margin-bottom: 6px;">Portfolio & Craft Links</div>
+      <div style="background-color: #FAFAFA; border: 1px solid #ECECEC; border-radius: 8px; padding: 12px 14px;">
         ${p.portfolio ? `
-          <a href="${escapeHtml(p.portfolio)}" target="_blank" rel="noopener noreferrer" style="font-size:14px; font-weight:600; color:#2563EB; text-decoration:underline; word-break:break-all;">
+          <a href="${escapeHtml(p.portfolio)}" target="_blank" rel="noopener noreferrer" style="font-size: 13.5px; color: #111827; font-weight: 500; text-decoration: underline; word-break: break-all;">
             ${escapeHtml(p.portfolio)} &nearr;
           </a>
-        ` : '<span style="font-size:13px; color:#71717A;">No portfolio link provided</span>'}
+        ` : '<span style="font-size: 13px; color: #9CA3AF;">None provided</span>'}
       </div>
     </div>
 
-    <!-- HARDEST PROBLEM SOLVED / COVER NOTE -->
-    <div style="margin-bottom:24px;">
-      <div class="label" style="margin-bottom:6px;">HARDEST PROBLEM SOLVED & CRAFT HIGHLIGHTS</div>
-      <div style="background-color:#FFFFFF; border:1px solid #E4E4E7; border-left:4px solid #10B981; border-radius:8px; padding:16px; font-size:14px; line-height:1.6; color:#18181B; white-space:pre-wrap;">${escapeHtml(p.message || 'No additional note provided')}</div>
+    <!-- COVER / HARDEST PROBLEM -->
+    <div style="margin-bottom: 26px;">
+      <div class="label" style="margin-bottom: 6px;">Hardest Problem Solved</div>
+      <div class="quote-box">${escapeHtml(p.message || 'No additional note provided')}</div>
     </div>
 
     <!-- ACTION BUTTONS -->
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-top:24px; padding-top:20px; border-top:1px solid #E4E4E7;">
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="padding-top: 6px;">
       <tr>
-        <td>
+        <td align="left">
           ${p.portfolio ? `
-          <a href="${escapeHtml(p.portfolio)}" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding:12px 24px; background-color:#10B981; color:#FFFFFF; text-decoration:none; font-size:13px; font-weight:600; border-radius:9999px; margin-right:10px;">
-            Open Candidate Portfolio &nearr;
+          <a href="${escapeHtml(p.portfolio)}" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-right: 8px;">
+            Open Portfolio &nearr;
           </a>` : ''}
-          <a href="mailto:${escapeHtml(p.email)}?subject=Re:%20ARKA%20Technovation%20Engineering%20Opportunities" style="display:inline-block; padding:12px 20px; background-color:#09090B; color:#FFFFFF; text-decoration:none; font-size:13px; font-weight:600; border-radius:9999px;">
+          <a href="mailto:${escapeHtml(p.email)}?subject=Re:%20ARKA%20Technovation%20Application" class="btn-secondary">
             Email Candidate
           </a>
         </td>
       </tr>
     </table>
 
-    <div style="margin-top:20px; font-size:11px; color:#A1A1AA; font-family:monospace;">
-      Source Page: ${escapeHtml(p.pageUrl || '/careers')} · Time: ${p.submittedAt || new Date().toISOString()}${p.ip ? ` · IP: ${p.ip}` : ''}
+    <div style="margin-top: 22px; font-size: 11px; color: #9CA3AF;">
+      Source: ${escapeHtml(p.pageUrl || '/careers')} · ${p.submittedAt || new Date().toISOString()}
     </div>
   `;
 
   const html = emailLayout({
     preheader,
-    headerBadge: 'Talent Network',
-    headerBadgeBg: '#DCFCE7',
-    headerBadgeColor: '#15803D',
-    title: 'New Talent Application & Portfolio Submission',
-    subtitle: 'A prospective engineer/specialist has submitted their profile for Noida HQ production roles.',
+    badgeText: 'Talent Application',
+    title: 'New Talent Application & Profile',
+    subtitle: 'A prospective craft specialist has submitted their credentials for review.',
     bodyContent,
-    accentColor: '#10B981',
   });
 
   const text = `
 NEW TALENT APPLICATION
-ARKA Technovation Private Limited
-
-Candidate Name: ${p.name}
+Candidate: ${p.name}
 Discipline: ${discipline}
 Email: ${p.email}
 Phone: ${p.phone || 'N/A'}
-Portfolio URL: ${p.portfolio || 'N/A'}
+Portfolio: ${p.portfolio || 'N/A'}
 
 Hardest Problem Solved / Message:
 ${p.message || 'N/A'}
 
-Source Page: ${p.pageUrl || '/careers'}
-Submitted At: ${p.submittedAt || new Date().toISOString()}
+Source: ${p.pageUrl || '/careers'}
+Time: ${p.submittedAt || new Date().toISOString()}
   `.trim();
 
   return { subject, html, text };
 }
 
 /**
- * 3. Corporate World News & Editorial Pitch Template (/corporate-world-news)
+ * 3. Corporate World News & Story Pitch (Subtle Editorial Style)
  */
 export function renderNewsPitchEmail(p: FormSubmissionPayload): { subject: string; html: string; text: string } {
-  const company = p.company || 'Enterprise Leader';
+  const company = p.company || 'Corporate Leader';
   const subject = `[Editorial Pitch] ${p.name} · ${company}`;
-  const preheader = `New editorial pitch from ${p.name} at ${company}: "${(p.topic || p.message || '').slice(0, 100)}..."`;
+  const preheader = `Editorial story pitch from ${p.name} at ${company}`;
 
   const bodyContent = `
-    <!-- SENDER HIGHLIGHT BOX -->
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#FAF5FF; border:1px solid #E9D5FF; border-radius:12px; margin-bottom:24px;">
+    <!-- SENDER ROW -->
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 20px; border-bottom: 1px solid #F4F4F6; padding-bottom: 16px;">
       <tr>
-        <td style="padding:20px;">
-          <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-            <tr>
-              <td width="50%" valign="top" style="padding-bottom:14px;">
-                <div class="label">EXECUTIVE NAME</div>
-                <div class="value" style="font-size:16px; font-weight:700; color:#581C87;">${escapeHtml(p.name)}</div>
-              </td>
-              <td width="50%" valign="top" style="padding-bottom:14px;">
-                <div class="label">COMPANY / ORGANIZATION</div>
-                <div class="value" style="font-size:15px; font-weight:700; color:#09090B;">${escapeHtml(company)}</div>
-              </td>
-            </tr>
-            <tr>
-              <td width="50%" valign="top">
-                <div class="label">CORPORATE EMAIL</div>
-                <div class="value"><a href="mailto:${escapeHtml(p.email)}" style="color:#7C3AED; text-decoration:none; font-weight:600;">${escapeHtml(p.email)}</a></div>
-              </td>
-              <td width="50%" valign="top">
-                <div class="label">ROUTING BUREAU</div>
-                <div class="value" style="color:#6B21A8; font-weight:600;">Sector 63, Noida Editorial Desk</div>
-              </td>
-            </tr>
-          </table>
+        <td width="50%" valign="top" style="padding-right: 12px;">
+          <div class="label">Executive</div>
+          <div class="value" style="font-size: 15px; font-weight: 600; color: #111827;">${escapeHtml(p.name)}</div>
+          <div style="font-size: 12.5px; color: #4B5563; margin-top: 2px;">${escapeHtml(company)}</div>
+        </td>
+        <td width="50%" valign="top">
+          <div class="label">Corporate Email</div>
+          <div class="value">
+            <a href="mailto:${escapeHtml(p.email)}" style="color: #111827; text-decoration: underline; font-weight: 500;">
+              ${escapeHtml(p.email)}
+            </a>
+          </div>
+          <div style="font-size: 12px; color: #8E8E93; margin-top: 2px;">Sector 63 Editorial Desk</div>
         </td>
       </tr>
     </table>
 
-    <!-- TOPIC / STORY ANNOUNCEMENT -->
-    <div style="margin-bottom:24px;">
-      <div class="label" style="margin-bottom:6px;">STORY ANNOUNCEMENT / INTERVIEW TOPIC</div>
-      <div style="background-color:#FFFFFF; border:1px solid #E4E4E7; border-left:4px solid #7C3AED; border-radius:8px; padding:16px; font-size:14px; line-height:1.6; color:#18181B; white-space:pre-wrap;">${escapeHtml(p.topic || p.message || 'No description provided')}</div>
+    <!-- STORY ANNOUNCEMENT -->
+    <div style="margin-bottom: 26px;">
+      <div class="label" style="margin-bottom: 6px;">Announcement / Topic Description</div>
+      <div class="quote-box">${escapeHtml(p.topic || p.message || 'No description provided')}</div>
     </div>
 
-    <!-- ACTION BUTTONS -->
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-top:24px; padding-top:20px; border-top:1px solid #E4E4E7;">
+    <!-- ACTIONS -->
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="padding-top: 6px;">
       <tr>
-        <td>
-          <a href="mailto:${escapeHtml(p.email)}?subject=Re:%20Corporate%20World%20News%20Story%20Pitch%20-%20ARKA%20Technovation" style="display:inline-block; padding:12px 24px; background-color:#7C3AED; color:#FFFFFF; text-decoration:none; font-size:13px; font-weight:600; border-radius:9999px;">
+        <td align="left">
+          <a href="mailto:${escapeHtml(p.email)}?subject=Re:%20Corporate%20World%20News%20Story%20Pitch" class="btn-primary">
             Reply to Executive &rarr;
           </a>
         </td>
       </tr>
     </table>
 
-    <div style="margin-top:20px; font-size:11px; color:#A1A1AA; font-family:monospace;">
-      Source Page: ${escapeHtml(p.pageUrl || '/corporate-world-news')} · Time: ${p.submittedAt || new Date().toISOString()}${p.ip ? ` · IP: ${p.ip}` : ''}
+    <div style="margin-top: 22px; font-size: 11px; color: #9CA3AF;">
+      Source: ${escapeHtml(p.pageUrl || '/corporate-world-news')} · ${p.submittedAt || new Date().toISOString()}
     </div>
   `;
 
   const html = emailLayout({
     preheader,
-    headerBadge: 'Editorial Bureau',
-    headerBadgeBg: '#F3E8FF',
-    headerBadgeColor: '#7E22CE',
+    badgeText: 'Editorial Pitch',
     title: 'Corporate World News Story Pitch',
-    subtitle: 'An executive has submitted an industrial expansion, leadership interview, or press release pitch.',
+    subtitle: 'An executive has pitched an announcement or leadership interview.',
     bodyContent,
-    accentColor: '#7C3AED',
   });
 
   const text = `
 CORPORATE WORLD NEWS STORY PITCH
-ARKA Technovation Private Limited
-
 Executive: ${p.name}
 Company: ${company}
 Email: ${p.email}
@@ -454,8 +415,8 @@ Email: ${p.email}
 Story / Topic Description:
 ${p.topic || p.message || 'N/A'}
 
-Source Page: ${p.pageUrl || '/corporate-world-news'}
-Submitted At: ${p.submittedAt || new Date().toISOString()}
+Source: ${p.pageUrl || '/corporate-world-news'}
+Time: ${p.submittedAt || new Date().toISOString()}
   `.trim();
 
   return { subject, html, text };
@@ -465,75 +426,60 @@ Submitted At: ${p.submittedAt || new Date().toISOString()}
  * 4. Service Audit & Consultation Request Template
  */
 export function renderServiceAuditEmail(p: FormSubmissionPayload): { subject: string; html: string; text: string } {
-  const service = p.serviceName || 'SEO & Technical Growth';
+  const service = p.serviceName || 'Growth & Engineering';
   const subject = `[Audit Request] ${p.name} · ${service}`;
-  const preheader = `New audit request from ${p.name} for ${service}`;
+  const preheader = `Audit request from ${p.name} for ${service}`;
 
   const bodyContent = `
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#EFF6FF; border:1px solid #BFDBFE; border-radius:12px; margin-bottom:24px;">
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 20px; border-bottom: 1px solid #F4F4F6; padding-bottom: 16px;">
       <tr>
-        <td style="padding:20px;">
-          <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-            <tr>
-              <td width="50%" valign="top" style="padding-bottom:14px;">
-                <div class="label">CLIENT NAME</div>
-                <div class="value" style="font-size:16px; font-weight:700; color:#1E3A8A;">${escapeHtml(p.name)}</div>
-              </td>
-              <td width="50%" valign="top" style="padding-bottom:14px;">
-                <div class="label">TARGET SERVICE</div>
-                <div class="value" style="color:#2563EB; font-weight:700;">${escapeHtml(service)}</div>
-              </td>
-            </tr>
-            <tr>
-              <td width="50%" valign="top">
-                <div class="label">EMAIL ADDRESS</div>
-                <div class="value"><a href="mailto:${escapeHtml(p.email)}" style="color:#2563EB; text-decoration:none; font-weight:600;">${escapeHtml(p.email)}</a></div>
-              </td>
-              <td width="50%" valign="top">
-                <div class="label">PHONE / WHATSAPP</div>
-                <div class="value">${escapeHtml(p.phone || 'Not provided')}</div>
-              </td>
-            </tr>
-          </table>
+        <td width="50%" valign="top" style="padding-right: 12px;">
+          <div class="label">Inquirer</div>
+          <div class="value" style="font-size: 15px; font-weight: 600; color: #111827;">${escapeHtml(p.name)}</div>
+          <div style="font-size: 12.5px; color: #4B5563; margin-top: 2px;">${escapeHtml(service)}</div>
+        </td>
+        <td width="50%" valign="top">
+          <div class="label">Contact</div>
+          <div class="value">
+            <a href="mailto:${escapeHtml(p.email)}" style="color: #111827; text-decoration: underline; font-weight: 500;">
+              ${escapeHtml(p.email)}
+            </a>
+          </div>
+          ${p.phone ? `<div style="font-size: 12.5px; color: #6B7280; margin-top: 2px;">${escapeHtml(p.phone)}</div>` : ''}
         </td>
       </tr>
     </table>
 
-    <div style="margin-bottom:24px;">
-      <div class="label" style="margin-bottom:6px;">AUDIT OBJECTIVES / CURRENT BENCHMARKS</div>
-      <div style="background-color:#FFFFFF; border:1px solid #E4E4E7; border-left:4px solid #2563EB; border-radius:8px; padding:16px; font-size:14px; line-height:1.6; color:#18181B; white-space:pre-wrap;">${escapeHtml(p.message || 'No additional note provided')}</div>
+    <div style="margin-bottom: 26px;">
+      <div class="label" style="margin-bottom: 6px;">Audit Scope & Benchmarks</div>
+      <div class="quote-box">${escapeHtml(p.message || 'No additional note provided')}</div>
     </div>
 
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-top:24px; padding-top:20px; border-top:1px solid #E4E4E7;">
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="padding-top: 6px;">
       <tr>
-        <td>
-          <a href="mailto:${escapeHtml(p.email)}?subject=Re:%20ARKA%20Technovation%20Audit%20Consultation" style="display:inline-block; padding:12px 24px; background-color:#2563EB; color:#FFFFFF; text-decoration:none; font-size:13px; font-weight:600; border-radius:9999px;">
+        <td align="left">
+          <a href="mailto:${escapeHtml(p.email)}?subject=Re:%20ARKA%20Technovation%20Audit%20Consultation" class="btn-primary">
             Reply to Client &rarr;
           </a>
         </td>
       </tr>
     </table>
 
-    <div style="margin-top:20px; font-size:11px; color:#A1A1AA; font-family:monospace;">
-      Source Page: ${escapeHtml(p.pageUrl || '/seo-lead-generation')} · Time: ${p.submittedAt || new Date().toISOString()}
+    <div style="margin-top: 22px; font-size: 11px; color: #9CA3AF;">
+      Source: ${escapeHtml(p.pageUrl || '/seo-lead-generation')} · ${p.submittedAt || new Date().toISOString()}
     </div>
   `;
 
   const html = emailLayout({
     preheader,
-    headerBadge: 'Technical Audit',
-    headerBadgeBg: '#DBEAFE',
-    headerBadgeColor: '#1D4ED8',
-    title: 'New Service Audit & Strategy Consultation',
-    subtitle: 'A prospective client has requested an audit and technical consultation.',
+    badgeText: 'Technical Audit',
+    title: 'New Service Audit Request',
+    subtitle: 'A prospective client has requested a technical review or growth audit.',
     bodyContent,
-    accentColor: '#2563EB',
   });
 
   const text = `
 NEW SERVICE AUDIT REQUEST
-ARKA Technovation Private Limited
-
 Client: ${p.name}
 Service: ${service}
 Email: ${p.email}
@@ -542,7 +488,8 @@ Phone: ${p.phone || 'N/A'}
 Message / Scope:
 ${p.message || 'N/A'}
 
-Source Page: ${p.pageUrl || '/seo-lead-generation'}
+Source: ${p.pageUrl || '/seo-lead-generation'}
+Time: ${p.submittedAt || new Date().toISOString()}
   `.trim();
 
   return { subject, html, text };
@@ -575,4 +522,3 @@ function escapeHtml(str: string): string {
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;');
 }
-

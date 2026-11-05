@@ -2,11 +2,11 @@ import nodemailer from 'nodemailer';
 import { buildEmailTemplate, type FormSubmissionPayload } from './email-templates';
 
 /**
- * Primary recipient email configured as requested by user.
+ * Primary recipient email for website form submissions.
+ * Default: info@arkatechnovation.com
  * Can be overridden via NOTIFICATION_EMAIL environment variable.
- * Default: gouravdon518@gmail.com (to be switched to info@arkatechnovation.com later)
  */
-export const TARGET_EMAIL = process.env.NOTIFICATION_EMAIL || 'gouravdon518@gmail.com';
+export const TARGET_EMAIL = process.env.NOTIFICATION_EMAIL || 'info@arkatechnovation.com';
 
 export interface SendResult {
   success: boolean;
