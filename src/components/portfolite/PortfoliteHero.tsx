@@ -238,7 +238,7 @@ export default function PortfoliteHero() {
                       className="w-full h-full object-contain object-center select-none"
                       loading={index === 0 ? 'eager' : 'lazy'}
                       fetchPriority={index === 0 ? 'high' : 'auto'}
-                      decoding="async"
+                      decoding={index === 0 ? 'sync' : 'async'}
                     />
                   </picture>
                 )}

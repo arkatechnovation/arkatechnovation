@@ -290,9 +290,9 @@ export default function RootLayout({
         {/* Google Analytics 4 — Measurement ID: G-7B39DMT35D */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-7B39DMT35D"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
