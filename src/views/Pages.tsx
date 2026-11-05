@@ -415,7 +415,7 @@ export function ContactPage() {
               <div className="mt-6 space-y-3 text-[14px] font-light">
                 <a href={`mailto:${COMPANY.email}`} className="flex items-center gap-3 hover:text-solar transition-colors"><Mail className="h-4 w-4 text-solar" />{COMPANY.email}</a>
                 {COMPANY.phones.map(p => <a key={p} href={`tel:${p.replace(/\s/g, '')}`} className="flex items-center gap-3 hover:text-solar transition-colors"><Phone className="h-4 w-4 text-solar" />{p}</a>)}
-                <p className="flex items-center gap-3 text-paper/60"><MapPin className="h-4 w-4 text-solar" />Monday – Saturday, 10:00 – 19:00 IST</p>
+                <p className="flex items-center gap-3 text-paper/60"><MapPin className="h-4 w-4 text-solar" />Monday – Saturday, 10:00 AM – 7:00 PM IST</p>
               </div>
             </Fade>
           </div>

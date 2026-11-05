@@ -166,7 +166,7 @@ export default function PrivacyPolicyPage() {
                 </p>
                 <p className="text-zinc-700 flex items-center gap-2">
                   <Phone className="w-4 h-4 text-solar shrink-0" />
-                  <span>{COMPANY.phone} (Mon–Sat, 9:30 AM – 6:30 PM IST)</span>
+                  <span>{COMPANY.phone} (Mon–Sat, 10:00 AM – 7:00 PM IST)</span>
                 </p>
               </div>
             </div>

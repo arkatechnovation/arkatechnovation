@@ -44,7 +44,7 @@ export default function SupportSlaPage() {
       impact: 'Non-critical defect, administrative interface anomaly, or verified workaround available.',
       initialResponse: 'Within 6 Hours',
       resolutionTarget: 'Next scheduled deployment cycle or within 24 Hours',
-      coverage: 'Standard Business Hours (9:30 AM – 6:30 PM IST, Mon–Sat)',
+      coverage: 'Standard Business Hours (10:00 AM – 7:00 PM IST, Mon–Sat)',
       color: 'bg-blue-500/10 text-blue-600 border-blue-200',
     },
     {

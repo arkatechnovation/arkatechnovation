@@ -161,7 +161,7 @@ export default function PortfoliteContact() {
                     <Clock className="w-4 h-4" />
                   </div>
                   <div>
-                    <p className="font-medium text-xs text-zinc-900">Mon – Sat: 10:00 – 19:00 IST</p>
+                    <p className="font-medium text-xs text-zinc-900">Mon – Sat: 10:00 AM – 7:00 PM IST</p>
                     <p className="text-[11px] text-zinc-500">2-Hour First Response SLA</p>
                   </div>
                 </div>
