@@ -4639,7 +4639,38 @@ export const TESTIMONIALS_LITE = [
   { quote: 'Creative that looks world-class and strategy that behaves like it. That combination is rare, and it is why we have stayed for years.', name: 'Sneha Kulkarni', role: 'CMO, Meridian Healthcare · Bengaluru', metric: '3.4× engagement' },
 ];
 
-export const CLIENTS = ['PRECISION ENGINEERING', 'MAISON D2C', 'NORTHLINE INDUSTRIES', 'MERIDIAN HEALTHCARE', 'ENTERPRISE GROUP', 'INDUSTRIAL PLANT LTD', 'ATLAS LOGISTICS', 'VEDA EDUCATION', 'ORBIT REALTY', 'SURAKSHA STEEL', 'KAVYA FOODS', 'ZENITH AUTOMOTIVE'];
+export const CLIENTS = [
+  'DANCING STARS',
+  'HONEY HUT',
+  'HINDUSTAN EXPELLERS',
+  'LUXA INDUSTRIES',
+  'PUROLITE INDUSTRIES',
+  'SKN INDUSTRIES',
+  'LAXMI ELECTROMECH',
+  'ADEXCEL AUTO',
+  'AMBROSIA HARVEST',
+  'ATLAS ROLLING MILL',
+  'CHIC & HOLLAND',
+  'POLYPACK ENTERPRISES',
+  'COMFORT THERMOWARES',
+  'DOLPHIN AUTOMATION',
+  'INDIAN ROLLER',
+  'ENVIROTECH SYSTEMS',
+  'MARTIN KITCHENWARE',
+  'DH WELDING INDIA',
+  'UI MACHINERY',
+  'EXELCIUS AUTOMATION',
+  'TYCOD AUTOTECH',
+  'AMR PACKWELL',
+  'ROLL FORMING SOLUTION',
+  'ROYACE',
+  'SR LITES',
+  'WINDOW KING',
+  'SOUNDVILLE CINEMA',
+  'SUN ELASTOMERS',
+  'BNP HEALTHCARE',
+  'FELICITY DESIGN',
+];
 
 export const PROCESS = [
   { n: '01', t: 'Discover', d: 'A free audit and an honest diagnosis of where growth is hiding.' },
