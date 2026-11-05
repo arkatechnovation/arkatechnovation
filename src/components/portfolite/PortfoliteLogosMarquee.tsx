@@ -30,6 +30,24 @@ const BRANDS: Brand[] = [
     heightClass: 'h-8 sm:h-9',
   },
   {
+    name: 'Window King',
+    url: 'https://windowking.co.in',
+    src: '/portfolite/brands/windowking.webp',
+    alt: 'Window King',
+    width: 262,
+    height: 140,
+    heightClass: 'h-10 sm:h-12',
+  },
+  {
+    name: 'Anaansh',
+    url: 'https://anaansh.com',
+    src: '/portfolite/brands/anaansh.webp',
+    alt: 'Anaansh Healthcare',
+    width: 622,
+    height: 140,
+    heightClass: 'h-8 sm:h-9',
+  },
+  {
     name: 'Hindustan Expellers',
     url: 'https://hindustanexpellers.com',
     src: '/portfolite/brands/hindustanexpellers.webp',
@@ -382,15 +400,6 @@ const BRANDS: Brand[] = [
     heightClass: 'h-8 sm:h-9',
   },
   {
-    name: 'Anaansh',
-    url: 'https://anaansh.com',
-    src: '/portfolite/brands/anaansh.webp',
-    alt: 'Anaansh',
-    width: 386,
-    height: 140,
-    heightClass: 'h-9 sm:h-11',
-  },
-  {
     name: 'Sun Elastomers Pharma',
     url: 'https://sunelastomerspharma.com',
     src: '/portfolite/brands/sunelastomers.webp',
@@ -407,15 +416,6 @@ const BRANDS: Brand[] = [
     width: 575,
     height: 140,
     heightClass: 'h-8 sm:h-9',
-  },
-  {
-    name: 'Window King',
-    url: 'https://windowking.co.in',
-    src: '/portfolite/brands/windowking.webp',
-    alt: 'Window King',
-    width: 262,
-    height: 140,
-    heightClass: 'h-10 sm:h-12',
   },
 ];
 
