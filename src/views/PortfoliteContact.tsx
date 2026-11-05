@@ -1,15 +1,17 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Send, CheckCircle2, Sparkles, Clock, ShieldCheck, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, CheckCircle2, Sparkles, Clock, ShieldCheck, ArrowRight, Loader2, AlertCircle } from 'lucide-react';
 import PortfoliteNav from '../components/portfolite/PortfoliteNav';
 import PortfoliteFooter from '../components/portfolite/PortfoliteFooter';
 import { OFFICES, COMPANY } from '../lib/data';
 
 export default function PortfoliteContact() {
-  const [selectedServices, setSelectedServices] = useState<string[]>(['Technical SEO']);
+  const [selectedServices, setSelectedServices] = useState<string[]>(['SEO, GEO & AEO Services']);
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -28,19 +30,63 @@ export default function PortfoliteContact() {
     'Technical Support & Retainer',
   ];
 
+  // Auto-detect service from URL params if available (e.g. /contact?service=crm)
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const svcParam = params.get('service');
+      if (svcParam) {
+        const matched = availableServices.find((s) =>
+          s.toLowerCase().includes(svcParam.toLowerCase())
+        );
+        if (matched) {
+          setSelectedServices([matched]);
+        }
+      }
+    }
+  }, []);
+
   const toggleService = (svc: string) => {
     setSelectedServices((prev) =>
       prev.includes(svc) ? prev.filter((s) => s !== svc) : [...prev, svc]
     );
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
+    setIsSubmitting(true);
+    setErrorMessage('');
+
+    try {
+      const res = await fetch('/api/form-submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          formType: 'contact',
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          company: form.company,
+          services: selectedServices,
+          message: form.message,
+          pageUrl: typeof window !== 'undefined' ? window.location.href : '/contact',
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || 'Failed to submit inquiry. Please try again.');
+      }
+
+      setSubmitted(true);
       setForm({ name: '', email: '', phone: '', company: '', message: '' });
-    }, 5000);
+    } catch (err: any) {
+      console.error('Contact submission error:', err);
+      setErrorMessage(err.message || 'Unable to submit your proposal request. Please call us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -277,13 +323,33 @@ export default function PortfoliteContact() {
                     />
                   </div>
 
+                  {/* Honeypot spam defense */}
+                  <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
+
+                  {errorMessage && (
+                    <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs flex items-center gap-2">
+                      <AlertCircle className="w-4 h-4 shrink-0 text-red-600" />
+                      <span>{errorMessage}</span>
+                    </div>
+                  )}
+
                   <div className="pt-2">
                     <button
                       type="submit"
-                      className="site-button w-full py-3.5 rounded-full !bg-black !text-white font-semibold text-sm inline-flex items-center justify-center gap-2 hover:!bg-zinc-800 shadow-xl"
+                      disabled={isSubmitting}
+                      className="site-button w-full py-3.5 rounded-full !bg-black !text-white font-semibold text-sm inline-flex items-center justify-center gap-2 hover:!bg-zinc-800 shadow-xl disabled:opacity-60 disabled:cursor-not-allowed transition-all cursor-pointer"
                     >
-                      <span>Submit Project Inquiry</span>
-                      <Send className="w-3.5 h-3.5" />
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          <span>Transmitting Proposal Request...</span>
+                        </>
+                      ) : (
+                        <>
+                          <span>Submit Project Inquiry</span>
+                          <Send className="w-3.5 h-3.5" />
+                        </>
+                      )}
                     </button>
                   </div>
                 </form>

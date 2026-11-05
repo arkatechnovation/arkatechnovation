@@ -14,6 +14,8 @@ import {
   MapPin,
   Clock,
   ArrowRight,
+  Loader2,
+  AlertCircle,
 } from 'lucide-react';
 import PortfoliteNav from '../components/portfolite/PortfoliteNav';
 import PortfoliteFooter from '../components/portfolite/PortfoliteFooter';
@@ -21,6 +23,8 @@ import { COMPANY } from '../lib/data';
 
 export default function PortfoliteCareers() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const [discipline, setDiscipline] = useState('Full-Stack Software Engineering');
   const [form, setForm] = useState({
     name: '',
@@ -63,13 +67,41 @@ export default function PortfoliteCareers() {
     },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
+    setIsSubmitting(true);
+    setErrorMessage('');
+
+    try {
+      const res = await fetch('/api/form-submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          formType: 'career',
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          discipline,
+          portfolio: form.portfolio,
+          message: form.message,
+          pageUrl: typeof window !== 'undefined' ? window.location.href : '/careers',
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || 'Failed to submit profile. Please try again.');
+      }
+
+      setSubmitted(true);
       setForm({ name: '', email: '', phone: '', portfolio: '', message: '' });
-    }, 6000);
+    } catch (err: any) {
+      console.error('Career application submission error:', err);
+      setErrorMessage(err.message || 'Unable to submit your application. Please email your CV directly to careers@arkatechnovation.com');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -263,13 +295,33 @@ export default function PortfoliteCareers() {
                     />
                   </div>
 
+                  {/* Honeypot spam defense */}
+                  <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
+
+                  {errorMessage && (
+                    <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs flex items-center gap-2">
+                      <AlertCircle className="w-4 h-4 shrink-0 text-red-600" />
+                      <span>{errorMessage}</span>
+                    </div>
+                  )}
+
                   <div className="pt-2">
                     <button
                       type="submit"
-                      className="w-full py-3.5 px-6 rounded-full !bg-black !text-white hover:!bg-zinc-800 font-semibold text-sm inline-flex items-center justify-center gap-2 transition-all shadow-md active:scale-[0.99] cursor-pointer"
+                      disabled={isSubmitting}
+                      className="w-full py-3.5 px-6 rounded-full !bg-black !text-white hover:!bg-zinc-800 font-semibold text-sm inline-flex items-center justify-center gap-2 transition-all shadow-md active:scale-[0.99] disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
                     >
-                      <span>Submit Spontaneous Profile</span>
-                      <Send className="w-4 h-4" />
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          <span>Transmitting Portfolio Profile...</span>
+                        </>
+                      ) : (
+                        <>
+                          <span>Submit Spontaneous Profile</span>
+                          <Send className="w-4 h-4" />
+                        </>
+                      )}
                     </button>
                   </div>
                 </form>

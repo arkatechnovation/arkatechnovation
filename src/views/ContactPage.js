@@ -377,18 +377,49 @@ export function initContactPage() {
   const form = document.getElementById('loud-contact-form');
   const submitBtn = document.getElementById('contact-submit-btn');
   if (form && submitBtn) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      submitBtn.innerHTML = `<span>Inquiry Transmitted ✓</span>`;
-      submitBtn.style.background = '#00ffaa';
-      submitBtn.style.color = '#000000';
-      gsap.fromTo(submitBtn, { scale: 0.95 }, { scale: 1, duration: 0.4, ease: 'back.out(2)' });
-      setTimeout(() => {
-        form.reset();
-        submitBtn.innerHTML = `<span>Send us message</span>`;
-        submitBtn.style.background = '';
-        submitBtn.style.color = '';
-      }, 2500);
+      const formData = new FormData(form);
+      const name = formData.get('name') || document.getElementById('contact-name')?.value || 'Client';
+      const email = formData.get('email') || document.getElementById('contact-email')?.value || '';
+      const phone = formData.get('phone') || document.getElementById('contact-phone')?.value || '';
+      const message = formData.get('message') || document.getElementById('contact-message')?.value || '';
+      const company = formData.get('company') || '';
+
+      submitBtn.innerHTML = `<span>Transmitting...</span>`;
+      submitBtn.disabled = true;
+
+      try {
+        await fetch('/api/form-submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            formType: 'contact',
+            name,
+            email,
+            phone,
+            company,
+            message,
+            pageUrl: window.location.href,
+          }),
+        });
+
+        submitBtn.innerHTML = `<span>Inquiry Transmitted ✓</span>`;
+        submitBtn.style.background = '#00ffaa';
+        submitBtn.style.color = '#000000';
+        gsap.fromTo(submitBtn, { scale: 0.95 }, { scale: 1, duration: 0.4, ease: 'back.out(2)' });
+        setTimeout(() => {
+          form.reset();
+          submitBtn.innerHTML = `<span>Send us message</span>`;
+          submitBtn.style.background = '';
+          submitBtn.style.color = '';
+          submitBtn.disabled = false;
+        }, 3000);
+      } catch (err) {
+        console.error(err);
+        submitBtn.innerHTML = `<span>Error - Try Again</span>`;
+        submitBtn.disabled = false;
+      }
     });
   }
 }

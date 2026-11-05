@@ -251,10 +251,26 @@ export function CareersPage() {
       setApp(p => ({ ...p, [k]: e.target.value })),
   });
 
-  const handleApply = (e: React.FormEvent) => {
+  const handleApply = async (e: React.FormEvent) => {
     e.preventDefault();
     setSent(true);
-    setTimeout(() => setSent(false), 6000);
+    try {
+      await fetch('/api/form-submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          formType: 'career',
+          name: app.name,
+          email: app.email,
+          phone: app.phone,
+          discipline: app.role,
+          message: app.message,
+          pageUrl: typeof window !== 'undefined' ? window.location.href : '/careers',
+        }),
+      });
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   return (
@@ -341,6 +357,29 @@ export function CareersPage() {
 /* ═══ CONTACT ══════════════════════════════════════════════════ */
 export function ContactPage() {
   const [sent, setSent] = useState(false);
+  const handleQuote = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (f.name && f.email.includes('@')) {
+      setSent(true);
+      try {
+        await fetch('/api/form-submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            formType: 'contact',
+            name: f.name,
+            email: f.email,
+            phone: f.phone,
+            services: [f.type, ...svcs].filter(Boolean),
+            message: f.desc,
+            pageUrl: typeof window !== 'undefined' ? window.location.href : '/contact',
+          }),
+        });
+      } catch (err) {
+        console.error(err);
+      }
+    }
+  };
   const [f, setF] = useState({ name: '', email: '', phone: '', type: '', budget: '', desc: '' });
   const [svcs, setSvcs] = useState<string[]>([]);
   const fld = (k: keyof typeof f) => ({ value: f[k], onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setF(p => ({ ...p, [k]: e.target.value })) });
@@ -393,7 +432,7 @@ export function ContactPage() {
                 <button onClick={() => setSent(false)} data-hover className="mt-8 hover-line text-sm font-light">Send another request</button>
               </motion.div>
             ) : (
-              <form onSubmit={e => { e.preventDefault(); if (f.name && f.email.includes('@')) setSent(true); }} className="border border-paper/20 bg-coal/40 p-6 md:p-9">
+              <form onSubmit={handleQuote} className="border border-paper/20 bg-coal/40 p-6 md:p-9">
                 <Label>Request a quote</Label>
                 <div className="mt-6 grid md:grid-cols-2 gap-x-8">
                   {([['name', 'NAME*', 'Your name', 'text'], ['email', 'EMAIL*', 'name@company.com', 'email'], ['phone', 'PHONE', '+91', 'tel']] as const).map(([k, l, ph, ty]) => (

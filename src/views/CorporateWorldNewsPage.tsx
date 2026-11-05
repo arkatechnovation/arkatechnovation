@@ -22,6 +22,8 @@ import {
   Share2,
   Sparkles,
   ArrowUpRight,
+  Loader2,
+  AlertCircle,
 } from 'lucide-react';
 import PortfoliteNav from '@/components/portfolite/PortfoliteNav';
 import PortfoliteFooter from '@/components/portfolite/PortfoliteFooter';
@@ -170,15 +172,47 @@ const STUDIO_SPECS = [
 
 export default function CorporateWorldNewsPage() {
   const [pitchSent, setPitchSent] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const [name, setName] = useState('');
   const [company, setCompany] = useState('');
   const [email, setEmail] = useState('');
   const [topic, setTopic] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !email) return;
-    setPitchSent(true);
+
+    setIsSubmitting(true);
+    setErrorMessage('');
+
+    try {
+      const res = await fetch('/api/form-submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          formType: 'news-pitch',
+          name,
+          company,
+          email,
+          topic,
+          pageUrl: typeof window !== 'undefined' ? window.location.href : '/corporate-world-news',
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || 'Failed to submit pitch. Please try again.');
+      }
+
+      setPitchSent(true);
+    } catch (err: any) {
+      console.error('Editorial pitch submission error:', err);
+      setErrorMessage(err.message || 'Unable to submit your story pitch. Please email our desk directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -563,15 +597,33 @@ export default function CorporateWorldNewsPage() {
               />
             </div>
 
+            {/* Honeypot spam defense */}
+            <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
+
+            {errorMessage && (
+              <div className="mb-4 p-3 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs flex items-center gap-2">
+                <AlertCircle className="w-4 h-4 shrink-0 text-red-600" />
+                <span>{errorMessage}</span>
+              </div>
+            )}
+
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <p className="text-xs font-mono text-zinc-500">
                 Direct Desk: +91 97114 87316 · Sector 63, Noida
               </p>
               <button
                 type="submit"
-                className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-black text-white hover:bg-[#E8742C] text-sm font-semibold transition-colors shadow-sm cursor-pointer"
+                disabled={isSubmitting}
+                className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-black text-white hover:bg-[#E8742C] text-sm font-semibold transition-colors shadow-sm disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center justify-center gap-2 cursor-pointer"
               >
-                Submit to Editorial Desk
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    <span>Transmitting to Desk...</span>
+                  </>
+                ) : (
+                  <span>Submit to Editorial Desk</span>
+                )}
               </button>
             </div>
           </form>
