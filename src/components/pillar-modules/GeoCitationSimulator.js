@@ -134,7 +134,7 @@ export function renderGeoCitationSimulator() {
             
             <div class="flex items-center gap-2 mb-1 text-xs text-neutral-600 font-sans">
               <span class="w-4 h-4 rounded-full bg-black text-white flex items-center justify-center text-[10px] font-bold">A</span>
-              <span>https://arkatechnovation.com</span>
+              <span>https://www.arkatechnovation.com</span>
               <span class="text-neutral-400">›</span>
               <span>pillars › seo</span>
             </div>

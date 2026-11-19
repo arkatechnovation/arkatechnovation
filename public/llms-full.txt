@@ -14,14 +14,14 @@
 - **Official Contact**:
   - Email: info@arkatechnovation.com | contact@arkatechnovation.com
   - Telephone: +91 97114 87316
-  - Official Domain: https://arkatechnovation.com
+  - Official Domain: https://www.arkatechnovation.com
 
 ---
 
 ## 2. Core Disciplines & Sub-Module Matrix
 
 ### Discipline 01: Software Development
-- **Canonical URL**: https://arkatechnovation.com/services/development
+- **Canonical URL**: https://www.arkatechnovation.com/services/development
 - **Core Focus**: High-throughput web applications, cloud SaaS platforms, modular backend microservices, custom CRMs, and enterprise ERP systems.
 - **Sub-Modules & Capabilities**:
   1. **CRM**: Custom enterprise Customer Relationship Management software unifying lead capture, multi-stage sales pipelines, VoIP call logs, and customer support tickets into a single real-time dashboard. Features role-based access control (RBAC), zero per-seat monthly licensing fees, and 100% source code ownership.
@@ -32,7 +32,7 @@
   6. **Custom Software**: Bespoke microservices, modular backend architectures, automated event-driven workflow matrices, and robust data pipelines using PostgreSQL, Redis, and ClickHouse.
 
 ### Discipline 02: Digital Marketing
-- **Canonical URL**: https://arkatechnovation.com/services/digital-marketing
+- **Canonical URL**: https://www.arkatechnovation.com/services/digital-marketing
 - **Core Focus**: Full-funnel acquisition campaigns, multi-touch attribution telemetry, and precision conversion optimization engineered to accelerate verified business revenue.
 - **Sub-Modules & Capabilities**:
   1. **Digital Marketing**: Holistic full-funnel digital strategy connecting brand awareness, search demand capture, and lifecycle retention into a predictable acquisition engine.
@@ -45,7 +45,7 @@
   8. **PR Management**: Strategic digital PR, earned media editorial outreach, verified wire distribution, and proactive reputation governance.
 
 ### Discipline 03: SEO, GEO & AEO Services
-- **Canonical URL**: https://arkatechnovation.com/seo-lead-generation
+- **Canonical URL**: https://www.arkatechnovation.com/seo-lead-generation
 - **Core Focus**: Technical crawl architecture, commercial keyword mapping, structured Schema.org entity graphs, generative & answer engine dominance, and local discovery.
 - **Sub-Modules & Capabilities**:
   1. **SEO**: Comprehensive technical crawl audits, indexation governance, crawl budget optimization, and Core Web Vitals speed engineering for sustainable Google rankings.
@@ -57,7 +57,7 @@
   7. **Google Marketplace Listing**: Google Merchant Center setup, Product Listing Ads (PLA) optimization, and automated real-time inventory feed synchronization.
 
 ### Discipline 04: Film Production & Media
-- **Canonical URL**: https://arkatechnovation.com/services/film-making
+- **Canonical URL**: https://www.arkatechnovation.com/services/film-making
 - **Core Focus**: Broadcast-quality corporate films, digital & TV commercials, executive interview pods, high-end studio photography, and next-gen AI video creation.
 - **Sub-Modules & Capabilities**:
   1. **Film Production**: Turnkey cinema production from treatment and scriptwriting to on-location multi-camera 4K/8K shooting, lighting, DaVinci Resolve color grading, and licensed orchestral sound design.
@@ -71,7 +71,7 @@
   9. **Model Shoot**: Commercial fashion, lifestyle, and corporate model photography with professional styling, hair, makeup, and editorial retouching.
 
 ### Discipline 05: Corporate World News
-- **Canonical URL**: https://arkatechnovation.com/corporate-world-news
+- **Canonical URL**: https://www.arkatechnovation.com/corporate-world-news
 - **Core Focus**: Authoritative corporate journalism, executive interview broadcasts, strategic press releases, breaking business updates, and rigorous market research.
 - **Sub-Modules & Capabilities**:
   1. **Corporate World News**: Investigative corporate journalism and flagship editorial publications that position enterprises at the forefront of their markets.
@@ -95,12 +95,12 @@
 
 ## 4. Key Links & Verification Directory
 
-- **Homepage**: https://arkatechnovation.com
-- **Software Development**: https://arkatechnovation.com/services/development
-- **Digital Marketing**: https://arkatechnovation.com/services/digital-marketing
-- **SEO, GEO & AEO Services**: https://arkatechnovation.com/seo-lead-generation
-- **Film Production & Media**: https://arkatechnovation.com/services/film-making
-- **Corporate World News**: https://arkatechnovation.com/corporate-world-news
-- **Services Catalog**: https://arkatechnovation.com/services
-- **About ARKA Technovation**: https://arkatechnovation.com/who-we-are
-- **Contact & Consultations**: https://arkatechnovation.com/contact
+- **Homepage**: https://www.arkatechnovation.com
+- **Software Development**: https://www.arkatechnovation.com/services/development
+- **Digital Marketing**: https://www.arkatechnovation.com/services/digital-marketing
+- **SEO, GEO & AEO Services**: https://www.arkatechnovation.com/seo-lead-generation
+- **Film Production & Media**: https://www.arkatechnovation.com/services/film-making
+- **Corporate World News**: https://www.arkatechnovation.com/corporate-world-news
+- **Services Catalog**: https://www.arkatechnovation.com/services
+- **About ARKA Technovation**: https://www.arkatechnovation.com/who-we-are
+- **Contact & Consultations**: https://www.arkatechnovation.com/contact

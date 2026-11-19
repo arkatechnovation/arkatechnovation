@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { SERVICES } from '@/lib/data';
 import { BLOG_POSTS } from '@/lib/blogs';
 
-const BASE_URL = 'https://arkatechnovation.com';
+const BASE_URL = 'https://www.arkatechnovation.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

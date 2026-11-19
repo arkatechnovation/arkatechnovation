@@ -3,7 +3,7 @@ import '../index.css';
 import SmoothScrollProvider from '@/components/SmoothScrollProvider';
 import Script from 'next/script';
 
-const BASE_URL = 'https://arkatechnovation.com';
+const BASE_URL = 'https://www.arkatechnovation.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),

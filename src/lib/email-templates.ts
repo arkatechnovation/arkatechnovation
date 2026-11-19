@@ -34,7 +34,7 @@ export interface FormSubmissionPayload {
 }
 
 const BRAND_NAME = 'ARKA Technovation';
-const BRAND_WEBSITE = 'https://arkatechnovation.com';
+const BRAND_WEBSITE = 'https://www.arkatechnovation.com';
 const BRAND_LOCATION = 'Sector 63, Noida, India';
 
 /**
