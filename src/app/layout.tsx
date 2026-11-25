@@ -223,18 +223,9 @@ export default function RootLayout({
         />
         <link
           rel="preload"
-          href="/images/hero/slider/hero-slide-1-mobile.webp"
+          href="/assets/video_hero/hero-poster.webp"
           as="image"
           type="image/webp"
-          media="(max-width: 768px)"
-          fetchPriority="high"
-        />
-        <link
-          rel="preload"
-          href="/images/hero/slider/hero-slide-1.webp"
-          as="image"
-          type="image/webp"
-          media="(min-width: 769px)"
           fetchPriority="high"
         />
         <link

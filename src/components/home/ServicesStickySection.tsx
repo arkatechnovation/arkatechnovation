@@ -17,7 +17,7 @@ const SERVICES = [
     title: 'Digital Marketing',
     link: '/services/digital-marketing',
     text: 'Full-funnel customer acquisition campaigns across Google and Meta, powered by multi-touch attribution and focused on pipeline growth.',
-    img: '/images/services/cards/service-02-ux-interactives.webp',
+    img: '/images/services/cards/service-02-digital-marketing.webp',
   },
   {
     num: '03',
@@ -31,14 +31,14 @@ const SERVICES = [
     title: 'Film Production & Media',
     link: '/services/film-making',
     text: 'Commercial films, TV ads, executive interview broadcasts, and studio photography produced in-house on our Noida soundstage.',
-    img: '/images/services/cards/service-03-crm-erp.webp',
+    img: '/images/services/cards/service-04-film-production.webp',
   },
   {
     num: '05',
     title: 'Corporate World News',
     link: '/corporate-world-news',
     text: 'Verified corporate journalism, executive interview broadcasts, vertical industry analysis, and wire-syndicated corporate press releases.',
-    img: '/images/services/cards/service-04-data-revenue.webp',
+    img: '/images/services/cards/service-05-corporate-world-news.webp',
   },
 ];
 

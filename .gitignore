@@ -21,6 +21,9 @@ scratch/
 !public/**
 !src/**
 
+# Raw 4K hero video source (>100MB GitHub limit; web-optimized hero mp4 is tracked instead)
+public/assets/video_hero/ARKA Technovation.mp4
+
 # Python cache & temp
 __pycache__/
 *.py[cod]
