@@ -35,10 +35,9 @@ export default function PortfoliteHero() {
         ARKA Technovation Private Limited — Enterprise Software, Web Platforms & Digital Growth Systems
       </h1>
 
-      {/* Edge-to-Edge Hero Video Container with Luminous Champagne-Gold Wash */}
-      {/* min-h: ensures cinematic height on small/low-res screens (720p/900p) */}
-      {/* max-h: caps at available viewport on large screens (1080p, 1440p, 4K) so it fills the view without spilling */}
-      <div className="relative w-full aspect-video min-h-[560px] md:min-h-[640px] lg:min-h-[720px] xl:min-h-[840px] max-h-[calc(100vh-70px)] sm:max-h-[calc(100vh-78px)] lg:max-h-[calc(100vh-114px)] overflow-hidden bg-[radial-gradient(ellipse_at_center,_#FFFDF6_0%,_#FBF2DD_55%,_#F4E2B8_100%)] border-y border-[#E6D5AE]/60">
+      {/* Mobile/tablet: pure aspect-video (no min-h) so 16:9 video never gets cropped on portrait screens */}
+      {/* Desktop (lg/xl): min-h clamps keep cinematic height on 720p–900p laptop displays */}
+      <div className="relative w-full aspect-video lg:min-h-[720px] xl:min-h-[840px] max-h-[calc(100vh-70px)] sm:max-h-[calc(100vh-78px)] lg:max-h-[calc(100vh-114px)] overflow-hidden bg-[radial-gradient(ellipse_at_center,_#FFFDF6_0%,_#FBF2DD_55%,_#F4E2B8_100%)] border-y border-[#E6D5AE]/60">
         <video
           ref={videoRef}
           className="w-full h-full object-cover object-center block mix-blend-multiply brightness-[1.02] contrast-[1.05] saturate-[1.08]"
