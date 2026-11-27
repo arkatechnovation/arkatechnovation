@@ -121,7 +121,7 @@ export default function DigitalGrowthShowcaseSection() {
                 alt="ARKA Technovation - Software Development, GenAI Workflows, Revenue Growth & Analytics"
                 width={978}
                 height={656}
-                className="w-full h-auto max-w-[700px] lg:max-w-none object-contain select-none pointer-events-none"
+                className="w-full h-auto max-w-[700px] lg:max-w-none lg:max-[1680px]:w-[90%] object-contain select-none pointer-events-none"
                 loading="lazy"
                 decoding="async"
               />

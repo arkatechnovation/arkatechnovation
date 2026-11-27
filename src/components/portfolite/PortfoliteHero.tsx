@@ -27,7 +27,7 @@ export default function PortfoliteHero() {
   return (
     <section
       id="hero"
-      className="relative w-full pt-[70px] sm:pt-[78px] lg:pt-[114px] bg-white text-black font-framer select-none overflow-hidden"
+      className="relative w-full pt-[70px] sm:pt-[78px] lg:pt-[var(--desktop-header-height)] bg-white text-black font-framer select-none overflow-hidden"
       aria-label="ARKA Technovation Hero Video"
     >
       {/* Semantic H1 tag for Googlebot, SEO ranking & Screen Reader Accessibility */}
@@ -36,8 +36,7 @@ export default function PortfoliteHero() {
       </h1>
 
       {/* Mobile/tablet: pure aspect-video (no min-h) so 16:9 video never gets cropped on portrait screens */}
-      {/* Desktop (lg/xl): min-h clamps keep cinematic height on 720p–900p laptop displays */}
-      <div className="relative w-full aspect-video lg:min-h-[720px] xl:min-h-[840px] max-h-[calc(100vh-70px)] sm:max-h-[calc(100vh-78px)] lg:max-h-[calc(100vh-114px)] overflow-hidden bg-[radial-gradient(ellipse_at_center,_#FFFDF6_0%,_#FBF2DD_55%,_#F4E2B8_100%)] border-y border-[#E6D5AE]/60">
+      <div className="relative w-full aspect-video max-h-[calc(100vh-70px)] sm:max-h-[calc(100vh-78px)] lg:max-h-[var(--desktop-hero-limit)] overflow-hidden bg-[radial-gradient(ellipse_at_center,_#FFFDF6_0%,_#FBF2DD_55%,_#F4E2B8_100%)] border-y border-[#E6D5AE]/60">
         <video
           ref={videoRef}
           className="w-full h-full object-cover object-center block mix-blend-multiply brightness-[1.02] contrast-[1.05] saturate-[1.08]"

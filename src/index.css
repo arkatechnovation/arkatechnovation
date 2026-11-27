@@ -3,6 +3,33 @@
 @import "./junca-components.css";
 @import "tailwindcss";
 
+/* Keep the desktop header compact regardless of browser toolbar height. */
+:root {
+  --info-height: 26px;
+  --desktop-nav-row: 54px;
+  --desktop-logo-height: 38px;
+  --desktop-header-height: calc(var(--info-height) + var(--desktop-nav-row));
+
+  /* Ease into the original video frame around the 1680px laptop width. */
+  --desktop-frame-allowance: max(0px, min(100vw - 1440px, 1920px - 100vw));
+  --desktop-hero-limit: min(
+    max(840px, calc(100vh - 114px)),
+    calc(66.6667svh + var(--desktop-frame-allowance))
+  );
+}
+
+/* Also match a maximized window when browser chrome reduces its height. */
+@media (width: 1680px) and (height: 1050px),
+       (width: 1680px) and (device-width: 1680px) and (device-height: 1050px) {
+  :root {
+    --info-height: 36px;
+    --desktop-nav-row: 78px;
+    --desktop-logo-height: 46px;
+    --scrolled-info-height: var(--info-height);
+    --scrolled-info-opacity: 1;
+  }
+}
+
 @theme {
   --font-display: "Cabinet Grotesk", "Helvetica Neue", Arial, sans-serif;
   --font-sans: "Geist", "Helvetica Neue", Arial, sans-serif;

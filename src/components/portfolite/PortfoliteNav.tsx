@@ -269,12 +269,12 @@ export default function PortfoliteNav() {
           <div
             className="hidden lg:block overflow-hidden transition-[height,opacity] duration-300 ease-out"
             style={{
-              height: solid ? 0 : 36,
-              opacity: solid ? 0 : 1,
+              height: solid ? 'var(--scrolled-info-height, 0px)' : 'var(--info-height)',
+              opacity: solid ? 'var(--scrolled-info-opacity, 0)' : 1,
             }}
           >
             <div
-              className={`xl:max-w-[1280px] xl:mx-auto px-4 lg:px-10 h-9 flex items-center justify-between font-mono text-[9.5px] tracking-[0.08em] uppercase border-b transition-colors duration-300 ${
+              className={`xl:max-w-[1280px] xl:mx-auto px-4 lg:px-10 h-[var(--info-height)] flex items-center justify-between font-mono text-[9.5px] tracking-[0.08em] uppercase border-b transition-colors duration-300 ${
                 isOverHero ? 'text-white border-white/15' : 'text-zinc-500 border-black/[0.06]'
               }`}
             >
@@ -306,10 +306,10 @@ export default function PortfoliteNav() {
           </div>
 
           {/* ── Main Edge-to-Edge Navigation Bar ── */}
-          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 h-[70px] sm:h-[78px] flex items-center justify-between gap-2 lg:gap-4 xl:gap-6">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 h-[70px] sm:h-[78px] lg:h-[var(--desktop-nav-row)] flex items-center justify-between gap-2 lg:gap-4 xl:gap-6">
             {/* Official ARKA Technovation Logo */}
             <Link to="/" className="relative flex items-center group cursor-pointer shrink-0 py-1" aria-label="ARKA Technovation Private Limited Home">
-              <div className="relative h-10 sm:h-12 lg:h-[46px] w-[150px] sm:w-[175px] lg:w-[190px] xl:w-[215px]">
+              <div className="relative h-10 sm:h-12 lg:h-[var(--desktop-logo-height)] w-[150px] sm:w-[175px] lg:w-[190px] xl:w-[215px]">
                 <picture className="h-full w-auto block">
                   <source
                     media="(max-width: 640px)"
