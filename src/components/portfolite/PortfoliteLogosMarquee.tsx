@@ -434,8 +434,8 @@ export default function PortfoliteLogosMarquee() {
 
       <div className="overflow-hidden flex py-1 min-h-[32px] sm:min-h-[44px] items-center">
         <div
-          className="animate-marquee flex items-center gap-14 sm:gap-20 opacity-90 hover:opacity-100 hover:[animation-play-state:paused] transition-opacity will-change-transform"
-          style={{ animationDuration: '95s' }}
+          className="group/strip animate-marquee flex items-center gap-14 pr-14 sm:gap-20 sm:pr-20"
+          style={{ animationDuration: '88s' }}
         >
           {DISPLAY_BRANDS.map((brand, idx) => (
             <a
@@ -444,7 +444,7 @@ export default function PortfoliteLogosMarquee() {
               target="_blank"
               rel="noopener noreferrer"
               title={`${brand.name} — Visit Website`}
-              className="group flex items-center justify-center shrink-0 opacity-85 hover:opacity-100 transition-opacity duration-300 ease-out"
+              className="group flex items-center justify-center shrink-0 opacity-[0.765] group-hover/strip:opacity-85 hover:!opacity-100 transition-opacity duration-300 ease-out"
             >
               <img
                 src={brand.src}
